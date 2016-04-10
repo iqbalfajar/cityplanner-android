@@ -62,22 +62,34 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('detailZona', {
+  .state('menu.detailZona', {
     url: '/zone-detail',
-    templateUrl: 'templates/detailZona.html',
-    controller: 'detailZonaCtrl'
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/detailZona.html',
+        controller: 'detailZonaCtrl'
+      }
+    }
   })
 
-  .state('formLaporanPelanggaran', {
+  .state('menu.formLaporanPelanggaran', {
     url: '/report-form',
-    templateUrl: 'templates/formLaporanPelanggaran.html',
-    controller: 'formLaporanPelanggaranCtrl'
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/formLaporanPelanggaran.html',
+        controller: 'formLaporanPelanggaranCtrl'
+      }
+    }
   })
 
-  .state('formLaporanPelanggaran2', {
+  .state('menu.formLaporanPelanggaran2', {
     url: '/report-form2',
-    templateUrl: 'templates/formLaporanPelanggaran2.html',
-    controller: 'formLaporanPelanggaranCtrl'
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/formLaporanPelanggaran2.html',
+        controller: 'formLaporanPelanggaranCtrl'
+      }
+    }
   })
 
 $urlRouterProvider.otherwise('/home')

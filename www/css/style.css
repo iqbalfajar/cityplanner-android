@@ -1,3 +1,4 @@
+/*Home*/
 .home {
     background: url(../img/menu.png);
     background-repeat: no-repeat;
@@ -5,14 +6,12 @@
     background-position: center;
     background
 }
-
 .home-button {
     margin-top: 200px;
     margin-left: auto;
     margin-right: auto;
     display: block;
     text-align:center;
-    /*padding-left: 70px;*/
 }
 
 .city-build-btn {
@@ -20,9 +19,22 @@
     max-width: 100px;
     max-height: 100px;
 }
-
 .city-watch-btn {
     content: url(../img/city_watch.png);
     max-width: 100px;
     max-height: 100px;
+}
+
+/*City Build*/
+.tabs .tab-item .icon.rumah {
+  content: url('../img/rumah.png');
+}
+.tabs .tab-item .icon.minimarket {
+  content: url('../img/minimarket.png');
+}
+.tabs .tab-item .icon.hotel {
+  content: url('../img/hotel.png');
+}
+.tabs .tab-item .icon.restoran {
+  content: url('../img/restoran.png');
 }
