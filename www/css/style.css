@@ -1,0 +1,28 @@
+.home {
+    background: url(../img/menu.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background
+}
+
+.home-button {
+    margin-top: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align:center;
+    /*padding-left: 70px;*/
+}
+
+.city-build-btn {
+    content: url(../img/city_build.png);
+    width: 100px;
+    height: 100px;
+}
+
+.city-watch-btn {
+    content: url(../img/city_watch.png);
+    width: 100px;
+    height: 100px;
+}
