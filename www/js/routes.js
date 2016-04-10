@@ -74,6 +74,12 @@ angular.module('app.routes', [])
     controller: 'formLaporanPelanggaranCtrl'
   })
 
+  .state('formLaporanPelanggaran2', {
+    url: '/report-form2',
+    templateUrl: 'templates/formLaporanPelanggaran2.html',
+    controller: 'formLaporanPelanggaranCtrl'
+  })
+
 $urlRouterProvider.otherwise('/home')
 
   

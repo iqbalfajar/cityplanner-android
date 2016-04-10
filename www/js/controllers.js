@@ -27,4 +27,8 @@ angular.module('app.controllers', [])
 .controller('formLaporanPelanggaranCtrl', function($scope) {
 
 })
+
+.controller('formLaporanPelanggaran2Ctrl', function($scope) {
+
+})
  
