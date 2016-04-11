@@ -1,0 +1,41 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button></ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="side-menu21">
+      <ion-view style="" id="page1" title="Tabs Controller">
+        <ion-tabs style="" class="tabs-assertive tabs-icon-top">
+          <ion-tab style="" title="Rumah" icon="ion-ios-search" href="#/page1/page3">
+            <ion-nav-view name="tab1"></ion-nav-view>
+          </ion-tab>
+          <ion-tab style="" title="Minimarket" icon="ion-ios-people" href="#/page1/tab5/page1">
+            <ion-nav-view name="tab5"></ion-nav-view>
+          </ion-tab>
+          <ion-tab style="" title="Hotel" icon="ion-ios-musical-notes" href="#/page1/tab2/page8">
+            <ion-nav-view name="tab2"></ion-nav-view>
+          </ion-tab>
+          <ion-tab style="" title="Restoran" icon="ion-ios-briefcase" href="#/page1/page10">
+            <ion-nav-view name="tab3"></ion-nav-view>
+          </ion-tab>
+        </ion-tabs>
+      </ion-view>
+    </ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left" id="side-menu21">
+    <ion-header-bar class="bar-positive">
+      <div class="title">Menu</div>
+    </ion-header-bar>
+    <ion-content padding="false" class="side-menu-left has-header">
+      <ion-list>
+        <ion-item ui-sref="menu.login" menu-close="">Login</ion-item>
+        <ion-item ui-sref="menu.cityBuilder" menu-close="">City Build</ion-item>
+        <ion-item ui-sref="menu.cityWatch" menu-close="">City Watch</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+

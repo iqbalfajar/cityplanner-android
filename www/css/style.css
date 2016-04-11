@@ -42,3 +42,59 @@
 .tabs .tab-item .icon.restoran {
   content: url('../img/restoran.png');
 }
+
+.bar.bar-positive {
+  border-color: #313FA0;;
+  background-color: #313FA0;;
+  background-image: linear-gradient(0deg, #313FA0, #313FA0 50%, transparent 50%);
+  color: #fff;
+}
+
+.tabs-assertive > .tabs,
+.tabs.tabs-assertive {
+  border-color: #0c0a09;
+  background-color: #0c0a09;
+  background-image: linear-gradient(0deg, #0c0a09, #0c0a09 50%, transparent 50%);
+  color: #fff; }
+.tabs-assertive > .tabs .tab-item .badge,
+.tabs.tabs-assertive .tab-item .badge {
+  background-color: #0c0a09;
+  color: #ef473a; }
+
+.tabs {
+  border-color: #444;
+  background-color: #444;
+  color: #f8f8f8;
+}
+
+.tabs .tab-item .icon.rumah {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 60%;
+  background-image: url('../img/rumah.png');
+  background-size:25%
+}
+
+.tabs .tab-item .icon.minimarket {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 60%;
+  background-image: url('../img/minimarket.png');
+  background-size:25%
+}
+
+.tabs .tab-item .icon.restoran {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 60%;
+  background-image: url('../img/restoran.png');
+  background-size:25%
+}
+
+.tabs .tab-item .icon.hotel {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 60%;
+  background-image: url('../img/hotel.png');
+  background-size:25%
+}
