@@ -98,3 +98,34 @@
   background-image: url('../img/hotel.png');
   background-size:25%
 }
+
+.custompopup{
+  display : block;
+  position : absolute;
+}
+
+.item.item-cw{
+  font-size : 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.list.list-cw{
+  width:70%;
+  left:15%;
+  position: absolute;
+}
+
+.list-cw > .item-checkbox .checkbox {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  left: 12px;
+  z-index: 3;
+  margin-top: -21px;
+}
+
+.list-cw .checkbox input{
+  height: 14px;
+  width: 14px;
+}

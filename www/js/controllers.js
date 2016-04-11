@@ -18,6 +18,20 @@ angular.module('app.controllers', [])
 
 .controller('cityWatchCtrl', function($scope) {
 
+  $scope.data = { filterShow : false};
+  var style = {
+    top : ($("#cityWatch-button7").position().top - ($("#filterForm").height()+5)) + "px",
+  }
+  $("#filterForm").css(style);
+  $scope.toogle = function(){
+    $scope.data.filterShow = !$scope.data.filterShow;
+    if($scope.data.filterShow){
+      $("#filterForm").show();
+    }
+    else{
+      $("#filterForm").hide();
+    }
+  }
 })
 
 .controller('loginCtrl', function($scope) {
