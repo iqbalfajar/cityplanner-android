@@ -23,5 +23,7 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
 })
 
 .config(function($ionicConfigProvider) {
-    $ionicConfigProvider.tabs.position('bottom');
+    $ionicConfigProvider.views.transition('ios');
+    $ionicConfigProvider.tabs.style('standard').position('bottom');
+    $ionicConfigProvider.navBar.alignTitle('center').positionPrimaryButtons('left');
 })

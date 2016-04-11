@@ -1,10 +1,16 @@
 /*Home*/
-.home {
-    background: url(../img/menu.png);
+.home-splash {
+    background: url(../img/splash.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background
+}
+
+.home {
+  background: url(../img/menu.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 .home-button {
     margin-top: 200px;
@@ -15,12 +21,10 @@
 }
 
 .city-build-btn {
-    content: url(../img/city_build.png);
     max-width: 100px;
     max-height: 100px;
 }
 .city-watch-btn {
-    content: url(../img/city_watch.png);
     max-width: 100px;
     max-height: 100px;
 }

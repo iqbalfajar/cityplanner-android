@@ -7,10 +7,14 @@ angular.module('app.routes', [])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-    
-  
 
-      .state('home', {
+    .state('splash', {
+      url: '/splash',
+      templateUrl: 'templates/splash.html',
+      controller: 'splashCtrl'
+    })
+
+    .state('home', {
     url: '/home',
     templateUrl: 'templates/home.html',
     controller: 'homeCtrl'
@@ -92,8 +96,8 @@ angular.module('app.routes', [])
     }
   })
 
-$urlRouterProvider.otherwise('/home')
+$urlRouterProvider.otherwise('/splash')
 
-  
+
 
 });
