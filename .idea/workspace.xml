@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9a295939-775c-4ecd-868b-9f4e86374c85" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/hotel.png" afterPath="$PROJECT_DIR$/www/img/hotel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/minimarket.png" afterPath="$PROJECT_DIR$/www/img/minimarket.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/img/restoran.png" afterPath="$PROJECT_DIR$/www/img/restoran.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/style.css" afterPath="$PROJECT_DIR$/www/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/app.js" afterPath="$PROJECT_DIR$/www/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/templates/cityBuilder.html" afterPath="$PROJECT_DIR$/www/templates/cityBuilder.html" />
-    </list>
+    <list default="true" id="9a295939-775c-4ecd-868b-9f4e86374c85" name="Default" comment="" />
     <ignored path="cityplanner-android.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -734,12 +726,12 @@
       <created>1460358920726</created>
       <option name="number" value="Default" />
       <updated>1460358920726</updated>
-      <workItem from="1460358922397" duration="6451000" />
+      <workItem from="1460358922397" duration="6827000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6451000" />
+    <option name="totallyTimeSpent" value="6827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
