@@ -1,16 +1,16 @@
 <ion-view title="City Watch" id="page3">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
         <div>
-            <iframe width="100%" height="450px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://my.ctrlq.org/maps/#roadmap|16|-6.9042102|107.62526609999998">
-            </iframe>
-          <form class="list list-cw" id="filterForm" hidden>
-            <label name="PemukimanTinggi" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input value="on" name="PemukimanTinggi" type="checkbox"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Pemukiman Tinggi</span></div></label>
-            <label name="Perdagangan" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Perdagangan" type="checkbox"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Perdagangan dan Jasa</span></div></label>
-            <label name="Jasa" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Jasa" type="checkbox"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Perkantoran</span></div></label>
-            <label name="Jasa" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Jasa" type="checkbox"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Sarana Pelayanan Umum</span></div></label>
-            <label name="Jasa" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Jasa" type="checkbox"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Pertahanan dan Keamanan</span></div></label>
-            <label name="Jasa" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Jasa" type="checkbox"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Lindung Alami</span></div></label>
-          </form>
+            <iframe width="100%" height="auto" style="min-height: 500px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://cityplanner-web.herokuapp.com/examples/show/mapbox-gljs-zona"></iframe>
+
+            <form class="list list-cw" id="filterForm" hidden>
+              <label name="PemukimanTinggi" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input value="on" name="PemukimanTinggi" type="checkbox"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Pemukiman Tinggi</span></div></label>
+              <label name="Perdagangan" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Perdagangan" type="checkbox"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Perdagangan dan Jasa</span></div></label>
+              <label name="Jasa" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Jasa" type="checkbox"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Perkantoran</span></div></label>
+              <label name="Jasa" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Jasa" type="checkbox"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Sarana Pelayanan Umum</span></div></label>
+              <label name="Jasa" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Jasa" type="checkbox"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Pertahanan dan Keamanan</span></div></label>
+              <label name="Jasa" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Jasa" type="checkbox"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Lindung Alami</span></div></label>
+            </form>
         </div>
         <ion-list></ion-list>
 
@@ -30,10 +30,9 @@
         -->
 
         <div>
-
           <button id="cityWatch-button7" class="button button-positive  button-block" type="button" ng-click="toogle()">Filter Zona</button>
         </div>
 
-        <!-- <a ui-sref="menu.formLaporanPelanggaran" id="login-button9" class="button button-positive  button-block button-clear">Form Laporan</a> -->
+        <a ui-sref="menu.formLaporanPelanggaran" id="login-button9" class="button button-positive  button-block button-clear">Form Laporan</a>
     </ion-content>
 </ion-view>
