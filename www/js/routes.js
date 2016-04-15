@@ -76,6 +76,16 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('menu.detailZona2', {
+    url: '/zone-detail2',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/detailZona2.html',
+        controller: 'detailZona2Ctrl'
+      }
+    }
+  })
+
   .state('menu.formLaporanPelanggaran', {
     url: '/report-form',
     views: {

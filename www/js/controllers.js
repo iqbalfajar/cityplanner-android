@@ -46,6 +46,10 @@ angular.module('app.controllers', [])
 
 })
 
+.controller('detailZona2Ctrl', function($scope) {
+
+})
+
 .controller('formLaporanPelanggaranCtrl', function($scope) {
 
 })
