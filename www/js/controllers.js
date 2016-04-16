@@ -42,8 +42,7 @@ angular.module('app.controllers', [])
 
 })
 
-.controller('detailZonaCtrl', function($scope) {
-
+.controller('detailZonaCtrl', function($scope,$ionicPopup) {
 })
 
 .controller('detailZona2Ctrl', function($scope) {
