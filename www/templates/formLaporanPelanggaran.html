@@ -1,14 +1,34 @@
 <ion-view title="Form Laporan Pelanggaran" id="page7">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-        <h3 id="formLaporanPelanggaran-heading5" style="color:#000000;">Nama Zona | Wilayah</h3>
+        <!-- <h3 id="formLaporanPelanggaran-heading5" style="color:#000000;">Nama Zona | Wilayah</h3> -->
         <div class="list card">
-            <div class="item item-divider">Deskripsi</div>
+            <div class="item item-divider">Overview</div>
             <div class="item item-body">
-                <div id="formLaporanPelanggaran-markdown6" style="color:#000000;">
-                    <p>Some friendly
-                        <strong>markdown</strong>
-                    </p>
+                <div style="color:#000000;">
+                    <label class="control-label">
+                        <strong>Kode</strong>
+                    </label>
+                    <div class="controls">
+                        <span>K3</span>
+                    </div>
                 </div>
+                <div style="color:#000000;">
+                    <label class="control-label">
+                        <strong>Zona</strong>
+                    </label>
+                    <div class="controls">
+                        <span>Perdagangan dan Jasa</span>
+                    </div>
+                </div>
+                <div style="color:#000000;">
+                    <label class="control-label">
+                        <strong>Sub Zona</strong>
+                    </label>
+                    <div class="controls">
+                        <span>Perdagangan dan Jasa Linier</span>
+                    </div>
+                </div>
+                <a ui-sref="menu.detailZona2" class="button button-positive  button-block button-clear">Detail Aturan</a>
             </div>
         </div>
         <div class="list card">
@@ -16,16 +36,25 @@
             <div class="item item-body">
                 <form class="list">
                     <label class="item item-select" name="JenisPelanggaran">
-                        <span class="input-label">Jenis Kegiatan</span>
-                        <select>
-                            <option>Jenis 1</option>
-                            <option>Jenis 2</option>
-                            <option>Jenis 3</option>
-                        </select>
+                    <span class="input-label">Jenis Kegiatan</span>
+                    <select>
+                        <option>Rumah</option>
+                        <option>Minimarket</option>
+                        <option>Hotel</option>
+                    </select>
+                    </label>
+                    <label class="item item-input" name="DetailPelanggaran">
+                    <span class="input-label">Detail Pelanggaran</span><textarea placeholder="Detail Pelanggaran"> </textarea>
+                    </label>
+                    <form class="list"></form>
+                    <label class="item item-input" name="UploadFoto">
+                        <span class="input-label">Upload Foto</span>
+                        <input type="text" placeholder="">
                     </label>
                 </form>
             </div>
         </div>
-        <a ui-sref="menu.formLaporanPelanggaran2" id="formLaporanPelanggaran-button11" class="button button-positive  button-block">Lanjut</a>
+        <button id="formLaporanPelanggaran-button11" class="button button-positive  button-block">Kirim Laporan</button>
+        <!-- <a ui-sref="menu.formLaporanPelanggaran2" id="formLaporanPelanggaran-button11" class="button button-positive  button-block">Lanjut</a> -->
     </ion-content>
 </ion-view>
