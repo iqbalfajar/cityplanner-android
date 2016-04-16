@@ -1,103 +1,67 @@
 <ion-view title="Detail Zona" id="page6">
-    <ion-content overflow-scroll="true" padding="true" class="has-header">
-        <div class="list card">
-            <div class="item item-divider">Overview</div>
-            <div class="item item-body">
-                <div style="color:#000000;">
-                    <label class="control-label">
-                        <strong>Kode</strong>
-                    </label>
-                    <div class="controls">
-                        <span>K3</span>
-                    </div>
-                </div>
-                <div style="color:#000000;">
-                    <label class="control-label">
-                        <strong>Zona</strong>
-                    </label>
-                    <div class="controls">
-                        <span>Perdagangan dan Jasa</span>
-                    </div>
-                </div>
-                <div style="color:#000000;">
-                    <label class="control-label">
-                        <strong>Sub Zona</strong>
-                    </label>
-                    <div class="controls">
-                        <span>Perdagangan dan Jasa Linier</span>
-                    </div>
-                </div>
-                <div style="color:#000000;">
-                    <label class="control-label">
-                        <strong>Kode Peraturan</strong>
-                    </label>
-                    <div class="controls">
-                        <span>Diizinkan (I)</span>
-                    </div>
-                </div>
+    <ion-content overflow-scroll="true" class="has-header">
+
+        <div class="item item-divider">Overview</div>
+        <div class="row">
+          <div class="col col-33"><strong>Kode</strong></div>
+          <div class="col col-67"><span class="badge badge-assertive">K3</span></div>
+        </div>
+        <div class="row">
+          <div class="col col-33"><strong>Zona</strong></div>
+          <div class="col col-67">Perdagangan dan Jasa</div>
+        </div>
+        <div class="row">
+          <div class="col col-33"><strong>Sub Zona</strong></div>
+          <div class="col col-67">Perdagangan dan Jasa Linier</div>
+        </div>
+
+        <div class="item item-divider">Jenis Kegiatan</div>
+        <div class="row">
+            <div class="col col-33"><i class="icon ion-star "></i>
+                <strong>Rumah</strong>
+            </div>
+            <div class="col col-33"><i class="icon ion-star item-icon-top"></i>
+                <strong>Minimarket</strong></div>
+            <div class="col col-33"><i class="icon ion-star item-icon-top"></i>
+                <strong>Hotel</strong></div>
+        </div>
+
+        <div class="item item-divider">Aturan</div>
+        <div class="row">
+          <div class="col col-75"><strong>Koefisien Dasar Bangunan (KDB)</strong></div>
+          <div class="col col-25">70%</div>
+        </div>
+        <div class="row">
+          <div class="col col-75"><strong>Koefisien Luas Bangunan (KLB)</strong></div>
+          <div class="col col-25">2.1</div>
+        </div>
+        <div class="row">
+          <div class="col col-75"><strong>Koefisien Dasar Hijau (KDH)</strong></div>
+          <div class="col col-25">20%</div>
+        </div>
+
+        <div class="item item-divider">Tata Bangunan</div>
+        <div class="row">
+            <div class="col">
+            <p>
+                Pusat Belanja, hotel dan Perkantoran
+            </p>
+            <p>
+                GSB Minimum = 1/2 x lebar rumija
+            </p>
+            <p>
+                (a) Pusat Belanja, hotel dan Perkantoran <br>
+                GSB Minimum = 1/2 x lebar rumija <br>
+                - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza) <br>
+                - Luas lantai maksimum 80.000 m2 <br>
+                - Jalan Kolektor minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir
+            </p> 
             </div>
         </div>
-        <!-- TODO: check condition -->
-        <div class="list card">
-            <div class="item item-divider">Jenis Kegiatan</div>
-            <div class="item item-body">
-                <ul>
-                    <li>Rumah</li>
-                    <li>Minimarket</li>
-                    <li>Hotel</li>
-                    <li>Restoran</li>
-                </ul>
-            </div>
+        <div class="item item-divider">
+            <a ui-sref="menu.formLaporanPelanggaran" id="login-button9" class="button button-positive  button-block button-clear">Lapor Pelanggaran</a>
         </div>
-        <div class="list card">
-            <div class="item item-divider">Aturan</div>
-            <div class="item item-body">
-                <div style="color:#000000;">
-                    <label class="control-label">
-                        <strong>Koefisien Dasar Bangunan (KDB)</strong>
-                    </label>
-                    <div class="controls">
-                        <span>70%</span>
-                    </div>
-                </div>
-                <div style="color:#000000;">
-                    <label class="control-label">
-                        <strong>Koefisien Luas Bangunan (KLB)</strong>
-                    </label>
-                    <div class="controls">
-                        <span>2.1</span>
-                    </div>
-                </div>
-                <div style="color:#000000;">
-                    <label class="control-label">
-                        <strong>Koefisien Dasar Hijau (KDH)</strong>
-                    </label>
-                    <div class="controls">
-                        <span>Perdagangan dan Jasa Linier</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="list card">
-            <div class="item item-divider">Tata Bangunan</div>
-            <div class="item item-body">
-                <div id="detailZona-markdown5" style="color:#000000;">
-                    <p>
-                        Pusat Belanja, hotel dan Perkantoran
-                    </p>
-                    <p>
-                        GSB Minimum = 1/2 x lebar rumija
-                    </p>
-                    <p>
-                        (a) Pusat Belanja, hotel dan Perkantoran <br>
-                        GSB Minimum = 1/2 x lebar rumija <br>
-                        - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza) <br>
-                        - Luas lantai maksimum 80.000 m2 <br>
-                        - Jalan Kolektor minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir
-                    </p> 
-                </div>
-            </div>
-        </div>
-        <a ui-sref="menu.formLaporanPelanggaran" id="login-button9" class="button button-positive  button-block button-clear">Lapor Pelanggaran !</a>
+
+        
     </ion-content>
 </ion-view>

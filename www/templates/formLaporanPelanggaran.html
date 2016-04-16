@@ -1,60 +1,53 @@
 <ion-view title="Form Laporan Pelanggaran" id="page7">
-    <ion-content overflow-scroll="true" padding="true" class="has-header">
-        <!-- <h3 id="formLaporanPelanggaran-heading5" style="color:#000000;">Nama Zona | Wilayah</h3> -->
-        <div class="list card">
-            <div class="item item-divider">Overview</div>
-            <div class="item item-body">
-                <div style="color:#000000;">
-                    <label class="control-label">
-                        <strong>Kode</strong>
-                    </label>
-                    <div class="controls">
-                        <span>K3</span>
-                    </div>
-                </div>
-                <div style="color:#000000;">
-                    <label class="control-label">
-                        <strong>Zona</strong>
-                    </label>
-                    <div class="controls">
-                        <span>Perdagangan dan Jasa</span>
-                    </div>
-                </div>
-                <div style="color:#000000;">
-                    <label class="control-label">
-                        <strong>Sub Zona</strong>
-                    </label>
-                    <div class="controls">
-                        <span>Perdagangan dan Jasa Linier</span>
-                    </div>
-                </div>
-                <a ui-sref="menu.detailZona2" class="button button-positive  button-block button-clear">Detail Aturan</a>
-            </div>
+    <ion-content overflow-scroll="true" class="has-header">
+
+        <div class="item item-divider">Overview</div>
+        <div class="row">
+          <div class="col col-33"><strong>Kode</strong></div>
+          <div class="col col-67"><span class="badge badge-assertive">K3</span></div>
         </div>
-        <div class="list card">
-            <div class="item item-divider">Lapor Pelanggaran</div>
-            <div class="item item-body">
-                <form class="list">
-                    <label class="item item-select" name="JenisPelanggaran">
-                    <span class="input-label">Jenis Kegiatan</span>
-                    <select>
-                        <option>Rumah</option>
-                        <option>Minimarket</option>
-                        <option>Hotel</option>
-                    </select>
-                    </label>
-                    <label class="item item-input" name="DetailPelanggaran">
-                    <span class="input-label">Detail Pelanggaran</span><textarea placeholder="Detail Pelanggaran"> </textarea>
-                    </label>
-                    <form class="list"></form>
-                    <label class="item item-input" name="UploadFoto">
-                        <span class="input-label">Upload Foto</span>
-                        <input type="text" placeholder="">
-                    </label>
-                </form>
-            </div>
+        <div class="row">
+          <div class="col col-33"><strong>Zona</strong></div>
+          <div class="col col-67">Perdagangan dan Jasa</div>
         </div>
-        <button id="formLaporanPelanggaran-button11" class="button button-positive  button-block">Kirim Laporan</button>
+        <div class="row">
+          <div class="col col-33"><strong>Sub Zona</strong></div>
+          <div class="col col-67">Perdagangan dan Jasa Linier</div>
+        </div>
+
+        <div class="item item-divider">Lapor Pelanggaran</div>
+        <div class="list">
+            <label class="item item-select" name="JenisPelanggaran">
+                <span class="input-label">Jenis Kegiatan</span>
+                <select>
+                    <option>Rumah</option>
+                    <option>Minimarket</option>
+                    <option>Hotel</option>
+                </select>
+            </label>
+
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Detail Pelanggaran</span>
+                <!-- <input type="text" placeholder="Detail Pelanggaran"> -->
+                <textarea placeholder="Detail Pelanggaran"></textarea>
+            </label>
+
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                  <input type="text" placeholder="Tambah Foto">
+                </label>
+                <button class="button button-small button-dark">
+                  Upload
+                </button>
+            </div>
+            
+            <div class="padding">
+                <button id="formLaporanPelanggaran-button11" class="button button-positive  button-block">Kirim Laporan</button>
+            </div>
+
+            
+        </div>
+        
         <!-- <a ui-sref="menu.formLaporanPelanggaran2" id="formLaporanPelanggaran-button11" class="button button-positive  button-block">Lanjut</a> -->
     </ion-content>
 </ion-view>

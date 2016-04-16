@@ -133,3 +133,9 @@
 #cityWatch-button7{
   background-color: #313fa0;
 }
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
