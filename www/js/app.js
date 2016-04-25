@@ -27,3 +27,5 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
     $ionicConfigProvider.tabs.style('standard').position('bottom');
     $ionicConfigProvider.navBar.alignTitle('left').positionPrimaryButtons('left');
 })
+
+

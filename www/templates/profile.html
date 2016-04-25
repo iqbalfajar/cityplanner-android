@@ -1,0 +1,73 @@
+<ion-view view-title="Account" hide-back-button="true">
+  <!-- 
+    #IMPLEMENTATION-DETAIL;
+    all view content is wrapped in a form in order to be able to leverage
+    angular 'form' directive in all the view.
+    #TIP: The form must have a "name" property set for using angular validation.
+  -->
+  <form name="accountForm">
+  
+  <!-- main content -->
+  <ion-content>
+    
+    <div class=" text-center ui-gradient-deepblue padding">
+        <img class="avatar-account" ng-src="img/person-flat.png">
+    </div>
+    <div class="text-center">
+      <a class="item item-icon-center positive" href="#">
+        <b>John Doe</b> <i class="icon ion-android-star"></i><i class="icon ion-android-star"></i><i class="icon ion-android-star-half"></i>
+      </a>
+    </div>
+    
+    <!-- form fields -->
+    <!-- 
+      #IMPLEMENTATION-DETAIL:
+      ng-readonly is set on each field and bound to $scope.readonly
+    -->
+    <label class="item item-input">
+      <span class="input-label">Email</span>
+      <input type="text" ng-model="Iqbalfajar" name="email" ng-readonly="readonly" >
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Name</span>
+      <input type="text" ng-model="accountUser.name" name="name" ng-readonly="readonly" >
+    </label>
+    <label class="item item-input">
+      <span class="input-label">Address</span>
+      <input type="text" ng-model="accountUser.address" name="address" ng-readonly="readonly" >
+    </label>
+    <label class="item item-input">
+      <span class="input-label">City</span>
+      <input type="text" ng-model="accountUser.city" name="city" ng-readonly="readonly" >
+    </label>
+
+    <!-- this leverages angular form directive to show up in case of errors-->
+    <!-- <div class="item assertive item-text-wrap text-center" ng-if="accountForm.$invalid">
+      Please fill in all info
+    </div> -->
+
+  </ion-content>
+
+  <!-- footer bar -->
+    <!--
+      #IMPLEMENTATION-DETAIL:
+      we switch footer bar when editing form data
+    -->
+  <ion-footer-bar class="bar bar-positive" ng-click="startEdit()">
+    <h2 class="title">Edit info</h2>
+    <button class="button button-assertive" ng-click="saveEdit()" ng-disabled="accountForm.$invalid">Save changes</button>
+  </ion-footer-bar>
+
+  <ion-footer-bar class="bar bar-positive" ng-if="!readonly">
+    <button ng-if="!readonly" class="button button-positive" ng-click="cancelEdit()">Cancel editing</button>
+    <h2 class="title"> </h2>
+    <!--
+      #IMPLEMENTATION-DETAIL:
+      ng-disable disable the button in case of invalid form, leveraging form validation
+    -->
+    <button ng-show="!readonly" class="button button-energized" ng-click="saveEdit()" >Save changes</button>
+  </ion-footer-bar>
+  
+  </form>
+
+</ion-view>

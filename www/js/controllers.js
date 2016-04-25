@@ -14,6 +14,7 @@ angular.module('app.controllers', [])
 
 .controller('cityBuilderCtrl', function($scope) {
 
+
 })
 
 .controller('cityWatchCtrl', function($scope) {
@@ -31,7 +32,8 @@ angular.module('app.controllers', [])
     else{
       $("#filterForm").hide();
     }
-  }
+  }  
+
 })
 
 .controller('loginCtrl', function($scope) {
@@ -50,9 +52,30 @@ angular.module('app.controllers', [])
 })
 
 .controller('formLaporanPelanggaranCtrl', function($scope) {
+  $scope.data = { showMore : false};
 
+  $scope.toogleMore = function(){
+    $scope.data.showMore = !$scope.data.showMore;
+    if($scope.data.showMore){
+      $(".showmore").show();
+      $(".showless").hide();
+    }
+    else{
+      $(".showmore").hide();
+      $(".showless").show();
+    }
+  }  
 })
 
 .controller('formLaporanPelanggaran2Ctrl', function($scope) {
+
+})
+
+.controller('mapCtrl', function($scope) {
+
+})
+
+.controller('profileCtrl', function($scope) {
+
 
 })

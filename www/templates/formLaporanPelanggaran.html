@@ -11,8 +11,8 @@
           <div class="col col-67">Perdagangan dan Jasa</div>
         </div>
         <div class="row">
-          <div class="col col-33"><strong>Sub Zona</strong></div>
-          <div class="col col-67">Perdagangan dan Jasa Linier</div>
+          <div class="col col-33"><strong>Jenis Kegiatan</strong></div>
+          <div class="col col-67">Hotel</div>
         </div>
         <div class="row">
             <div class="col col-67 col-offset-33">
@@ -21,17 +21,48 @@
             </div>
         </div>
 
-        <div class="item item-divider">Lapor Pelanggaran</div>
-        <div class="list">
-            <label class="item item-select" name="JenisPelanggaran">
-                <span class="input-label">Jenis Kegiatan</span>
-                <select>
-                    <option>Rumah</option>
-                    <option>Minimarket</option>
-                    <option>Hotel</option>
-                </select>
-            </label>
+        <div class="item item-divider">Detail Laporan</div>
+        <div class="row">
+          <div class="col col-75"><strong>Koefisien Dasar Bangunan (KDB)</strong></div>
+          <div class="col col-20">70%</div>
+          <div class="col col-5"><i class="icon ion-checkmark-round"></i></div>
+        </div>
+        <div class="row">
+          <div class="col col-75"><strong>Koefisien Luas Bangunan (KLB)</strong></div>
+          <div class="col col-20">2.1</div>
+          <div class="col col-5"><i class="icon ion-checkmark-round"></i></div>
+        </div>
+        <div class="row">
+          <div class="col col-75"><strong>Koefisien Dasar Hijau (KDH)</strong></div>
+          <div class="col col-20">20%</div>
+          <div class="col col-5"><i class="icon ion-close-round"></i></div>
+        </div>
+        <div id="moreDetail" class="showmore" hidden>
+        <div class="row">
+          <div class="col col-75"><strong>Koefisien Dasar Bangunan (KDB)</strong></div>
+          <div class="col col-20">70%</div>
+          <div class="col col-5"><i class="icon ion-checkmark-round"></i></div>
+        </div>
+        <div class="row">
+          <div class="col col-75"><strong>Koefisien Luas Bangunan (KLB)</strong></div>
+          <div class="col col-20">2.1</div>
+          <div class="col col-5"><i class="icon ion-help"></i></div>
+        </div>
+        <div class="row">
+          <div class="col col-75"><strong>Koefisien Dasar Hijau (KDH)</strong></div>
+          <div class="col col-20">20%</div>
+          <div class="col col-5"><i class="icon ion-close-round"></i></div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col col-offset-33">
+                <button class="button button-small button-stable" ng-click="toogleMore()"><span class="showless">More</span><span class="showmore" hidden>Less</span> <i class="icon ion-more"></i></button>
+            </div>
+        </div>
 
+
+        <div class="item item-divider">Informasi Tambahan</div>
+        <div class="list">
             <label class="item item-input item-floating-label">
                 <span class="input-label">Detail Pelanggaran</span>
                 <!-- <input type="text" placeholder="Detail Pelanggaran"> -->

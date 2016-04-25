@@ -106,6 +106,26 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('menu.map', {
+    url: '/map',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/map.html',
+        controller: 'mapCtrl'
+      }
+    }
+  })
+
+  .state('menu.profile', {
+    url: '/profile',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/profile.html',
+        controller: 'profileCtrl'
+      }
+    }
+  })
+
 $urlRouterProvider.otherwise('/splash')
 
 

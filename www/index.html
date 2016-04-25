@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+
     <title>City Plan</title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
     <!-- your app's css -->
     <link rel='stylesheet' href="css/style.css"/>
 
@@ -26,17 +27,18 @@
     <script src="js/services.js"></script>
     <script src="js/directives.js"></script>
 
-    <!-- ionic/angularjs js -->
-    <script src="lib/angular-touch/angular-touch.js"></script>
-    <script src="lib/angular-carousel.js"></script>
-    <script type="text/javascript" src="lib/angularjs-geolocation/src/geolocation.js"></script>
-
     <!-- Only required for Tab projects w/ pages in multiple tabs
     <script src="lib/ionicuirouter/ionicUIRouter.js"></script>
     -->
 
+    <!-- Google Maps -->
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCknzVB3Rdb8P-1u3isF5Kf6C7vHS1seWk"></script>
+
+    <script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+    <script src="lib/lodash/dist/lodash.min.js"></script>
+
   </head>
-  <body ng-app="app" animation="slide-left-right-ios7">
+  <body animation="slide-left-right-ios7">
   <div>
     <div>
         <ion-nav-bar class="bar-stable">
