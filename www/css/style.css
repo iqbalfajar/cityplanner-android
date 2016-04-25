@@ -170,3 +170,7 @@ map {
     border-radius: 100%;
     border: solid white 4px;
 }
+
+.pointer {
+    cursor: pointer;
+}

@@ -47,8 +47,25 @@ angular.module('app.controllers', [])
 .controller('detailZonaCtrl', function($scope,$ionicPopup) {
 })
 
-.controller('detailZona2Ctrl', function($scope) {
+.controller('detailZona2Ctrl', function($scope, BackendService) {
+  $scope.kdb = 0;
+  
+  $scope.toogleMore = function(jenisKegiatan){
+      $(".showmore").show();
 
+      BackendService.getZonaByKodeKegiatan()
+      .success(function(zonas) {
+        for (var i = 0; i < zonas.length; i++) {
+          if (zonas[i].kode == 'K3' && zonas[i].kegiatan == jenisKegiatan) {
+            console.log(zonas[i]);
+
+            $scope.kdb = zonas[i].kdb;
+
+          }
+        }
+      })
+
+  }  
 })
 
 .controller('formLaporanPelanggaranCtrl', function($scope) {

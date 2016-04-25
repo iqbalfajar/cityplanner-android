@@ -16,58 +16,67 @@
         </div>
 
         <div class="item item-divider">Jenis Kegiatan</div>
+        <div class="row row-center">
+            <div class="col" style="text-align:center;">Klik salah satu untuk menampilan detail Aturan</div>
+        </div>
         <div class="row">
             <div class="col col-33">
-                <img src="img/rumah2.png" width="40" height="40" align="middle">
+                <img class="pointer" src="img/rumah2.png" width="40" height="40" align="middle" sytle="cursor:pointer;" ng-click="toogleMore('rumah')">
                 <br>
                 <strong>Rumah</strong>
             </div>
             <div class="col col-33">
-              &nbsp&nbsp&nbsp&nbsp<img src="img/minimarket2.png" width="40" height="40">
+              &nbsp&nbsp&nbsp&nbsp<img class="pointer" src="img/minimarket2.png" width="40" height="40" sytle="cursor:pointer;" ng-click="toogleMore('minimarket')">
                 <br>
                 <strong>Minimarket</strong></div>
             <div class="col col-33">
-              <img src="img/hotel2.png" width="40" height="40" align="middle">
+              <img class="pointer" src="img/hotel2.png" width="40" height="40" align="middle" sytle="cursor:pointer;" ng-click="toogleMore('hotel')">
                 <br>
                 <strong>Hotel</strong></div>
         </div>
 
         <div class="item item-divider">Aturan</div>
-        <div class="row">
-          <div class="col col-75"><strong>Koefisien Dasar Bangunan (KDB)</strong></div>
-          <div class="col col-25">70%</div>
-        </div>
-        <div class="row">
-          <div class="col col-75"><strong>Koefisien Luas Bangunan (KLB)</strong></div>
-          <div class="col col-25">2.1</div>
-        </div>
-        <div class="row">
-          <div class="col col-75"><strong>Koefisien Dasar Hijau (KDH)</strong></div>
-          <div class="col col-25">20%</div>
+        <div class="showmore" hidden>
+          <div class="row" >
+            <div class="col col-75"><strong>Koefisien Dasar Bangunan (KDB)</strong></div>
+            <div class="col col-25">{{kdb}}%</div>
+          </div>
+          <div class="row" >
+            <div class="col col-75"><strong>Koefisien Luas Bangunan (KLB)</strong></div>
+            <div class="col col-25">2.1</div>
+          </div>
+          <div class="row " >
+            <div class="col col-75"><strong>Koefisien Dasar Hijau (KDH)</strong></div>
+            <div class="col col-25">20%</div>
+          </div>
         </div>
 
         <div class="item item-divider">Tata Bangunan</div>
-        <div class="row">
-            <div class="col">
-            <p>
-                Pusat Belanja, hotel dan Perkantoran
-            </p>
-            <p>
-                GSB Minimum = 1/2 x lebar rumija
-            </p>
-            <p>
-                (a) Pusat Belanja, hotel dan Perkantoran <br>
-                GSB Minimum = 1/2 x lebar rumija <br>
-                - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza) <br>
-                - Luas lantai maksimum 80.000 m2 <br>
-                - Jalan Kolektor minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir
-            </p> 
-            </div>
-        </div>
-        <div class="item item-divider">
-            <a ui-sref="menu.formLaporanPelanggaran" id="login-button9" class="button button-positive button-block icon-center ion-android-warning"> Lapor Pelanggaran</a>
+        <div class="showmore" hidden>
+          <div class="row aturan">
+              <div class="col">
+              <p>
+                  Pusat Belanja, hotel dan Perkantoran
+              </p>
+              <p>
+                  GSB Minimum = 1/2 x lebar rumija
+              </p>
+              <p>
+                  (a) Pusat Belanja, hotel dan Perkantoran <br>
+                  GSB Minimum = 1/2 x lebar rumija <br>
+                  - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza) <br>
+                  - Luas lantai maksimum 80.000 m2 <br>
+                  - Jalan Kolektor minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir
+              </p> 
+              </div>
+          </div>
         </div>
 
+        <div class="showmore" hidden>
+          <div class="item item-divider">
+              <a ui-sref="menu.formLaporanPelanggaran" id="login-button9" class="button button-positive button-block icon-center ion-android-warning"> Lapor Pelanggaran</a>
+          </div>
+        </div>
         
     </ion-content>
 </ion-view>
