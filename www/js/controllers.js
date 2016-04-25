@@ -44,19 +44,58 @@ angular.module('app.controllers', [])
 
 })
 
-.controller('detailZonaCtrl', function($scope,$ionicPopup) {
-})
-
-.controller('detailZona2Ctrl', function($scope, BackendService) {
+.controller('detailZonaCtrl', function($scope,$stateParams, BackendService) {
+  $scope.kode = $stateParams.kode;
+  $scope.zona = '';
+  $scope.sub_zona = '';
   $scope.kdb = 0;
   
+  BackendService.getZonaKegiatan()
+  .success(function(zonas) {
+    for (var i = 0; i < zonas.length; i++) {
+      if (zonas[i].kode == $scope.kode && zonas[i].kegiatan == $stateParams.kegiatan) {
+        console.log(zonas[i]);
+
+        $scope.zona = zonas[i].zona;
+        $scope.sub_zona = zonas[i].sub_zona;
+        $scope.kdb = zonas[i].kdb;
+
+        break;
+      }
+    }
+  })
+
+
+})
+
+.controller('detailZona2Ctrl', function($scope, $stateParams, BackendService) {
+  $scope.kode = $stateParams.kode;
+  $scope.zona = '';
+  $scope.sub_zona = '';
+  
+  BackendService.getZonaKegiatan()
+  .success(function(zonas) {
+    for (var i = 0; i < zonas.length; i++) {
+      if (zonas[i].kode == $scope.kode) {
+        console.log(zonas[i]);
+
+        $scope.zona = zonas[i].zona;
+        $scope.sub_zona = zonas[i].sub_zona;
+
+        break;
+      }
+    }
+  })
+
+  $scope.kdb = 0;
+
   $scope.toogleMore = function(jenisKegiatan){
       $(".showmore").show();
 
-      BackendService.getZonaByKodeKegiatan()
+      BackendService.getZonaKegiatan()
       .success(function(zonas) {
         for (var i = 0; i < zonas.length; i++) {
-          if (zonas[i].kode == 'K3' && zonas[i].kegiatan == jenisKegiatan) {
+          if (zonas[i].kode == $scope.kode && zonas[i].kegiatan == jenisKegiatan) {
             console.log(zonas[i]);
 
             $scope.kdb = zonas[i].kdb;

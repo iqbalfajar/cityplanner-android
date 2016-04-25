@@ -12,7 +12,7 @@ angular.module('app.services', [])
 
   var svc = {};
 
-  svc.getZonaByKodeKegiatan = function(){
+  svc.getZonaKegiatan = function(){
   	return $http.get('sampledata/zonakegiatan.json');
   }
 

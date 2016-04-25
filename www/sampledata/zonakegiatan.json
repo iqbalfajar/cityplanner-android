@@ -2,21 +2,32 @@
     {
         "id" : 1,
         "kode" : "K3",
-        "nama" : "Perdagangan dan Jasa",
+        "zona" : "Perdagangan dan Jasa",
+        "sub_zona" : "Perdagangan dan Jasa Linier",
         "kegiatan" : "rumah",
         "kdb" : "70"
     },
     {
         "id" : 2,
         "kode" : "K3",
-        "nama" : "Perdagangan dan Jasa",
+        "zona" : "Perdagangan dan Jasa",
+        "sub_zona" : "Perdagangan dan Jasa Linier",
         "kegiatan" : "minimarket",
         "kdb" : "80"
     },
     {
         "id" : 3,
         "kode" : "K3",
-        "nama" : "Perdagangan dan Jasa",
+        "zona" : "Perdagangan dan Jasa",
+        "sub_zona" : "Perdagangan dan Jasa Linier",
+        "kegiatan" : "hotel",
+        "kdb" : "90"
+    },
+    {
+        "id" : 4,
+        "kode" : "K4",
+        "zona" : "Perumahan",
+        "sub_zona" : "Perumahan",
         "kegiatan" : "hotel",
         "kdb" : "90"
     }
