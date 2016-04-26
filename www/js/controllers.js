@@ -120,6 +120,25 @@ angular.module('app.controllers', [])
     }
   }  
 
+  $scope.kdbCheck = "-1";
+  $scope.klbCheck = "-1";
+  $scope.kdhCheck = "-1";
+  $scope.updateCheck = function(item,value) {
+    switch (item) {
+        case 'kdb':
+            $scope.kdbCheck = value;
+            break;
+        case 'klb':
+            $scope.klbCheck = value;
+            break;
+        case 'kdh':
+            $scope.kdhCheck = value;
+            break;
+        default:
+    }  
+    console.log(item + ':' + value);
+  }
+
   $ionicModal.fromTemplateUrl('templates/formLaporanModal.html', {
     scope: $scope,
     animation: 'slide-in-up'

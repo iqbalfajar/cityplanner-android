@@ -39,15 +39,42 @@
         <div class="showmore" hidden>
           <div class="row" >
             <div class="col col-75"><strong>Koefisien Dasar Bangunan (KDB)</strong></div>
-            <div class="col col-25">{{detailKegiatan.KDB}}</div>
+            <div class="col col-15">{{detailKegiatan.KDB}}</div>
+            <div class="col col-10">
+              <label class="">
+              <select ng-model="kdbCheck" ng-change="updateCheck('kdb',kdbCheck)">
+                <option value="-1">..</option>
+                <option value="1">&radic;</option>
+                <option value="0">&#9747;</option>
+              </select>
+              </label>
+            </div>
           </div>
           <div class="row" >
             <div class="col col-75"><strong>Koefisien Luas Bangunan (KLB)</strong></div>
-            <div class="col col-25">{{detailKegiatan.KLB}}</div>
+            <div class="col col-15">{{detailKegiatan.KLB}}</div>
+            <div class="col col-10">
+              <label class="">
+              <select ng-model="klbCheck" ng-change="updateCheck('klb',klbCheck)">
+                <option value="-1">..</option>
+                <option value="1">&radic;</option>
+                <option value="0">&#9747;</option>
+              </select>
+              </label>
+            </div>
           </div>
           <div class="row " >
             <div class="col col-75"><strong>Koefisien Dasar Hijau (KDH)</strong></div>
-            <div class="col col-25">{{detailKegiatan.KDH}}</div>
+            <div class="col col-15">{{detailKegiatan.KDH}}</div>
+            <div class="col col-10">
+              <label class="">
+              <select ng-model="kdhCheck" ng-change="updateCheck('kdh',kdhCheck)">
+                <option value="-1">..</option>
+                <option value="1">&radic;</option>
+                <option value="0">&#9747;</option>
+              </select>
+              </label>
+            </div>
           </div>
         </div>
 

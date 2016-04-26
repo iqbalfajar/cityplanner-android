@@ -14,6 +14,10 @@
           <div class="col col-67">{{detail.Zona}}</div>
         </div>
         <div class="row">
+          <div class="col col-33"><strong>Sub Zona</strong></div>
+          <div class="col col-67">{{detail.Subzona}}</div>
+        </div>
+        <div class="row">
           <div class="col col-33"><strong>Jenis Kegiatan</strong></div>
           <div class="col col-67">{{jenisKegiatan | capitalize}}</div>
         </div>
@@ -22,17 +26,26 @@
         <div class="row">
           <div class="col col-75"><strong>Koefisien Dasar Bangunan (KDB)</strong></div>
           <div class="col col-20">{{detailKegiatan.KDB}}</div>
-          <div class="col col-5"><i class="icon ion-checkmark-round"></i></div>
+          <div class="col col-5">
+          	<i class="icon ion-checkmark-round" ng-hide="kdbCheck != '1'"></i>
+          	<i class="icon ion-close-round" ng-hide="kdbCheck != '0'"></i>
+          </div>
         </div>
         <div class="row">
           <div class="col col-75"><strong>Koefisien Luas Bangunan (KLB)</strong></div>
           <div class="col col-20">{{detailKegiatan.KLB}}</div>
-          <div class="col col-5"><i class="icon ion-checkmark-round"></i></div>
+          <div class="col col-5">
+          	<i class="icon ion-checkmark-round" ng-hide="klbCheck != '1'"></i>
+          	<i class="icon ion-close-round" ng-hide="klbCheck != '0'"></i>
+          </div>
         </div>
         <div class="row">
           <div class="col col-75"><strong>Koefisien Dasar Hijau (KDH)</strong></div>
           <div class="col col-20">{{detailKegiatan.KDH}}</div>
-          <div class="col col-5"><i class="icon ion-close-round"></i></div>
+          <div class="col col-5">
+          	<i class="icon ion-checkmark-round" ng-hide="kdhCheck != '1'"></i>
+          	<i class="icon ion-close-round" ng-hide="kdhCheck != '0'"></i>
+          </div>
         </div>
         <div id="moreDetail" class="showmore_modal" hidden>
           <div class="row aturan">
