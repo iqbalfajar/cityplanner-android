@@ -92,6 +92,15 @@ angular.module('app.controllers', [])
       $(".showmore").show();
       $scope.jenisKegiatan = jenisKegiatan;
 
+      var style = {
+        background : "silver",
+      }
+      var styleClear = {
+        background : "none",
+      }
+      $(".div-kegiatan").css(styleClear);
+      $(".div-"+jenisKegiatan).css(style);
+
       BackendService.getZonaKegiatan(jenisKegiatan)
       .success(function(zonas) {
         for (var i = 0; i < zonas.length; i++) {

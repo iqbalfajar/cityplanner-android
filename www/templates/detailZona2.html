@@ -20,16 +20,16 @@
             <div class="col" style="text-align:center;">Klik salah satu untuk menampilan detail Aturan</div>
         </div>
         <div class="row">
-            <div class="col col-33" ng-hide="zonasRumah.indexOf(detail.Kode) == -1">
+            <div class="col col-33 div-kegiatan div-rumah" ng-hide="zonasRumah.indexOf(detail.Kode) == -1">
                 <img class="pointer" src="img/rumah2.png" width="40" height="40" align="middle" sytle="cursor:pointer;" ng-click="toogleMore('rumah')">
                 <br>
                 <strong>Rumah</strong>
             </div>
-            <div class="col col-33" ng-hide="zonasMinimarket.indexOf(detail.Kode) == -1">
+            <div class="col col-33 div-kegiatan div-minimarket" ng-hide="zonasMinimarket.indexOf(detail.Kode) == -1">
               &nbsp&nbsp&nbsp&nbsp<img class="pointer" src="img/minimarket2.png" width="40" height="40" sytle="cursor:pointer;" ng-click="toogleMore('minimarket')">
                 <br>
                 <strong>Minimarket</strong></div>
-            <div class="col col-33" ng-hide="zonasHotel.indexOf(detail.Kode) == -1">
+            <div class="col col-33 div-kegiatan div-hotel" ng-hide="zonasHotel.indexOf(detail.Kode) == -1">
               <img class="pointer" src="img/hotel2.png" width="40" height="40" align="middle" sytle="cursor:pointer;" ng-click="toogleMore('hotel')">
                 <br>
                 <strong>Hotel</strong></div>
