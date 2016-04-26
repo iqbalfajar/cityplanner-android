@@ -1,0 +1,77 @@
+  <ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+      <h1 class="title"><i class="icon ion-android-warning"></i> Lapor Pelanggaran</h1>
+      <button class="button button-clear button-primary" ng-click="modal.hide()">Batal</button>
+    </ion-header-bar>
+    <ion-content overflow-scroll="true" class="has-header">
+        <div class="item item-divider">Overview</div>
+        <div class="row">
+          <div class="col col-33"><strong>Kode</strong></div>
+          <div class="col col-67"><span class="badge badge-assertive">{{detail.Kode}}</span></div>
+        </div>
+        <div class="row">
+          <div class="col col-33"><strong>Zona</strong></div>
+          <div class="col col-67">{{detail.Zona}}</div>
+        </div>
+        <div class="row">
+          <div class="col col-33"><strong>Jenis Kegiatan</strong></div>
+          <div class="col col-67">{{jenisKegiatan | capitalize}}</div>
+        </div>
+
+        <div class="item item-divider">Detail Laporan</div>
+        <div class="row">
+          <div class="col col-75"><strong>Koefisien Dasar Bangunan (KDB)</strong></div>
+          <div class="col col-20">{{detailKegiatan.KDB}}</div>
+          <div class="col col-5"><i class="icon ion-checkmark-round"></i></div>
+        </div>
+        <div class="row">
+          <div class="col col-75"><strong>Koefisien Luas Bangunan (KLB)</strong></div>
+          <div class="col col-20">{{detailKegiatan.KLB}}</div>
+          <div class="col col-5"><i class="icon ion-checkmark-round"></i></div>
+        </div>
+        <div class="row">
+          <div class="col col-75"><strong>Koefisien Dasar Hijau (KDH)</strong></div>
+          <div class="col col-20">{{detailKegiatan.KDH}}</div>
+          <div class="col col-5"><i class="icon ion-close-round"></i></div>
+        </div>
+        <div id="moreDetail" class="showmore_modal" hidden>
+          <div class="row aturan">
+              <div class="col">
+              <p ng-repeat="tatabangunan in tatabangunans">
+                {{tatabangunan}}
+              </p>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col col-offset-33">
+                <button class="button button-small button-stable" ng-click="toogleMoreModal()"><span class="showless_modal">More</span><span class="showmore_modal" hidden>Less</span> <i class="icon ion-more"></i></button>
+            </div>
+        </div>
+
+
+        <div class="item item-divider">Informasi Tambahan</div>
+        <div class="list">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Detail Pelanggaran</span>
+                <!-- <input type="text" placeholder="Detail Pelanggaran"> -->
+                <textarea placeholder="Detail Pelanggaran"></textarea>
+            </label>
+
+            <div class="item item-input-inset">
+                <label class="item-input-wrapper">
+                  <input type="text" placeholder="Tambah Foto">
+                </label>
+                <button class="button button-small button-dark">
+                  Upload
+                </button>
+            </div>
+            
+            <div class="padding">
+                <button id="formLaporanPelanggaran-button11" class="button button-positive button-block" ng-click="showAlert()">Kirim Laporan</button>
+            </div>
+
+        </div>
+    </ion-content>
+  </ion-modal-view>
+

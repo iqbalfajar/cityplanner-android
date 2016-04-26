@@ -1,4 +1,4 @@
-<ion-view view-title="Account" hide-back-button="true">
+<ion-view view-title="Profil" hide-back-button="true">
   <!-- 
     #IMPLEMENTATION-DETAIL;
     all view content is wrapped in a form in order to be able to leverage
@@ -14,9 +14,12 @@
         <img class="avatar-account" ng-src="img/person-flat.png">
     </div>
     <div class="text-center">
-      <a class="item item-icon-center positive" href="#">
+      <div class="positive" href="#" style="border:0;">
         <b>Iqbal Fajar</b> <i class="icon ion-android-star"></i><i class="icon ion-android-star"></i><i class="icon ion-android-star-half"></i>
-      </a>
+      </div>
+      <div class="padding text-center" style="border:0;">
+      <span class="badge badge-energized">150</span> Points
+      </div>
     </div>
     
     <!-- form fields -->
@@ -30,7 +33,7 @@
     </label>
     <label class="item item-input">
       <span class="input-label">Email</span>
-      <input type="text" ng-model="Iqbalfajar" name="email" ng-readonly="readonly" >
+      <input type="text" ng-model="accountUser.email" name="email" ng-readonly="readonly" >
     </label>
     <label class="item item-input">
       <span class="input-label">Alamat</span>
@@ -59,13 +62,13 @@
   </ion-footer-bar>
 
   <ion-footer-bar class="bar bar-positive" ng-if="!readonly">
-    <button ng-if="!readonly" class="button button-positive" ng-click="cancelEdit()">Cancel editing</button>
+    <button ng-if="!readonly" class="button button-positive" ng-click="cancelEdit()">Batal</button>
     <h2 class="title"> </h2>
     <!--
       #IMPLEMENTATION-DETAIL:
       ng-disable disable the button in case of invalid form, leveraging form validation
     -->
-    <button ng-show="!readonly" class="button button-energized" ng-click="saveEdit()" >Save changes</button>
+    <button ng-show="!readonly" class="button button-energized" ng-click="saveEdit()" >Simpan</button>
   </ion-footer-bar>
   
   </form>

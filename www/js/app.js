@@ -28,4 +28,10 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
     $ionicConfigProvider.navBar.alignTitle('left').positionPrimaryButtons('left');
 })
 
+.filter('capitalize', function() {
+    return function(input) {
+      return (!!input) ? input.charAt(0).toUpperCase() + input.substr(1).toLowerCase() : '';
+    }
+});
+
 

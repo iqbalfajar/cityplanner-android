@@ -65,10 +65,15 @@ angular.module('app.controllers', [])
 
 })
 
-.controller('detailZona2Ctrl', function($scope, $stateParams, BackendService) {
+.controller('detailZona2Ctrl', function($scope, $stateParams, BackendService, $ionicModal, $ionicPopup, $location, $state) {
   $scope.detail = {};
   $scope.detailKegiatan = [];
   $scope.tatabangunans = [];
+  $scope.jenisKegiatan = '';
+
+  $scope.zonasRumah = ["C1","HK","I","K2","K3","R1.1","R1.2","R1.3","R2.2","R3"];
+  $scope.zonasHotel = ["C1","I","K2","K3","K1","HK","W","SPU5","SPU1","SPU2"];
+  $scope.zonasMinimarket = ["R3","R2.2","R2.1","R1.1","R1.2","R1.3","C1","I","KT","K2","K3","W","SPU2","SPU1","SPU3","SPU5"];
   
   BackendService.getZonaKegiatan('')
   .success(function(zonas) {
@@ -85,6 +90,7 @@ angular.module('app.controllers', [])
 
   $scope.toogleMore = function(jenisKegiatan){
       $(".showmore").show();
+      $scope.jenisKegiatan = jenisKegiatan;
 
       BackendService.getZonaKegiatan(jenisKegiatan)
       .success(function(zonas) {
@@ -98,8 +104,64 @@ angular.module('app.controllers', [])
           }
         }
       })
+  }
 
+  $scope.data = { showMore : false};
+
+  $scope.toogleMoreModal = function(){
+    $scope.data.showMore = !$scope.data.showMore;
+    if($scope.data.showMore){
+      $(".showmore_modal").show();
+      $(".showless_modal").hide();
+    }
+    else{
+      $(".showmore_modal").hide();
+      $(".showless_modal").show();
+    }
   }  
+
+  $ionicModal.fromTemplateUrl('templates/formLaporanModal.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
+  $scope.openModal = function() {
+    $scope.modal.show();
+  };
+  $scope.closeModal = function() {
+    $scope.modal.hide();
+  };
+  // Cleanup the modal when we're done with it!
+  $scope.$on('$destroy', function() {
+    $scope.modal.remove();
+  });
+  // Execute action on hide modal
+  $scope.$on('modal.hidden', function() {
+    // Execute action
+  });
+  // Execute action on remove modal
+  $scope.$on('modal.removed', function() {
+    // Execute action
+  });  
+
+  // An alert dialog
+   $scope.showAlert = function() {
+     var alertPopup = $ionicPopup.alert({
+       title: 'Sukses!',
+       template: 'Terima kasih telah mengirim Laporan. Laporan Anda akan kami sampaikan ke Dinas terkait untuk segera diproses.'
+     });
+
+     alertPopup.then(function(res) {
+       alertPopup.close();
+       $scope.modal.hide();
+       console.log('redirect to #/menu/zone-detail2/'+$scope.detail.Kode)
+      
+       // $location.path('#/menu/zone-detail2/'+$scope.detail.Kode);
+       $state.go("menu.detailZona2",{'kode':$scope.detail.Kode});
+       
+     });
+   };
 })
 
 .controller('formLaporanPelanggaranCtrl', function($scope) {
@@ -127,6 +189,10 @@ angular.module('app.controllers', [])
 })
 
 .controller('profileCtrl', function($scope) {
-
+  $scope.accountUser = [];
+  $scope.accountUser.name = "Iqbal Fajar";
+  $scope.accountUser.email = "iqbalfajar@gmail.com";
+  $scope.accountUser.address = "Jl. H. Abdul Malik No. 61";
+  $scope.accountUser.city = "Tangerang";
 
 })
