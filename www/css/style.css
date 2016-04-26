@@ -7,26 +7,28 @@
 }
 
 .home {
-  background: url(../img/menu.png);
+  background: url(../img/menu-clean.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 .home-button {
-    margin-top: 200px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     display: block;
     text-align:center;
 }
-
-.city-build-btn {
-    max-width: 100px;
-    max-height: 100px;
+.logo-container {
+  margin-bottom: 30px;
 }
-.city-watch-btn {
-    max-width: 100px;
-    max-height: 100px;
+.home-logo-btn {
+    max-width: 300px;
+    max-height: 200px;
+}
+.home-menu-btn {
+    max-width: 80px;
+    max-height: 80px;
 }
 
 /*City Build*/
@@ -130,7 +132,6 @@
   width: 14px;
 }
 
-#cityWatch-button7,
 .button.button-positive {
   background-color: #313fa0;
 }
