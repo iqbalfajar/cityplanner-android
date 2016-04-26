@@ -2,6 +2,8 @@ package com.muzavan.userpc.cityplanner;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -15,7 +17,6 @@ public class CityActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Toolbar toolbar; // For setting the title in each fragment
-    LinearLayout mainLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +39,12 @@ public class CityActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        // Main Layout
-        mainLayout = (LinearLayout) findViewById(R.id.main_layout);
-        mainLayout.inflate(this,R.layout.fragment_city_build,mainLayout);
+        // Set Default Fragment
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        CityBuildFragment cityBuildFragment = new CityBuildFragment();
+        fragmentTransaction.replace(R.id.main_layout,cityBuildFragment).commit();
+
     }
 
     @Override
@@ -81,14 +85,21 @@ public class CityActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
         if (id == R.id.login) {
             // Handle the login, unimplemented
         } else if (id == R.id.menu_city_build) {
             toolbar.setTitle(getResources().getString(R.string.title_activity_city));
-            mainLayout.inflate(this, R.layout.fragment_city_build, mainLayout);
+            CityBuildFragment cityBuildFragment = new CityBuildFragment();
+            fragmentTransaction.replace(R.id.main_layout,cityBuildFragment).commit();
+
         } else if (id == R.id.menu_city_watch) {
             toolbar.setTitle(getResources().getString(R.string.title_activity_city_watch));
-            mainLayout.inflate(this, R.layout.fragment_city_watch, mainLayout);
+            CityWatchFragment cityWatchFragment = new CityWatchFragment();
+            fragmentTransaction.replace(R.id.main_layout,cityWatchFragment).commit();
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
