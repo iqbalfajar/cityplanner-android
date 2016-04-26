@@ -67,7 +67,7 @@ angular.module('app.routes', [])
   })
 
   .state('menu.detailZona', {
-    url: '/zone-detail/:kode/:kegiatan',
+    url: '/zone-detail/:kegiatan/:kode',
     views: {
       'side-menu21': {
         templateUrl: 'templates/detailZona.html',

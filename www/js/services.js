@@ -16,7 +16,7 @@ angular.module('app.services', [])
             return $http.get('sampledata/zona-minimarket.json');
             break;
         default:
-        	return $http.get('sampledata/zonakegiatan.json');
+        	return $http.get('sampledata/zona-rumah.json');
     }  	
   }
 

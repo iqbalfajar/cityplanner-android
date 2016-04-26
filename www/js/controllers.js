@@ -45,8 +45,8 @@ angular.module('app.controllers', [])
 })
 
 .controller('detailZonaCtrl', function($scope,$stateParams, BackendService) {
-  $scope.detail = {};
-  $scope.tatabangunans = {};
+  $scope.detail = [];
+  $scope.tatabangunans = [];
   
   BackendService.getZonaKegiatan($stateParams.kegiatan)
   .success(function(zonas) {
@@ -66,25 +66,22 @@ angular.module('app.controllers', [])
 })
 
 .controller('detailZona2Ctrl', function($scope, $stateParams, BackendService) {
-  $scope.kode = $stateParams.kode;
-  $scope.zona = '';
-  $scope.sub_zona = '';
+  $scope.detail = {};
+  $scope.detailKegiatan = [];
+  $scope.tatabangunans = [];
   
   BackendService.getZonaKegiatan('')
   .success(function(zonas) {
     for (var i = 0; i < zonas.length; i++) {
-      if (zonas[i].Kode == $scope.kode) {
+      if (zonas[i].Kode == $stateParams.kode) {
         console.log(zonas[i]);
 
-        $scope.zona = zonas[i].Zona;
-        $scope.sub_zona = zonas[i].Subzona;
+        $scope.detail = zonas[i];
 
         break;
       }
     }
   })
-
-  $scope.kdb = 0;
 
   $scope.toogleMore = function(jenisKegiatan){
       $(".showmore").show();
@@ -92,10 +89,11 @@ angular.module('app.controllers', [])
       BackendService.getZonaKegiatan(jenisKegiatan)
       .success(function(zonas) {
         for (var i = 0; i < zonas.length; i++) {
-          if (zonas[i].Kode == $scope.kode) {
+          if (zonas[i].Kode == $stateParams.kode) {
             console.log(zonas[i]);
 
-            $scope.kdb = zonas[i].KDB;
+            $scope.detailKegiatan = zonas[i];
+            $scope.tatabangunans = zonas[i].TataBangunan.split('<br>');
 
           }
         }
