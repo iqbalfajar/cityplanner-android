@@ -1,7 +1,7 @@
 <ion-view title="City Watch" id="page3">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
         <div>
-            <iframe id="myFrame" class="iframe_wrap" width="100%" height="auto" style="min-height: 450px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://cityplanweb.herokuapp.com/examples/show/mapbox-gljs-zona"></iframe>
+            <iframe id="myFrame" class="iframe_wrap" width="100%" height="auto" style="min-height: 450px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ng-src="{{urlZonaAll}}"></iframe>
             
             <form class="list list-cw" id="filterForm" hidden>
               <label name="PemukimanTinggi" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input value="on" name="PemukimanTinggi" type="checkbox" checked="true"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Pemukiman Tinggi</span></div></label>

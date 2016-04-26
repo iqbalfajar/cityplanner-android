@@ -96,16 +96,6 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('menu.formLaporanPelanggaran2', {
-    url: '/report-form2',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/formLaporanPelanggaran2.html',
-        controller: 'formLaporanPelanggaranCtrl'
-      }
-    }
-  })
-
   .state('menu.map', {
     url: '/map',
     views: {

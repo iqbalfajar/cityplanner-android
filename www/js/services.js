@@ -23,3 +23,25 @@ angular.module('app.services', [])
   return svc;
 
 }])
+
+.factory('Config', function () {
+
+  var mapbox_host = 'http://localhost/cityplanner-web/public';
+  // var mapbox_host = 'http://cityplanweb.herokuapp.com';
+
+  return {
+      getUrlZonaRumah: function () {
+          return mapbox_host + '/examples/show/mapbox-gljs-rumah';
+      },
+      getUrlZonaHotel: function () {
+          return mapbox_host + '/examples/show/mapbox-gljs-hotel';
+      },
+      getUrlZonaMinimarket: function () {
+          return mapbox_host + '/examples/show/mapbox-gljs-rumah';
+      },
+      getUrlZonaAll: function () {
+          return mapbox_host + '/examples/show/mapbox-gljs-zona';
+      },
+  };
+
+});
