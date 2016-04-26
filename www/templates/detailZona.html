@@ -3,51 +3,41 @@
         <div class="item item-divider">Overview</div>
         <div class="row">
           <div class="col col-33"><strong>Kode</strong></div>
-          <div class="col col-67"><span class="badge badge-assertive">K3</span></div>
+          <div class="col col-67"><span class="badge badge-assertive">{{detail.Kode}}</span></div>
         </div>
         <div class="row">
           <div class="col col-33"><strong>Zona</strong></div>
-          <div class="col col-67">{{zona}}</div>
+          <div class="col col-67">{{detail.Zona}}</div>
         </div>
         <div class="row">
           <div class="col col-33"><strong>Sub Zona</strong></div>
-          <div class="col col-67">{{sub_zona}}</div>
+          <div class="col col-67">{{detail.Subzona}}</div>
         </div>
         <div class="row">
           <div class="col col-33"><strong>Kode Peraturan</strong></div>
-          <div class="col col-67">Diizinkan (I)</div>
+          <div class="col col-67">{{detail.KeteranganSyarat}} ({{detail.Syarat}})</div>
         </div>
 
         <div class="item item-divider">Aturan</div>
         <div class="row">
           <div class="col col-75"><strong>Koefisien Dasar Bangunan (KDB)</strong></div>
-          <div class="col col-25">{{kdb}}</div>
+          <div class="col col-25">{{detail.KDB}}</div>
         </div>
         <div class="row">
           <div class="col col-75"><strong>Koefisien Luas Bangunan (KLB)</strong></div>
-          <div class="col col-25">2.1</div>
+          <div class="col col-25">{{detail.KLB}}</div>
         </div>
         <div class="row">
           <div class="col col-75"><strong>Koefisien Dasar Hijau (KDH)</strong></div>
-          <div class="col col-25">20%</div>
+          <div class="col col-25">{{detail.KDH}}</div>
         </div>
 
         <div class="item item-divider">Tata Bangunan</div>
         <div class="row">
             <div class="col">
-            <p>
-                Pusat Belanja, hotel dan Perkantoran
+            <p collection-repeat="tatabangunan in tatabangunans">
+                {{tatabangunan}}
             </p>
-            <p>
-                GSB Minimum = 1/2 x lebar rumija
-            </p>
-            <p>
-                (a) Pusat Belanja, hotel dan Perkantoran <br>
-                GSB Minimum = 1/2 x lebar rumija <br>
-                - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza) <br>
-                - Luas lantai maksimum 80.000 m2 <br>
-                - Jalan Kolektor minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir
-            </p> 
             </div>
         </div>
 

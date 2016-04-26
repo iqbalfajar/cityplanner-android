@@ -45,20 +45,17 @@ angular.module('app.controllers', [])
 })
 
 .controller('detailZonaCtrl', function($scope,$stateParams, BackendService) {
-  $scope.kode = $stateParams.kode;
-  $scope.zona = '';
-  $scope.sub_zona = '';
-  $scope.kdb = 0;
+  $scope.detail = {};
+  $scope.tatabangunans = {};
   
-  BackendService.getZonaKegiatan()
+  BackendService.getZonaKegiatan($stateParams.kegiatan)
   .success(function(zonas) {
     for (var i = 0; i < zonas.length; i++) {
-      if (zonas[i].kode == $scope.kode && zonas[i].kegiatan == $stateParams.kegiatan) {
+      if (zonas[i].Kode == $stateParams.kode) {
         console.log(zonas[i]);
 
-        $scope.zona = zonas[i].zona;
-        $scope.sub_zona = zonas[i].sub_zona;
-        $scope.kdb = zonas[i].kdb;
+        $scope.detail = zonas[i];
+        $scope.tatabangunans = zonas[i].TataBangunan.split('<br>');
 
         break;
       }
@@ -73,14 +70,14 @@ angular.module('app.controllers', [])
   $scope.zona = '';
   $scope.sub_zona = '';
   
-  BackendService.getZonaKegiatan()
+  BackendService.getZonaKegiatan('')
   .success(function(zonas) {
     for (var i = 0; i < zonas.length; i++) {
-      if (zonas[i].kode == $scope.kode) {
+      if (zonas[i].Kode == $scope.kode) {
         console.log(zonas[i]);
 
-        $scope.zona = zonas[i].zona;
-        $scope.sub_zona = zonas[i].sub_zona;
+        $scope.zona = zonas[i].Zona;
+        $scope.sub_zona = zonas[i].Subzona;
 
         break;
       }
@@ -92,13 +89,13 @@ angular.module('app.controllers', [])
   $scope.toogleMore = function(jenisKegiatan){
       $(".showmore").show();
 
-      BackendService.getZonaKegiatan()
+      BackendService.getZonaKegiatan(jenisKegiatan)
       .success(function(zonas) {
         for (var i = 0; i < zonas.length; i++) {
-          if (zonas[i].kode == $scope.kode && zonas[i].kegiatan == jenisKegiatan) {
+          if (zonas[i].Kode == $scope.kode) {
             console.log(zonas[i]);
 
-            $scope.kdb = zonas[i].kdb;
+            $scope.kdb = zonas[i].KDB;
 
           }
         }
