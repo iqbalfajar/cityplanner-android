@@ -15,7 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ModeActivity"></activity>
+        <activity android:name=".ModeActivity" />
+        <activity
+            android:name=".CityActivity"
+            android:label="@string/title_activity_city"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

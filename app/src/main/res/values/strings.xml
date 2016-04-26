@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">CityPlanner</string>
+    <string name="title_activity_city">City Build</string>
+    <string name="title_activity_city_watch">City Watch</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

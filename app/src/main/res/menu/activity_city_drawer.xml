@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/login"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Login" />
+        <item
+            android:id="@+id/menu_city_build"
+            android:icon="@drawable/ic_streetview_black_24dp"
+            android:title="City Build" />
+        <item
+            android:id="@+id/menu_city_watch"
+            android:icon="@drawable/ic_map_black_24dp"
+            android:title="City Watch" />
+    </group>
+
+</menu>
