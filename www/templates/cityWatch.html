@@ -4,20 +4,57 @@
     </ion-nav-buttons>
 
     <ion-content overflow-scroll="true" padding="true" class="has-header" data-tap-disabled="true">
-      <!-- <iframe id="myFrame" class="iframe_wrap" width="100%" height="auto" style="min-height: 450px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ng-src="{{urlZonaAll}}"></iframe> -->
-
-      <leaflet defaults="map.defaults" center="map.center" markers="map.markers" layers="map.layers" geojson="map.geojson" width="100%" height="90%"></leaflet>
+      <leaflet defaults="map.defaults" center="map.center" markers="map.markers" layers="map.layers" geojson="map.geojson" geojson-nested="true" width="100%" height="90%"></leaflet>
 
       <div>
         <form class="list list-cw" id="filterForm" hidden>
-          <label name="PemukimanTinggi" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input value="on" name="PemukimanTinggi" type="checkbox" checked="true"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Pemukiman Tinggi</span></div></label>
-          <label name="Perdagangan" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Perdagangan" type="checkbox" checked="true"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Perdagangan dan Jasa</span></div></label>
-          <label name="Jasa" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Jasa" type="checkbox" checked="true"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Perkantoran</span></div></label>
-          <label name="Jasa" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Jasa" type="checkbox" checked="true"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Sarana Pelayanan Umum</span></div></label>
-          <label name="Jasa" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Jasa" type="checkbox" checked="true"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Pertahanan dan Keamanan</span></div></label>
-          <label name="Jasa" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle"><input name="Jasa" type="checkbox" checked="true"><i class="checkbox-icon"></i></div><div class="item-content disable-pointer-events" ng-transclude=""><span>Lindung Alami</span></div></label>
+          <label name="Kantor_Pemerintahan" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+            <input value="on" name="Kantor_Pemerintahan" type="checkbox" checked="true" ng-model='show.Kantor_Pemerintahan' ng-change="filterChange('Kantor_Pemerintahan','rgba(255,139,253,56)', show.Kantor_Pemerintahan)"><i class="checkbox-icon"></i></div>
+            <div class="item-content disable-pointer-events">
+            <span>Kantor Pemerintahan</span></div>
+          </label>
+          <label name="Kesehatan" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+            <input value="on" name="Kesehatan" type="checkbox" checked="true" ng-model='show.Kesehatan' ng-change="filterChange('Kesehatan','rgba(245,124,0,44)', show.Kesehatan)"><i class="checkbox-icon"></i></div>
+            <div class="item-content disable-pointer-events">
+            <span>Kesehatan</span></div>
+          </label>
+          <label name="Pendidikan" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+            <input value="on" name="Pendidikan" type="checkbox" checked="true" ng-model='show.Pendidikan' ng-change="filterChange('Pendidikan','rgba(245,124,0,44)', show.Pendidikan)"><i class="checkbox-icon"></i></div>
+            <div class="item-content disable-pointer-events">
+            <span>Pendidikan</span></div>
+          </label>
+          <label name="Perdagangan_Jasa_Linear" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+            <input value="on" name="Perdagangan_Jasa_Linear" type="checkbox" checked="true" ng-model='show.Perdagangan_Jasa_Linear' ng-change="filterChange('Perdagangan_Jasa_Linear','rgba(255,61,0,72)', show.Perdagangan_Jasa_Linear)"><i class="checkbox-icon"></i></div>
+            <div class="item-content disable-pointer-events">
+            <span>Perdagangan Jasa Linear</span></div>
+          </label>
+          <label name="Peribadatan" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+            <input value="on" name="Peribadatan" type="checkbox" checked="true" ng-model='show.Peribadatan' ng-change="filterChange('Peribadatan','rgba(255,195,0,13)', show.Peribadatan)"><i class="checkbox-icon"></i></div>
+            <div class="item-content disable-pointer-events">
+            <span>Peribadatan</span></div>
+          </label>
+          <label name="Perumahan_Kepadatan_Tinggi" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+            <input value="on" name="Perumahan_Kepadatan_Tinggi" type="checkbox" checked="true" ng-model='show.Perumahan_Kepadatan_Tinggi' ng-change="filterChange('Perumahan_Kepadatan_Tinggi','rgba(255,193,7,14)', show.Perumahan_Kepadatan_Tinggi)"><i class="checkbox-icon"></i></div>
+            <div class="item-content disable-pointer-events">
+            <span>Perumahan Kepadatan Tinggi</span></div>
+          </label>
+          <label name="Pusat_Perdagangan_Jasa" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+            <input value="on" name="Pusat_Perdagangan_Jasa" type="checkbox" checked="true" ng-model='show.Pusat_Perdagangan_Jasa' ng-change="filterChange('Pusat_Perdagangan_Jasa','rgba(249,0,0,79)', show.Pusat_Perdagangan_Jasa)"><i class="checkbox-icon"></i></div>
+            <div class="item-content disable-pointer-events">
+            <span>Pusat Perdagangan Jasa</span></div>
+          </label>
+          <label name="RTH_Taman_Kota" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+            <input value="on" name="RTH_Taman_Kota" type="checkbox" checked="true" ng-model='show.RTH_Taman_Kota' ng-change="filterChange('RTH_Taman_Kota','rgba(85,255,0,-71)', show.RTH_Taman_Kota)"><i class="checkbox-icon"></i></div>
+            <div class="item-content disable-pointer-events">
+            <span>RTH Taman Kota</span></div>
+          </label>
+          <label name="RTNH" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+            <input value="on" name="RTNH" type="checkbox" checked="true" ng-model='show.RTNH' ng-change="filterChange('RTNH','rgba(85,255,0,-71)', show.RTNH)"><i class="checkbox-icon"></i></div>
+            <div class="item-content disable-pointer-events">
+            <span>RTNH</span></div>
+          </label>
         </form>
-        <!-- <a href="#/menu/zone-detail2/I" id="login-button9" class="button button-positive  button-block button-clear">Detail Zona</a> -->
+
         <button id="cityWatch-button7" class="button button-positive button-block icon-center ion-social-buffer" type="button" ng-click="toogle()"> Filter Zona</button>
       </div>
         

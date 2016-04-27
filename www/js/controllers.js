@@ -84,11 +84,6 @@ angular.module('app.controllers', [])
     },
     layers: {
         baselayers: {
-            // osm: {
-            //     name: 'OpenStreetMap',
-            //     url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-            //     type: 'xyz'
-            // },
             googleRoadmap: {
                 name: 'Streets',
                 layerType: 'ROADMAP',
@@ -99,33 +94,8 @@ angular.module('app.controllers', [])
                 layerType: 'HYBRID',
                 type: 'google'
             }, 
-            // mapbox: {
-            //     name: 'Mapbox',
-            //     url: 'https://api.mapbox.com/styles/v1/iqbalfajar/cimvh38pc00eb9wnjukchjqc9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaXFiYWxmYWphciIsImEiOiJjaWx3ZTA1c2kwMXFqdWJrc29yMXlrc216In0.x27mOpcQja1glCL7NO-MLA',
-            //     type: 'xyz'
-            // },  
         },
-        overlays: {
-            // buildings: {
-            //     name:'Kantor Pemerintahan',
-            //     visible: false,
-            //     type: 'geoJSON',
-            //     url:'sampledata/Kantor_Pemerintahan.geojson',
-            //     layerOptions: {
-            //       style: {
-            //             fillColor: "green",
-            //             weight: 1,
-            //             opacity: 0.3,
-            //             color: 'white',
-            //             // dashArray: '3',
-            //             fillOpacity: 0.2
-            //         },
-            //         transparent: true,
-            //         hoverStyle : {
-            //             "fillOpacity": 0.5
-            //         },
-            //     },
-            // },            
+        overlays: {           
         },
     },
     geojson: {},
@@ -139,34 +109,84 @@ angular.module('app.controllers', [])
   };
 
   // Get the layer geojson data from a JSON
-  $http.get("sampledata/geojson/Kantor_Pemerintahan.geojson").success(function(data, status) {
-      angular.extend($scope.map, {
-          geojson: {
-              data: data,
-              style: {
-                    fillColor: 'rgba(255,139,253,56)',
-                    weight: 2,
-                    opacity: 1,
-                    color: 'rgba(255,139,253,56)',
-                    fillOpacity: 0.6
-              },
-              hoverStyle : {
-                  fillOpacity: 0.8
-              },
-              onEachFeature: onEachFeature,
-              resetStyleOnMouseout: true
+  $scope.loadGeojson = function (Kategori, fillColor, show) {
+      $http.get("sampledata/geojson/citywatch/"+Kategori+".geojson").success(function(data, status) {
+        $scope.map.geojson[Kategori] = {
+          data: data,
+          filter: function (feature) {
+              return show;
           },
+          style: {
+                fillColor: fillColor,
+                weight: 1,
+                opacity: 0.4,
+                color: fillColor,
+                fillOpacity: 0.4
+          },
+          hoverStyle : {
+              fillOpacity: 0.6
+          },
+          onEachFeature: onEachFeature,
+          resetStyleOnMouseout: true
+        };
+
+        function onEachFeature(feature, layer) {
+            layer.on({
+
+              click: function() {
+                layer.bindPopup("<a href='#/menu/zone-detail2/"+feature.properties.kode15+"' class='a-popup'>"+ feature.properties.kategori + "</a>");
+              }
+            })
+          }
+    });
+  };
+
+  $scope.show = {};
+  $scope.show.Kantor_Pemerintahan = true;
+  $scope.show.Kesehatan = true;
+  $scope.show.Pendidikan = true;
+  $scope.show.Perdagangan_Jasa_Linear = true;
+  $scope.show.Peribadatan = true;
+  $scope.show.Perumahan_Kepadatan_Tinggi = true;
+  $scope.show.Pusat_Perdagangan_Jasa = true;
+  $scope.show.RTH_Taman_Kota = true;
+  $scope.show.RTNH = true;
+  // Load geojson
+  $scope.loadAllGeojson = function () {
+    $scope.loadGeojson('Kantor_Pemerintahan','rgba(255,139,253,56)', $scope.show.Kantor_Pemerintahan);
+    $scope.loadGeojson('Kesehatan','rgba(245,124,0,44)', $scope.show.Kesehatan);
+    $scope.loadGeojson('Pendidikan','rgba(245,124,0,44)', $scope.show.Pendidikan);
+    $scope.loadGeojson('Perdagangan_Jasa_Linear','rgba(255,61,0,72)', $scope.show.Perdagangan_Jasa_Linear);
+    $scope.loadGeojson('Peribadatan','rgba(255,195,0,13)', $scope.show.Peribadatan);
+    $scope.loadGeojson('Perumahan_Kepadatan_Tinggi','rgba(255,193,7,14)', $scope.show.Perumahan_Kepadatan_Tinggi);
+    $scope.loadGeojson('Pusat_Perdagangan_Jasa','rgba(249,0,0,79)', $scope.show.Pusat_Perdagangan_Jasa);
+    $scope.loadGeojson('RTH_Taman_Kota','rgba(85,255,0,-71)', $scope.show.RTH_Taman_Kota);
+    $scope.loadGeojson('RTNH','rgba(85,255,0,-71)', $scope.show.RTNH);
+  };
+  //Load geojson
+  $scope.loadAllGeojson();
+  
+  // Filter Layer
+  $scope.filterChecked = true;
+  $scope.filterChange = function(Kategori, fillColor, checked) {
+      $scope.show[Kategori] = checked;
+ 
+      // now remove and reload geojson
+      leafletData.getMap().then(function (map) {
+          leafletData.getGeoJSON().then(function (geoJSON) {
+              // console.log(geoJSON);
+              
+              if ($scope.show[Kategori]) {
+                console.log('reload');
+                $scope.loadGeojson(Kategori,fillColor, $scope.show[Kategori]);
+              } else {
+                console.log('remove');
+                map.removeLayer(geoJSON[Kategori]);
+              }
+              // $scope.loadAllGeojson();
+          });
       });
-
-      function onEachFeature(feature, layer) {
-          layer.on({
-
-            click: function() {
-              layer.bindPopup("<a href='#/menu/zone-detail2/"+feature.properties.kode15+"' class='a-popup'>"+ feature.properties.kategori + "</a>");
-            }
-          })
-        }
-  });
+  };
 
   /**
    * Center map on user's current position
@@ -193,7 +213,6 @@ angular.module('app.controllers', [])
         console.log("Location error!");
         console.log(err);
       });
-
   };
 
 })
@@ -239,7 +258,8 @@ angular.module('app.controllers', [])
   BackendService.getZonaKegiatan('')
   .success(function(zonas) {
     for (var i = 0; i < zonas.length; i++) {
-      if (zonas[i].Kode == $stateParams.kode) {
+      var zonaKodeClean = zonas[i].Kode.split('.');
+      if (zonaKodeClean[0] == $stateParams.kode) {
         console.log(zonas[i]);
 
         $scope.detail = zonas[i];
@@ -265,7 +285,9 @@ angular.module('app.controllers', [])
       BackendService.getZonaKegiatan(jenisKegiatan)
       .success(function(zonas) {
         for (var i = 0; i < zonas.length; i++) {
-          if (zonas[i].Kode == $stateParams.kode) {
+          //TODO: fix R1.1,2,3 di city watch
+          var zonaKodeClean = zonas[i].Kode.split('.');
+          if (zonaKodeClean[0] == $stateParams.kode) {
             console.log(zonas[i]);
 
             $scope.detailKegiatan = zonas[i];
