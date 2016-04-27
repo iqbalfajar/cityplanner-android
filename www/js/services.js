@@ -26,8 +26,8 @@ angular.module('app.services', [])
 
 .factory('Config', function () {
 
-  var mapbox_host = 'http://localhost/cityplanner-web/public';
-  // var mapbox_host = 'http://cityplanweb.herokuapp.com';
+  // var mapbox_host = 'http://localhost/cityplanner-web/public';
+  var mapbox_host = 'http://cityplanweb.herokuapp.com';
 
   return {
       getUrlZonaRumah: function () {
