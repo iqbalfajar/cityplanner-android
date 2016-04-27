@@ -24,7 +24,7 @@
 }
 .home-logo-btn {
     max-width: 300px;
-    max-height: 200px;
+    height: auto;
 }
 .home-menu-btn {
     max-width: 80px;
@@ -32,6 +32,20 @@
 }
 
 /*City Build*/
+.text-header-container {
+  margin-bottom: 10px;
+}
+.button-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align:center;
+}
+.citybuild-category-btn {
+  max-width: 300px;
+  height: auto;
+}
+
 .tabs .tab-item .icon.rumah {
   content: url('../img/rumah.png');
 }
@@ -174,4 +188,26 @@ map {
 
 .pointer {
     cursor: pointer;
+}
+
+/*Leaflet*/
+body {
+  height: auto;
+  min-height: 100%;
+}
+
+.scroll, .angular-leaflet-map {
+  height: 100%;
+}
+
+.leaflet-bottom {
+  bottom : 10px;
+}
+
+.item.item-body p {
+  margin-top: 0;
+}
+
+.tabs.border-top {
+  border-top: 1px solid #ddd !important;
 }

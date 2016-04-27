@@ -1,42 +1,40 @@
-<ion-view title="City Build" id="page2">
+<ion-view title="{{kegiatanTitle}}" id="page2">
     <ion-content scroll="true" overflow-scroll="true" class="has-header">
-        <div id="map"></div>
-        <ion-tabs class="tabs-icon-top">
-          <ion-tab title="Rumah" icon-on="rumah" icon-off="rumah">
-              <div padding="true">
-                <div>
-                    <!-- <map on-create="mapCreated(map)"></map> -->
-                    
-                      <iframe class="iframe-maps" width="100%" height="auto" style="min-height: 450px" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" ng-src="{{urlZonaRumah}}"></iframe>
+        <!-- <ion-tabs class="tabs-icon-top"> -->
+          <!-- <ion-tab title="Rumah" icon-on="rumah" icon-off="rumah" class="{{classTabRumah}}" > -->
+              <div padding="true" class="{{classTabRumah}}">               
+              
+                  <iframe class="iframe-maps" width="100%" height="auto" style="min-height: 450px" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" ng-src="{{urlZonaRumah}}"></iframe>
 
-                      <!-- <leaflet id="map" defaults="defaults" center="center" height="100vh" markers="markers"></leaflet> -->
-                </div>
+                  <!-- <leaflet id="map" defaults="defaults" center="center" height="100vh" markers="markers"></leaflet> -->
                   
                   <a href="#/menu/zone-detail/rumah/I"  class="button button-positive  button-block button-clear">Detail Zona</a>
               </div>
-          </ion-tab>
+          <!-- </ion-tab> -->
 
-          <ion-tab title="Minimarket" icon="minimarket">
-              <div>
+         <!-- <ion-tab title="Hotel" icon="hotel" class="{{classTabHotel}}"> -->
+            <div padding="true" class="{{classTabHotel}}">
+                
+                <iframe width="100%" height="auto" style="min-height: 450px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ng-src="{{urlZonaHotel}}"></iframe>
+
+                <!-- <leaflet id="map{{trailId}}" defaults="defaults" center="center" height="100vh" markers="markers"></leaflet> -->
+                <a href="#/menu/zone-detail/hotel/I"  class="button button-positive  button-block button-clear">Detail Zona</a>
+            </div>
+            
+        <!-- </ion-tab> -->
+
+          <!-- <ion-tab title="Minimarket" icon="minimarket" class="{{classTabMinimarket}}" > -->
+              <div padding="true" class="{{classTabMinimarket}}">
+                
                   <iframe width="100%" height="auto" style="min-height: 450px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ng-src="{{urlZonaMinimarket}}"></iframe>
 
                   <!-- <leaflet id="map{{trailId}}" defaults="defaults" center="center" height="100vh" markers="markers"></leaflet> -->
+                  <a href="#/menu/zone-detail/minimarket/I"  class="button button-positive  button-block button-clear">Detail Zona</a>
               </div>
 
-              <a href="#/menu/zone-detail/minimarket/I"  class="button button-positive  button-block button-clear">Detail Zona</a>
-          </ion-tab>
-
-          <ion-tab title="Hotel" icon="hotel">
-              <div>
-                  <iframe width="100%" height="auto" style="min-height: 450px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ng-src="{{urlZonaHotel}}"></iframe>
-
-                  <!-- <leaflet id="map{{trailId}}" defaults="defaults" center="center" height="100vh" markers="markers"></leaflet> -->
-                  <a href="#/menu/zone-detail/hotel/I"  class="button button-positive  button-block button-clear">Detail Zona</a>
-              </div>
               
-          </ion-tab>
-
-        </ion-tabs>
+          <!-- </ion-tab> -->
+        <!-- </ion-tabs> -->
 
     </ion-content>
 </ion-view>

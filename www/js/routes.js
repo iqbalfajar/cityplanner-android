@@ -20,8 +20,18 @@ angular.module('app.routes', [])
     controller: 'homeCtrl'
   })
 
+  .state('menu.cityBuilderPre', {
+    url: '/citybuilder-pre',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/cityBuilder-pre.html',
+        controller: 'cityBuilderPreCtrl'
+      }
+    }
+  })
+
   .state('menu.cityBuilder', {
-    url: '/citybuilder',
+    url: '/citybuilder/:tabIndex',
     views: {
       'side-menu21': {
         templateUrl: 'templates/cityBuilder.html',
@@ -29,6 +39,42 @@ angular.module('app.routes', [])
       }
     }
   })
+
+   // setup an abstract state for the tabs directive
+   .state('citybuild', {
+     url: "/citybuild",
+     abstract: true,
+     templateUrl: "templates/cityBuildTabs.html"
+   })
+ 
+    // Each tab has its own nav history stack:
+   .state('citybuild.rumah', {
+     url: '/rumah',
+     views: {
+     'citybuild-rumah': {
+       templateUrl: 'templates/CityBuildRumah.html',
+       controller: 'cityBuilderCtrl'
+     }
+     }
+   })
+   .state('citybuild.minimarket', {
+     url: '/minimarket',
+     views: {
+     'citybuild-minimarket': {
+       templateUrl: 'templates/CityBuildMinimarket.html',
+       controller: 'cityBuilderCtrl'
+     }
+     }
+   })
+   .state('citybuild.hotel', {
+     url: '/hotel',
+     views: {
+     'citybuild-hotel': {
+       templateUrl: 'templates/CityBuildHotel.html',
+       controller: 'cityBuilderCtrl'
+     }
+     }
+   })
 
   .state('menu.cityWatch', {
     url: '/citywatch',
@@ -102,6 +148,16 @@ angular.module('app.routes', [])
       'side-menu21': {
         templateUrl: 'templates/map.html',
         controller: 'mapCtrl'
+      }
+    }
+  })
+
+  .state('menu.leaflet', {
+    url: '/leaflet',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/leaflet.html',
+        controller: 'leafletCtrl'
       }
     }
   })

@@ -12,19 +12,54 @@ angular.module('app.controllers', [])
 
 })
 
-.controller('cityBuilderCtrl', function($scope, Config, $sce) {
+.controller('cityBuilderPreCtrl', function($scope, Config, $sce) {
+
+})
+
+.controller('cityBuilderCtrl', function($scope, Config, $sce, $ionicTabsDelegate, $stateParams, $timeout) {
+  console.log($stateParams.tabIndex);
+  // $ionicTabsDelegate.select($stateParams.tabIndex);
+  // $scope.tabIndex = $stateParams.tabIndex;
+
+  $scope.kegiatanTitle = '';
+  $scope.classTabRumah = 'ng-hide';
+  $scope.classTabHotel = 'ng-hide';
+  $scope.classTabMinimarket = 'ng-hide';
+  switch ($stateParams.tabIndex) {
+      case '0':
+          $scope.kegiatanTitle = 'Bangun Rumah';
+          $scope.classTabRumah = 'ng-show';
+          $scope.classTabHotel = 'ng-hide';
+          $scope.classTabMinimarket = 'ng-hide';
+          break;
+      case '1':
+          $scope.kegiatanTitle = 'Bangun Hotel';
+          $scope.classTabHotel = 'ng-show';
+          $scope.classTabRumah = 'ng-hide';
+          $scope.classTabMinimarket = 'ng-hide';
+          break;
+      case '2':
+          $scope.kegiatanTitle = 'Bangun Minimarket';
+          $scope.classTabMinimarket = 'ng-show';
+          $scope.classTabRumah = 'ng-hide';
+          $scope.classTabHotel = 'ng-hide';
+          break;
+      default:
+        break;
+  }
+
   $scope.urlZonaRumah = $sce.trustAsResourceUrl(Config.getUrlZonaRumah());
   $scope.urlZonaHotel = $sce.trustAsResourceUrl(Config.getUrlZonaHotel());
   $scope.urlZonaMinimarket = $sce.trustAsResourceUrl(Config.getUrlZonaMinimarket());
 
 })
 
-.controller('cityWatchCtrl', function($scope, Config, $sce) {
+.controller('cityWatchCtrl', function($scope, Config, $sce, $cordovaGeolocation, $http, leafletMapEvents, leafletData) {
   $scope.urlZonaAll = $sce.trustAsResourceUrl(Config.getUrlZonaAll());
 
   $scope.data = { filterShow : false};
   var style = {
-    top : ($("#cityWatch-button7").position().top - ($("#filterForm").height()+5)) + "px",
+    top : ($("#cityWatch-button7").position().top - ($("#filterForm").height()+60)) + "px",
   }
   $("#filterForm").css(style);
   $scope.toogle = function(){
@@ -36,6 +71,138 @@ angular.module('app.controllers', [])
       $("#filterForm").hide();
     }
   }  
+
+  // Map Code
+  $scope.map = {
+    defaults: {
+      // tileLayer: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
+      maxZoom: 18,
+      // zoomControlPosition: 'bottomleft'
+      // tileLayerOptions: {
+      //     opacity: 0.6,
+      //     detectRetina: true,
+      //     reuseTiles: true,
+      // },
+    },
+    center: {
+        lat: -6.9003,
+        lng: 107.6203,
+        zoom: 16
+    },
+    layers: {
+        baselayers: {
+            osm: {
+                name: 'OpenStreetMap',
+                url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                type: 'xyz'
+            },
+            googleRoadmap: {
+                name: 'Google Streets',
+                layerType: 'ROADMAP',
+                type: 'google'
+            },
+            googleHybrid: {
+                name: 'Google Hybrid',
+                layerType: 'HYBRID',
+                type: 'google'
+            }, 
+            mapbox: {
+                name: 'Mapbox',
+                url: 'https://api.mapbox.com/styles/v1/iqbalfajar/cimvh38pc00eb9wnjukchjqc9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaXFiYWxmYWphciIsImEiOiJjaWx3ZTA1c2kwMXFqdWJrc29yMXlrc216In0.x27mOpcQja1glCL7NO-MLA',
+                type: 'xyz'
+            },  
+        },
+        overlays: {
+            mapbox_light: {
+                name: 'Zona Rumah',
+                url: 'http://api.tiles.mapbox.com/v4/{mapid}/{z}/{x}/{y}.png?access_token={apikey}',
+                visible: true,
+                type: 'xyz',
+                layerOptions: {
+                  apikey: 'pk.eyJ1IjoiaXFiYWxmYWphciIsImEiOiJjaWx3ZTA1c2kwMXFqdWJrc29yMXlrc216In0.x27mOpcQja1glCL7NO-MLA',
+                  mapid: 'iqbalfajar.acmc3wp2',
+                  transparent: true,
+                  // style: {
+                  //   color: '#00D',
+                  //   fillColor: 'red',
+                  //   weight: 2.0,
+                  //   opacity: 0.6,
+                  //   fillOpacity: 0.2
+                  // }
+                },
+                layerParams: {
+                  // "layers": "usa:states",
+                  // "format": "image/png",
+                  transparent: true
+                },
+            },            
+        },
+    },
+    // tiles: {
+    //     name: 'Mapbox Park',
+    //     url: 'http://api.tiles.mapbox.com/v4/{mapid}/{z}/{x}/{y}.png?access_token={apikey}',
+    //     type: 'xyz',
+    //     options: {
+    //         apikey: 'pk.eyJ1IjoiZmVlbGNyZWF0aXZlIiwiYSI6Ik1Gak9FXzAifQ.9eB142zVCM4JMg7btDDaZQ',
+    //         mapid: 'feelcreative.llm8dpdk'
+    //     }
+    // },
+    geojson: {},
+    markers : {},
+  };
+
+  // $http.get("https://a.tiles.mapbox.com/v4/feelcreative.llm8dpdk/features.json?access_token=pk.eyJ1IjoiZmVlbGNyZWF0aXZlIiwiYSI6Ik1Gak9FXzAifQ.9eB142zVCM4JMg7btDDaZQ").success(function(data) {
+  //     $scope.map.geojson.data = data;
+  //     console.log(data);
+  // });
+
+  // $http.get("sampledata/pertahanan_keamanan.geojson").success(function(data, status) {
+  //     angular.extend($scope.map.layers.overlays, {
+  //         countries: {
+  //             name:'Pertahanan Keamanan GeoJson',
+  //             type: 'geoJSON',
+  //             data: data,
+  //             visible: true,
+  //             layerOptions: {
+  //                 style: {
+  //                         color: '#00D',
+  //                         fillColor: 'red',
+  //                         weight: 2.0,
+  //                         opacity: 0.6,
+  //                         fillOpacity: 0.2
+  //                 }
+  //             }
+  //         }
+  //     });
+  // });
+
+  /**
+   * Center map on user's current position
+   */
+  $scope.locate = function(){
+
+    $cordovaGeolocation
+      .getCurrentPosition()
+      .then(function (position) {
+        $scope.map.center.lat  = position.coords.latitude;
+        $scope.map.center.lng = position.coords.longitude;
+        $scope.map.center.zoom = 17;
+
+        $scope.map.markers.now = {
+          lat:position.coords.latitude,
+          lng:position.coords.longitude,
+          message: "Anda berada di sini",
+          focus: true,
+          draggable: false
+        };
+
+      }, function(err) {
+        // error
+        console.log("Location error!");
+        console.log(err);
+      });
+
+  };
 
 })
 
