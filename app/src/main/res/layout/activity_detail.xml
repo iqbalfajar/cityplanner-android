@@ -33,10 +33,12 @@
 
                 <TextView
                     style="@style/detail_group_desc"
-                    android:background="#EF473A"
-                    android:paddingLeft="0dp"
+                    android:background="@drawable/background_red"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
                     android:gravity="center"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="10dp"
                     android:layout_weight="1"
                     android:textStyle="bold"
                     android:textColor="#fff"
