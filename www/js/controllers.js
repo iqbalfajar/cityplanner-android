@@ -75,14 +75,7 @@ angular.module('app.controllers', [])
   // Map Code
   $scope.map = {
     defaults: {
-      // tileLayer: 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',
-      maxZoom: 18,
-      // zoomControlPosition: 'bottomleft'
-      // tileLayerOptions: {
-      //     opacity: 0.6,
-      //     detectRetina: true,
-      //     reuseTiles: true,
-      // },
+      // maxZoom: 18,
     },
     center: {
         lat: -6.9003,
@@ -91,90 +84,89 @@ angular.module('app.controllers', [])
     },
     layers: {
         baselayers: {
-            osm: {
-                name: 'OpenStreetMap',
-                url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                type: 'xyz'
-            },
+            // osm: {
+            //     name: 'OpenStreetMap',
+            //     url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            //     type: 'xyz'
+            // },
             googleRoadmap: {
-                name: 'Google Streets',
+                name: 'Streets',
                 layerType: 'ROADMAP',
                 type: 'google'
             },
             googleHybrid: {
-                name: 'Google Hybrid',
+                name: 'Hybrid',
                 layerType: 'HYBRID',
                 type: 'google'
             }, 
-            mapbox: {
-                name: 'Mapbox',
-                url: 'https://api.mapbox.com/styles/v1/iqbalfajar/cimvh38pc00eb9wnjukchjqc9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaXFiYWxmYWphciIsImEiOiJjaWx3ZTA1c2kwMXFqdWJrc29yMXlrc216In0.x27mOpcQja1glCL7NO-MLA',
-                type: 'xyz'
-            },  
+            // mapbox: {
+            //     name: 'Mapbox',
+            //     url: 'https://api.mapbox.com/styles/v1/iqbalfajar/cimvh38pc00eb9wnjukchjqc9/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaXFiYWxmYWphciIsImEiOiJjaWx3ZTA1c2kwMXFqdWJrc29yMXlrc216In0.x27mOpcQja1glCL7NO-MLA',
+            //     type: 'xyz'
+            // },  
         },
         overlays: {
-            mapbox_light: {
-                name: 'Zona Rumah',
-                url: 'http://api.tiles.mapbox.com/v4/{mapid}/{z}/{x}/{y}.png?access_token={apikey}',
-                visible: true,
-                type: 'xyz',
-                layerOptions: {
-                  apikey: 'pk.eyJ1IjoiaXFiYWxmYWphciIsImEiOiJjaWx3ZTA1c2kwMXFqdWJrc29yMXlrc216In0.x27mOpcQja1glCL7NO-MLA',
-                  mapid: 'iqbalfajar.acmc3wp2',
-                  transparent: true,
-                  // style: {
-                  //   color: '#00D',
-                  //   fillColor: 'red',
-                  //   weight: 2.0,
-                  //   opacity: 0.6,
-                  //   fillOpacity: 0.2
-                  // }
-                },
-                layerParams: {
-                  // "layers": "usa:states",
-                  // "format": "image/png",
-                  transparent: true
-                },
-            },            
+            // buildings: {
+            //     name:'Kantor Pemerintahan',
+            //     visible: false,
+            //     type: 'geoJSON',
+            //     url:'sampledata/Kantor_Pemerintahan.geojson',
+            //     layerOptions: {
+            //       style: {
+            //             fillColor: "green",
+            //             weight: 1,
+            //             opacity: 0.3,
+            //             color: 'white',
+            //             // dashArray: '3',
+            //             fillOpacity: 0.2
+            //         },
+            //         transparent: true,
+            //         hoverStyle : {
+            //             "fillOpacity": 0.5
+            //         },
+            //     },
+            // },            
         },
     },
-    // tiles: {
-    //     name: 'Mapbox Park',
-    //     url: 'http://api.tiles.mapbox.com/v4/{mapid}/{z}/{x}/{y}.png?access_token={apikey}',
-    //     type: 'xyz',
-    //     options: {
-    //         apikey: 'pk.eyJ1IjoiZmVlbGNyZWF0aXZlIiwiYSI6Ik1Gak9FXzAifQ.9eB142zVCM4JMg7btDDaZQ',
-    //         mapid: 'feelcreative.llm8dpdk'
-    //     }
-    // },
     geojson: {},
     markers : {},
+    events: {
+      map: {
+        enable: ['click', 'context'],
+        logic: 'emit'
+      }
+    }    
   };
 
-  // $http.get("https://a.tiles.mapbox.com/v4/feelcreative.llm8dpdk/features.json?access_token=pk.eyJ1IjoiZmVlbGNyZWF0aXZlIiwiYSI6Ik1Gak9FXzAifQ.9eB142zVCM4JMg7btDDaZQ").success(function(data) {
-  //     $scope.map.geojson.data = data;
-  //     console.log(data);
-  // });
+  // Get the layer geojson data from a JSON
+  $http.get("sampledata/geojson/Kantor_Pemerintahan.geojson").success(function(data, status) {
+      angular.extend($scope.map, {
+          geojson: {
+              data: data,
+              style: {
+                    fillColor: 'rgba(255,139,253,56)',
+                    weight: 2,
+                    opacity: 1,
+                    color: 'rgba(255,139,253,56)',
+                    fillOpacity: 0.6
+              },
+              hoverStyle : {
+                  fillOpacity: 0.8
+              },
+              onEachFeature: onEachFeature,
+              resetStyleOnMouseout: true
+          },
+      });
 
-  // $http.get("sampledata/pertahanan_keamanan.geojson").success(function(data, status) {
-  //     angular.extend($scope.map.layers.overlays, {
-  //         countries: {
-  //             name:'Pertahanan Keamanan GeoJson',
-  //             type: 'geoJSON',
-  //             data: data,
-  //             visible: true,
-  //             layerOptions: {
-  //                 style: {
-  //                         color: '#00D',
-  //                         fillColor: 'red',
-  //                         weight: 2.0,
-  //                         opacity: 0.6,
-  //                         fillOpacity: 0.2
-  //                 }
-  //             }
-  //         }
-  //     });
-  // });
+      function onEachFeature(feature, layer) {
+          layer.on({
+
+            click: function() {
+              layer.bindPopup("<a href='#/menu/zone-detail2/"+feature.properties.kode15+"' class='a-popup'>"+ feature.properties.kategori + "</a>");
+            }
+          })
+        }
+  });
 
   /**
    * Center map on user's current position
@@ -186,7 +178,7 @@ angular.module('app.controllers', [])
       .then(function (position) {
         $scope.map.center.lat  = position.coords.latitude;
         $scope.map.center.lng = position.coords.longitude;
-        $scope.map.center.zoom = 17;
+        $scope.map.center.zoom = 16;
 
         $scope.map.markers.now = {
           lat:position.coords.latitude,
