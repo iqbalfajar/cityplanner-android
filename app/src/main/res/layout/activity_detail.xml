@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.muzavan.userpc.cityplanner.DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/detail_group_title"
+            android:text="Overview" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:background="#EF473A"
+                    android:paddingLeft="0dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:text="K3" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Zona" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Perdagangan dan Jasa" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Sub Zona" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Perdagangan dan Jasa Linier" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/detail_group_title"
+            android:text="Aturan" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:layout_weight="15"
+                    android:text="Koefisien Dasar Bangunan (KDB)" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:gravity="right"
+                    android:paddingRight="20dp"
+                    android:text="70%" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:layout_weight="15"
+                    android:text="Koefisien Luas Bangunan (KLB)" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:gravity="right"
+                    android:paddingRight="20dp"
+                    android:text="2.1" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:layout_weight="15"
+                    android:text="Koefisien Dasar Hijau (KDH)" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:gravity="right"
+                    android:paddingRight="20dp"
+                    android:text="20%" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/detail_group_title"
+            android:text="Tata Bangunan" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="K3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Zona" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Perdagangan dan Jasa" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Sub Zona" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Perdagangan dan Jasa Linier" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    style="@style/detail_group_caption"
+                    android:text="Kode Peraturan" />
+
+                <TextView
+                    style="@style/detail_group_desc"
+                    android:text="Diizinkan(I)" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

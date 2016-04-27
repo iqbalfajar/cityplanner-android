@@ -1,5 +1,6 @@
 package com.muzavan.userpc.cityplanner;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
@@ -11,7 +12,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class CityActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -44,9 +47,10 @@ public class CityActivity extends AppCompatActivity
         // Set Default Fragment
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        CityBuildFragment cityBuildFragment = new CityBuildFragment();
-        fragmentTransaction.replace(R.id.main_layout,cityBuildFragment).commit();
+        cityBuildFragment = new CityBuildFragment();
+        cityWatchFragment = new CityWatchFragment();
 
+        fragmentTransaction.replace(R.id.main_layout,cityBuildFragment).commit();
     }
 
     @Override
