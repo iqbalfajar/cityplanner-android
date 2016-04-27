@@ -1,13 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Contoh-1"
-        android:id="@+id/textView"
-        android:layout_gravity="center_horizontal" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="MapBox"
+            android:textSize="13pt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:gravity="center"
+        android:background="@color/city_build_tab_color"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/tab_item_layout"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/tab_item_image"
+                android:src="@drawable/rumah" />
+
+            <TextView
+                style="@style/tab_item_text"
+                android:text="Rumah" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/tab_item_layout"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/tab_item_image"
+                android:src="@drawable/minimarket" />
+
+            <TextView
+                style="@style/tab_item_text"
+                android:text="Minimarket" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/tab_item_layout"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/tab_item_image"
+                android:src="@drawable/hotel" />
+
+            <TextView
+                style="@style/tab_item_text"
+                android:text="Hotel" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/tab_item_layout"
+            android:orientation="vertical">
+
+            <ImageView
+                style="@style/tab_item_image"
+                android:src="@drawable/restoran" />
+
+            <TextView
+                style="@style/tab_item_text"
+                android:text="Restoran" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 </LinearLayout>

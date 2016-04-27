@@ -3,4 +3,5 @@
     <color name="colorPrimary">#313FA0</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="city_build_tab_color">#2b2829</color>
 </resources>
