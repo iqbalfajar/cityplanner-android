@@ -19,6 +19,7 @@ import java.util.ArrayList;
  */
 public class CityWatchFragment extends Fragment {
     public ArrayList<Integer> selectedZona = new ArrayList<>();
+    final CharSequence[] items = {"Permukiman","Perdagangan dan Jasa","Perkantoran","Sarana Pelayanan Umum","Pertahanan dan Keamanan","Lindung Alami"};
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,11 +37,17 @@ public class CityWatchFragment extends Fragment {
         filterZona.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final CharSequence[] items = {"Permukiman","Perdagangan dan Jasa","Perkantoran","Sarana Pelayanan Umum","Pertahanan dan Keamanan","Lindung Alami"};
-                final ArrayList<Integer> selectedZonas = new ArrayList<>();
+                // To make list of selections before already checked
+                boolean[] selectedBefore = new boolean[items.length];
+                for(int i=0 ; i<selectedBefore.length;i++){
+                    selectedBefore[i] = selectedZona.contains(i) ? true : false;
+                }
+
+                //Create Dialog
+                final ArrayList<Integer> selectedZonas = new ArrayList<>(); //temporary variable for selected zona (before user commit aka press OK)
                 AlertDialog dialog = new AlertDialog.Builder(getContext())
                         .setTitle("Select The Difficulty Level")
-                        .setMultiChoiceItems(items, null, new DialogInterface.OnMultiChoiceClickListener() {
+                        .setMultiChoiceItems(items, selectedBefore, new DialogInterface.OnMultiChoiceClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int indexSelected, boolean isChecked) {
                                 if (isChecked) {
