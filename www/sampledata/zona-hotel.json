@@ -5,36 +5,11 @@
       "Zona":"Campuran",
       "Subzona":"Campuran Intensitas Tinggi",
       "Syarat":"T1, B3",
-      "Keterangan Syarat":"Dibatasi jumlahnya, Wajib menyediakan prasarana minimal sesuai ketentuan (misalnya : parkir, pengolahan limbah, dll)",
+      "KeteranganSyarat":"Dibatasi jumlahnya, Wajib menyediakan prasarana minimal sesuai ketentuan (misalnya : parkir, pengolahan limbah, dll)",
       "KDB":"65%",
       "KLB":6.5,
       "KDH":"30%",
-      "TataBangunan":"(a) GSB minimum = ½ x lebar rumija: - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 100.000 m2. - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. (b) GSB samping dan\nbelakang diatur
-berdasarkan
-pertimbangan
-keselamatan,
-estetika atau
-karakter kawasan
-yang ingin
-dibentuk,
-minimum 4
-meter.
-(c) Kegiatan
-campuran tinggi
-dan sedang
-hanya
-diperbolehkan
-dibangun pada
-sisi jalan dengan
-lebar Rumija
-eksisting 12
-meter.
-(d) KTB Maks =
-100%-KDH dan
-tidak
-diperkenankan di
-bawah RTH
-"
+      "TataBangunan":"(a) GSB minimum = ½ x lebar rumija: - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 100.000 m2. - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. (b) GSB samping dan\nbelakang diatur berdasarkan pertimbangan keselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. (c) Kegiatan campuran tinggi dan sedang hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 12 meter. (d) KTB Maks = 100%-KDH dan tidak diperkenankan di bawah RTH "
    },
    {
       "FID":7,
@@ -42,7 +17,7 @@ bawah RTH
       "Zona":"Industri dan Pergudangan",
       "Subzona":"Industri",
       "Syarat":"T1",
-      "Keterangan Syarat":"Dibatasi jumlahnya",
+      "KeteranganSyarat":"Dibatasi jumlahnya",
       "KDB":"60%",
       "KLB":1.2,
       "KDH":"10%",
@@ -54,12 +29,11 @@ bawah RTH
       "Zona":"Perdagangan dan Jasa",
       "Subzona":"Pusat Perdagangan dan Jasa",
       "Syarat":"I",
-      "Keterangan Syarat":"Diizinkan",
+      "KeteranganSyarat":"Diizinkan",
       "KDB":"70%",
       "KLB":3.5,
       "KDH":"20%",
-      "TataBangunan":"(a) Pusat Belanja, hotel dan perkantoran: GSB minimum = ½ x lebar rumija: - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 80.000 m2. - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. - Jalan Lokal/ Lingkungan: minimum 8 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 20.000 m2. (b) Shopping street yang menyediakan parkir basemen atau bangunan parkir: GSB minimum 0 meter (c) GSB samping dan belakang diatur berdasarkan pertimbangan keselamatan, estetika atau\nkarakter kawasan yang ingin dibentuk, minimum 4 meter. (d) KTB Maks = 100% -KDH dan tidak diperkenankan di bawah RTH
-"
+      "TataBangunan":"(a) Pusat Belanja, hotel dan perkantoran: GSB minimum = ½ x lebar rumija: - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 80.000 m2. - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. - Jalan Lokal/ Lingkungan: minimum 8 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 20.000 m2. (b) Shopping street yang menyediakan parkir basemen atau bangunan parkir: GSB minimum 0 meter (c) GSB samping dan belakang diatur berdasarkan pertimbangan keselamatan, estetika atau\nkarakter kawasan yang ingin dibentuk, minimum 4 meter. (d) KTB Maks = 100% -KDH dan tidak diperkenankan di bawah RTH "
    },
    {
       "FID":1,
@@ -67,12 +41,11 @@ bawah RTH
       "Zona":"Perdagangan dan Jasa",
       "Subzona":"Perdagangan dan Jasa Linier",
       "Syarat":"I",
-      "Keterangan Syarat":"Diizinkan",
+      "KeteranganSyarat":"Diizinkan",
       "KDB":"70%",
       "KLB":2.1,
       "KDH":"20%",
-      "TataBangunan":"(a) Pusat Belanja, hotel dan perkantoran: GSB minimum = ½ x lebar rumija: - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 80.000 m2. - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. - Jalan Lokal/ Lingkungan: minimum 8 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 20.000 m2. (b) Shopping street yang menyediakan parkir basemen atau bangunan parkir: GSB minimum 0 meter (c) GSB samping dan belakang diatur berdasarkan pertimbangan keselamatan, estetika atau\nkarakter kawasan yang ingin dibentuk, minimum 4 meter. (d) KTB Maks = 100% -KDH dan tidak diperkenankan di bawah RTH
-"
+      "TataBangunan":"(a) Pusat Belanja, hotel dan perkantoran: GSB minimum = ½ x lebar rumija: - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 80.000 m2. - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. - Jalan Lokal/ Lingkungan: minimum 8 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 20.000 m2. (b) Shopping street yang menyediakan parkir basemen atau bangunan parkir: GSB minimum 0 meter (c) GSB samping dan belakang diatur berdasarkan pertimbangan keselamatan, estetika atau\nkarakter kawasan yang ingin dibentuk, minimum 4 meter. (d) KTB Maks = 100% -KDH dan tidak diperkenankan di bawah RTH "
    },
    {
       "FID":8,
@@ -80,12 +53,11 @@ bawah RTH
       "Zona":"Perdagangan dan Jasa",
       "Subzona":"Pasar Tradisional",
       "Syarat":"B3",
-      "Keterangan Syarat":"Wajib menyediakan prasarana minimal sesuai ketentuan (misalnya : parkir, pengolahan limbah, dll)",
+      "KeteranganSyarat":"Wajib menyediakan prasarana minimal sesuai ketentuan (misalnya : parkir, pengolahan limbah, dll)",
       "KDB":"60%",
       "KLB":2.4,
       "KDH":"20%",
-      "TataBangunan":"(a) Pusat Belanja, hotel dan perkantoran: GSB minimum = ½ x lebar rumija: - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 80.000 m2. - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. - Jalan Lokal/ Lingkungan: minimum 8 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 20.000 m2. (b) Shopping street yang menyediakan parkir basemen atau bangunan parkir: GSB minimum 0 meter (c) GSB samping dan belakang diatur berdasarkan pertimbangan keselamatan, estetika atau\nkarakter kawasan yang ingin dibentuk, minimum 4 meter. (d) KTB Maks = 100% -KDH dan tidak diperkenankan di bawah RTH
-"
+      "TataBangunan":"(a) Pusat Belanja, hotel dan perkantoran: GSB minimum = ½ x lebar rumija: - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 80.000 m2. - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. - Jalan Lokal/ Lingkungan: minimum 8 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 20.000 m2. (b) Shopping street yang menyediakan parkir basemen atau bangunan parkir: GSB minimum 0 meter (c) GSB samping dan belakang diatur berdasarkan pertimbangan keselamatan, estetika atau\nkarakter kawasan yang ingin dibentuk, minimum 4 meter. (d) KTB Maks = 100% -KDH dan tidak diperkenankan di bawah RTH "
    },
    {
       "FID":4,
@@ -93,12 +65,11 @@ bawah RTH
       "Zona":"Pertahanan dan Keamanan",
       "Subzona":"Pertahanan dan Keamanan",
       "Syarat":"B3",
-      "Keterangan Syarat":"Wajib menyediakan prasarana minimal sesuai ketentuan (misalnya : parkir, pengolahan limbah, dll)",
+      "KeteranganSyarat":"Wajib menyediakan prasarana minimal sesuai ketentuan (misalnya : parkir, pengolahan limbah, dll)",
       "KDB":"60%",
       "KLB":1.8,
       "KDH":"25%",
-      "TataBangunan":"(a) GSB mempertimbangkan aspek keselamatan dan kebisingan suara dan minimum = ½ x lebar rumija;\n(b) Pergudangan senjata/peluru maupun kegiatan tembak-menembak dan sejenisnya harus dilengkapi pengaman.
-(c) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan."
+      "TataBangunan":"(a) GSB mempertimbangkan aspek keselamatan dan kebisingan suara dan minimum = ½ x lebar rumija;\n(b) Pergudangan senjata/peluru maupun kegiatan tembak-menembak dan sejenisnya harus dilengkapi pengaman. (c) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan."
    },
    {
       "FID":6,
@@ -106,7 +77,7 @@ bawah RTH
       "Zona":"Wisata",
       "Subzona":"Wisata Buatan",
       "Syarat":"I",
-      "Keterangan Syarat":"Diizinkan",
+      "KeteranganSyarat":"Diizinkan",
       "KDB":"40%",
       "KLB":1.2,
       "KDH":"40%",
@@ -118,7 +89,7 @@ bawah RTH
       "Zona":"Sarana Pelayanan Umum",
       "Subzona":"Transportasi",
       "Syarat":"B3",
-      "Keterangan Syarat":"Wajib menyediakan prasarana minimal sesuai ketentuan (misalnya : parkir, pengolahan limbah, dll)",
+      "KeteranganSyarat":"Wajib menyediakan prasarana minimal sesuai ketentuan (misalnya : parkir, pengolahan limbah, dll)",
       "KDB":"60%",
       "KLB":1.8,
       "KDH":"20%",
@@ -130,7 +101,7 @@ bawah RTH
       "Zona":"Sarana Pelayanan Umum",
       "Subzona":"Pendidikan",
       "Syarat":"B3",
-      "Keterangan Syarat":"Wajib menyediakan prasarana minimal sesuai ketentuan (misalnya : parkir, pengolahan limbah, dll)",
+      "KeteranganSyarat":"Wajib menyediakan prasarana minimal sesuai ketentuan (misalnya : parkir, pengolahan limbah, dll)",
       "KDB":"60%",
       "KLB":3,
       "KDH":"20%",
@@ -142,7 +113,7 @@ bawah RTH
       "Zona":"Sarana Pelayanan Umum",
       "Subzona":"Kesehatan",
       "Syarat":"B3",
-      "Keterangan Syarat":"Wajib menyediakan prasarana minimal sesuai ketentuan (misalnya : parkir, pengolahan limbah, dll)",
+      "KeteranganSyarat":"Wajib menyediakan prasarana minimal sesuai ketentuan (misalnya : parkir, pengolahan limbah, dll)",
       "KDB":"50%",
       "KLB":1.8,
       "KDH":"25%",
