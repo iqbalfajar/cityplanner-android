@@ -78,7 +78,7 @@ angular.module('app.controllers', [])
     center: {
         lat: -6.9003,
         lng: 107.6203,
-        zoom: 16
+        zoom: 14
     },
     layers: {
         baselayers: {
@@ -143,15 +143,15 @@ angular.module('app.controllers', [])
   $scope.show.Perdagangan_Jasa_Linier = false;
   $scope.show.Pertahanan_Keamanan = true;
   $scope.show.Perumahan_Kepadatan_Rendah = true;  
-  $scope.show.Perumahan_Kepadatan_Sedang = true;
-  $scope.show.Perumahan_Kepadatan_Tinggi = true;
+  $scope.show.Perumahan_Kepadatan_Sedang = false;
+  $scope.show.Perumahan_Kepadatan_Tinggi = false;
   // Load geojson
   $scope.loadAllGeojson = function () {
     // $scope.loadGeojson('Perdagangan_Jasa_Linier','rgba(255,61,0,72)', $scope.show.Perdagangan_Jasa_Linier);
     $scope.loadGeojson('Pertahanan_Keamanan','rgba(129,95,51,10)', $scope.show.Pertahanan_Keamanan);
     $scope.loadGeojson('Perumahan_Kepadatan_Rendah','rgba(55,148,179,1)', $scope.show.Perumahan_Kepadatan_Rendah);
-    $scope.loadGeojson('Perumahan_Kepadatan_Sedang','rgba(255,171,64,25)', $scope.show.Perumahan_Kepadatan_Sedang);
-    $scope.loadGeojson('Perumahan_Kepadatan_Tinggi','rgba(255,193,7,14)', $scope.show.Perumahan_Kepadatan_Tinggi);
+    // $scope.loadGeojson('Perumahan_Kepadatan_Sedang','rgba(255,171,64,25)', $scope.show.Perumahan_Kepadatan_Sedang);
+    // $scope.loadGeojson('Perumahan_Kepadatan_Tinggi','rgba(255,193,7,14)', $scope.show.Perumahan_Kepadatan_Tinggi);
   };
   //Load geojson
   $scope.loadAllGeojson();
@@ -231,7 +231,7 @@ angular.module('app.controllers', [])
     center: {
         lat: -6.9003,
         lng: 107.6203,
-        zoom: 16
+        zoom: 14
     },
     layers: {
         baselayers: {
@@ -295,7 +295,7 @@ angular.module('app.controllers', [])
   $scope.show = {};
   $scope.show.Campuran_Intensitas_Tinggi = true;
   $scope.show.Pendidikan = true;
-  $scope.show.Perdagangan_Jasa_Linier = true;
+  $scope.show.Perdagangan_Jasa_Linier = false;
   $scope.show.Pertahanan_Keamanan = true;
   $scope.show.Pusat_Perdagangan_Jasa = true;
   $scope.show.Wisata_Buatan = true;
@@ -303,7 +303,7 @@ angular.module('app.controllers', [])
   $scope.loadAllGeojson = function () {
     $scope.loadGeojson('Campuran_Intensitas_Tinggi','rgba(255,139,253,56)', $scope.show.Campuran_Intensitas_Tinggi);
     $scope.loadGeojson('Pendidikan','rgba(245,124,0,44)', $scope.show.Pendidikan);
-    $scope.loadGeojson('Perdagangan_Jasa_Linier','rgba(255,61,0,72)', $scope.show.Perdagangan_Jasa_Linier);
+    // $scope.loadGeojson('Perdagangan_Jasa_Linier','rgba(255,61,0,72)', $scope.show.Perdagangan_Jasa_Linier);
     $scope.loadGeojson('Pertahanan_Keamanan','rgba(255,195,0,13)', $scope.show.Pertahanan_Keamanan);
     $scope.loadGeojson('Pusat_Perdagangan_Jasa','rgba(249,0,0,79)', $scope.show.Pusat_Perdagangan_Jasa);
     $scope.loadGeojson('Wisata_Buatan','rgba(197,0,255,84)', $scope.show.Wisata_Buatan);
@@ -386,7 +386,7 @@ angular.module('app.controllers', [])
     center: {
         lat: -6.9003,
         lng: 107.6203,
-        zoom: 16
+        zoom: 14
     },
     layers: {
         baselayers: {
@@ -541,7 +541,7 @@ angular.module('app.controllers', [])
     center: {
         lat: -6.9003,
         lng: 107.6203,
-        zoom: 16
+        zoom: 14
     },
     layers: {
         baselayers: {
