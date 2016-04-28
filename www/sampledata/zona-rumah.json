@@ -1,6 +1,5 @@
 [
    {
-      "FID":1,
       "Kode":"C1",
       "Zona":"Campuran",
       "Subzona":"Campuran Intensitas Tinggi",
@@ -9,10 +8,9 @@
       "KDB":"65%",
       "KLB":6.5,
       "KDH":"30%",
-      "TataBangunan":"(a) GSB minimum = 1/2 x lebar rumija: - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 100.000 m2. - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. (b) GSB samping dan belakang diatur berdasarkan pertimbangan keselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter.(c) Kegiatancampuran tinggidan sedanghanyadiperbolehkandibangun padasisi jalan denganlebar Rumijaeksisting 12meter.(d) KTB Maks =100%-KDH dantidakdiperkenankan dibawah RTH"
+      "TataBangunan":"(a) GSB minimum = ½ x lebar rumija: <br> - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 100.000 m2. <br> - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. <br> (b) GSB samping dan belakang diatur berdasarkan pertimbangan keselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. <br> (c) Kegiatan campuran tinggi dan sedang hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 12 meter. <br> (d) KTB Maks = 100%-KDH dan tidak diperkenankan di bawah RTH "
    },
    {
-      "FID":3,
       "Kode":"HK",
       "Zona":"Pertahanan dan Keamanan",
       "Subzona":"Pertahanan dan Keamanan",
@@ -21,10 +19,9 @@
       "KDB":"60%",
       "KLB":1.8,
       "KDH":"25%",
-      "TataBangunan":"(a) GSB mempertimbangkan aspek keselamatan dan kebisingan suara dan minimum = 1/2 x lebar rumija; (b) Pergudangan senjata/peluru maupun kegiatan tembak-menembak dan sejenisnya harus dilengkapi pengaman. (c) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan."
+      "TataBangunan":"(a) GSB mempertimbangkan aspek keselamatan dan kebisingan suara dan minimum = ½ x lebar rumija; <br> (b) Pergudangan senjata/peluru maupun kegiatan tembak-menembak dan sejenisnya harus dilengkapi pengaman. <br> (c) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan."
    },
    {
-      "FID":9,
       "Kode":"I",
       "Zona":"Industri dan Pergudangan",
       "Subzona":"Industri",
@@ -33,10 +30,9 @@
       "KDB":"60%",
       "KLB":1.2,
       "KDH":"10%",
-      "TataBangunan":"(a) GSB mempertimbangkan aspek keselamatan dan kenyamanan; atau GSB minimum = 1/2 x lebar rumija<br>(b) Tinggi bangunan maksimum mempertimbangk an daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek Keselamatan penghuni, pekerja dan masyarakat sekitarnya"
+      "TataBangunan":"(a) GSB mempertimbangk an aspek keselamatan dan kenyamanan; atau <br> GSB minimum = ½ x lebar rumija <br> (b) Tinggi bangunan maksimum mempertimbangk an daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek Keselamatan penghuni, pekerja dan masyarakat sekitarnya"
    },
    {
-      "FID":6,
       "Kode":"K2",
       "Zona":"Perdagangan dan Jasa",
       "Subzona":"Pusat Perdagangan dan Jasa",
@@ -45,10 +41,9 @@
       "KDB":"70%",
       "KLB":3.5,
       "KDH":"20%",
-      "TataBangunan":"(a) Pusat Belanja, hotel dan perkantoran: GSB minimum = 1/2 x lebar rumija: - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 80.000 m2. - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. - Jalan Lokal/ Lingkungan: minimum 8 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 20.000 m2. (b) Shopping street yang menyediakan parkir basemen atau bangunan parkir: GSB minimum 0 meter (c) GSB samping dan belakang diatur berdasarkan pertimbangan keselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. (d) KTB Maks = 100% -KDH dan tidak diperkenankan di bawah RTH"
+      "TataBangunan":"(a) Pusat Belanja, hotel dan perkantoran: <br> GSB minimum = ½ x lebar rumija: <br> - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 80.000 m2. <br> - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. <br> - Jalan Lokal/ Lingkungan: minimum 8 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 20.000 m2. <br> (b) Shopping street yang menyediakan parkir basemen atau bangunan parkir: GSB minimum 0 meter <br> (c) GSB samping dan belakang diatur berdasarkan pertimbangan keselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. <br> (d) KTB Maks = 100% -KDH dan tidak diperkenankan di bawah RTH "
    },
    {
-      "FID":0,
       "Kode":"K3",
       "Zona":"Perdagangan dan Jasa",
       "Subzona":"Perdagangan dan Jasa Linier",
@@ -57,10 +52,9 @@
       "KDB":"70%",
       "KLB":2.1,
       "KDH":"20%",
-      "TataBangunan":"(a) Pusat Belanja, hotel dan perkantoran: GSB minimum = 1/2 x lebar rumija: - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 80.000 m2. - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. - Jalan Lokal/ Lingkungan: minimum 8 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 20.000 m2. (b) Shopping street yang menyediakan parkir basemen atau bangunan parkir: GSB minimum 0 meter (c) GSB samping dan belakang diatur berdasarkan pertimbangan keselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. (d) KTB Maks = 100% -KDH dan tidak diperkenankan di bawah RTH"
+      "TataBangunan":"(a) Pusat Belanja, hotel dan perkantoran: <br> GSB minimum = ½ x lebar rumija: <br> - Jalan Arteri: minimum 15 meter, yang dipergunakan sebagai RTNH (plaza). Luas lantai maksimum 80.000 m2. <br> - Jalan Kolektor: minimum 10 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 40.000 m2. <br> - Jalan Lokal/ Lingkungan: minimum 8 meter, yang dipergunakan sebagai RTNH (plaza) atau parkir. Luas lantai maksimum 20.000 m2. <br> (b) Shopping street yang menyediakan parkir basemen atau bangunan parkir: GSB minimum 0 meter <br> (c) GSB samping dan belakang diatur berdasarkan pertimbangan keselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. <br> (d) KTB Maks = 100% -KDH dan tidak diperkenankan di bawah RTH "
    },
    {
-      "FID":2,
       "Kode":"R1.1",
       "Zona":"Perumahan Kepadatan Tinggi",
       "Subzona":"Perumahan Kepadatan Tinggi",
@@ -69,10 +63,9 @@
       "KDB":"40%",
       "KLB":3.6,
       "KDH":"40%",
-      "TataBangunan":"(a) GSB mempertimbangk an aspek keselamatan dan kebisingan suara, (b) GSB minimum = 1/2 x lebar rumija Bangunan tinggi GSB minimum = 1/2 x lebar rumija: - Jalan Arteri:minimum 20 meter yang dipergunakan sebagai RTNH (plaza) - Jalan Kolektor: minimum 12 meter yang dipergunakan sebagai RTNH (plaza) atau parkir (c) Untuk kapling kurang dari 60 m2, GSB sekurangkurangnya 2 m. (d) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan penghuni. (e) Perumahanvertikal tinggi dan sedang hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 12 meter. (f) Perumahan vertikal rendah hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 8 meter. (g) GSB samping dan belakang diatur berdasarkan pertimbangankeselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. (h) Lebar persil minimum yang berada di sisi jalan arteri dan kolektor minimum 10 meter. "
+      "TataBangunan":"(a) GSB mempertimbangkan aspek keselamatan dan kebisingan suara, <br> (b) GSB minimum = ½ x lebar rumija Bangunan tinggi GSB minimum = ½ x lebar rumija: <br> - Jalan Arteri:minimum 20 meter yang dipergunakan sebagai RTNH (plaza) <br> - Jalan Kolektor: minimum 12 meter yang dipergunakan sebagai RTNH (plaza) atau parkir <br> (c) Untuk kapling kurang dari 60 m2, GSB sekurangkurangnya 2 m. <br> (d) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan penghuni. <br> (e) Perumahan vertikal tinggi dan sedang hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 12 meter. <br> (f) Perumahan vertikal rendah hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 8 meter. <br> (g) GSB samping dan belakang diatur berdasarkan pertimbangankeselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. <br> (h) Lebar persil minimum yang berada di sisi jalan arteri dan kolektor minimum 10 meter. "
    },
    {
-      "FID":4,
       "Kode":"R1.2",
       "Zona":"Perumahan Kepadatan Tinggi",
       "Subzona":"Perumahan Kepadatan Tinggi",
@@ -81,10 +74,9 @@
       "KDB":"40%",
       "KLB":2.4,
       "KDH":"40%",
-      "TataBangunan":"(a) GSB mempertimbangk an aspek keselamatan dan kebisingan suara, (b) GSB minimum = 1/2 x lebar rumija Bangunan tinggi GSB minimum = 1/2 x lebar rumija: - Jalan Arteri:minimum 20 meter yang dipergunakan sebagai RTNH (plaza) - Jalan Kolektor: minimum 12 meter yang dipergunakan sebagai RTNH (plaza) atau parkir (c) Untuk kapling kurang dari 60 m2, GSB sekurangkurangnya 2 m. (d) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan penghuni. (e) Perumahanvertikal tinggi dan sedang hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 12 meter. (f) Perumahan vertikal rendah hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 8 meter. (g) GSB samping dan belakang diatur berdasarkan pertimbangankeselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. (h) Lebar persil minimum yang berada di sisi jalan arteri dan kolektor minimum 10 meter. "
+      "TataBangunan":"(a) GSB mempertimbangkan aspek keselamatan dan kebisingan suara, <br> (b) GSB minimum = ½ x lebar rumija Bangunan tinggi GSB minimum = ½ x lebar rumija: <br> - Jalan Arteri:minimum 20 meter yang dipergunakan sebagai RTNH (plaza) <br> - Jalan Kolektor: minimum 12 meter yang dipergunakan sebagai RTNH (plaza) atau parkir <br> (c) Untuk kapling kurang dari 60 m2, GSB sekurangkurangnya 2 m. <br> (d) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan penghuni. <br> (e) Perumahan vertikal tinggi dan sedang hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 12 meter. <br> (f) Perumahan vertikal rendah hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 8 meter. <br> (g) GSB samping dan belakang diatur berdasarkan pertimbangankeselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. <br> (h) Lebar persil minimum yang berada di sisi jalan arteri dan kolektor minimum 10 meter. "
    },
    {
-      "FID":7,
       "Kode":"R1.3",
       "Zona":"Perumahan Kepadatan Tinggi",
       "Subzona":"Perumahan Kepadatan Tinggi",
@@ -93,10 +85,9 @@
       "KDB":"60%",
       "KLB":1.2,
       "KDH":"10%",
-      "TataBangunan":"(a) GSB mempertimbangk an aspek keselamatan dan kebisingan suara, (b) GSB minimum = 1/2 x lebar rumija Bangunan tinggi GSB minimum = 1/2 x lebar rumija: - Jalan Arteri:minimum 20 meter yang dipergunakan sebagai RTNH (plaza) - Jalan Kolektor: minimum 12 meter yang dipergunakan sebagai RTNH (plaza) atau parkir (c) Untuk kapling kurang dari 60 m2, GSB sekurangkurangnya 2 m. (d) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan penghuni. (e) Perumahanvertikal tinggi dan sedang hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 12 meter. (f) Perumahan vertikal rendah hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 8 meter. (g) GSB samping dan belakang diatur berdasarkan pertimbangankeselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. (h) Lebar persil minimum yang berada di sisi jalan arteri dan kolektor minimum 10 meter. "
+      "TataBangunan":"(a) GSB mempertimbangkan aspek keselamatan dan kebisingan suara, <br> (b) GSB minimum = ½ x lebar rumija Bangunan tinggi GSB minimum = ½ x lebar rumija: <br> - Jalan Arteri:minimum 20 meter yang dipergunakan sebagai RTNH (plaza) <br> - Jalan Kolektor: minimum 12 meter yang dipergunakan sebagai RTNH (plaza) atau parkir <br> (c) Untuk kapling kurang dari 60 m2, GSB sekurangkurangnya 2 m. <br> (d) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan penghuni. <br> (e) Perumahan vertikal tinggi dan sedang hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 12 meter. <br> (f) Perumahan vertikal rendah hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 8 meter. <br> (g) GSB samping dan belakang diatur berdasarkan pertimbangankeselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. <br> (h) Lebar persil minimum yang berada di sisi jalan arteri dan kolektor minimum 10 meter. "
    },
    {
-      "FID":5,
       "Kode":"R2.2",
       "Zona":"Perumahan Kepadatan Sedang",
       "Subzona":"Perumahan Kepadatan Sedang",
@@ -105,10 +96,9 @@
       "KDB":"60%",
       "KLB":1.2,
       "KDH":"10%",
-      "TataBangunan":"(a) GSB mempertimbangk an aspek keselamatan dan kebisingan suara, (b) GSB minimum = 1/2 x lebar rumija Bangunan tinggi GSB minimum = 1/2 x lebar rumija: - Jalan Arteri:minimum 20 meter yang dipergunakan sebagai RTNH (plaza) - Jalan Kolektor: minimum 12 meter yang dipergunakan sebagai RTNH (plaza) atau parkir (c) Untuk kapling kurang dari 60 m2, GSB sekurangkurangnya 2 m. (d) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan penghuni. (e) Perumahanvertikal tinggi dan sedang hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 12 meter. (f) Perumahan vertikal rendah hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 8 meter. (g) GSB samping dan belakang diatur berdasarkan pertimbangankeselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. (h) Lebar persil minimum yang berada di sisi jalan arteri dan kolektor minimum 10 meter. "
+      "TataBangunan":"(a) GSB mempertimbangkan aspek keselamatan dan kebisingan suara, <br> (b) GSB minimum = ½ x lebar rumija Bangunan tinggi GSB minimum = ½ x lebar rumija: <br> - Jalan Arteri:minimum 20 meter yang dipergunakan sebagai RTNH (plaza) <br> - Jalan Kolektor: minimum 12 meter yang dipergunakan sebagai RTNH (plaza) atau parkir <br> (c) Untuk kapling kurang dari 60 m2, GSB sekurangkurangnya 2 m. <br> (d) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan penghuni. <br> (e) Perumahan vertikal tinggi dan sedang hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 12 meter. <br> (f) Perumahan vertikal rendah hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 8 meter. <br> (g) GSB samping dan belakang diatur berdasarkan pertimbangankeselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. <br> (h) Lebar persil minimum yang berada di sisi jalan arteri dan kolektor minimum 10 meter. "
    },
    {
-      "FID":8,
       "Kode":"R3",
       "Zona":"Perumahan Kepadatan Rendah",
       "Subzona":"Perumahan Kepadatan Rendah",
@@ -117,6 +107,6 @@
       "KDB":"50%",
       "KLB":1,
       "KDH":"20%",
-      "TataBangunan":"(a) GSB mempertimbangk an aspek keselamatan dan kebisingan suara, (b) GSB minimum = 1/2 x lebar rumija Bangunan tinggi GSB minimum = 1/2 x lebar rumija: - Jalan Arteri:minimum 20 meter yang dipergunakan sebagai RTNH (plaza) - Jalan Kolektor: minimum 12 meter yang dipergunakan sebagai RTNH (plaza) atau parkir (c) Untuk kapling kurang dari 60 m2, GSB sekurangkurangnya 2 m. (d) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan penghuni. (e) Perumahanvertikal tinggi dan sedang hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 12 meter. (f) Perumahan vertikal rendah hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 8 meter. (g) GSB samping dan belakang diatur berdasarkan pertimbangankeselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. (h) Lebar persil minimum yang berada di sisi jalan arteri dan kolektor minimum 10 meter. "
+      "TataBangunan":"(a) GSB mempertimbangkan aspek keselamatan dan kebisingan suara, <br> (b) GSB minimum = ½ x lebar rumija Bangunan tinggi GSB minimum = ½ x lebar rumija: <br> - Jalan Arteri:minimum 20 meter yang dipergunakan sebagai RTNH (plaza) <br> - Jalan Kolektor: minimum 12 meter yang dipergunakan sebagai RTNH (plaza) atau parkir <br> (c) Untuk kapling kurang dari 60 m2, GSB sekurangkurangnya 2 m. <br> (d) Tinggi bangunan maksimum mempertimbangkan daya dukung lahan, kawasan keselamatan operasi penerbangan serta mempertimbangkan aspek keselamatan penghuni. <br> (e) Perumahan vertikal tinggi dan sedang hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 12 meter. <br> (f) Perumahan vertikal rendah hanya diperbolehkan dibangun pada sisi jalan dengan lebar Rumija eksisting 8 meter. <br> (g) GSB samping dan belakang diatur berdasarkan pertimbangankeselamatan, estetika atau karakter kawasan yang ingin dibentuk, minimum 4 meter. <br> (h) Lebar persil minimum yang berada di sisi jalan arteri dan kolektor minimum 10 meter. "
    }
 ]
