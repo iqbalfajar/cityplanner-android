@@ -4,7 +4,7 @@
     </ion-nav-buttons>
 
     <ion-content overflow-scroll="true" padding="true" class="has-header" data-tap-disabled="true">
-      <leaflet defaults="map.defaults" center="map.center" markers="map.markers" layers="map.layers" geojson="map.geojson" geojson-nested="true" width="100%" height="90%"></leaflet>
+      <leaflet defaults="map.defaults" center="map.center" markers="map.markers" layers="map.layers" geojson="map.geojson" geojson-nested="true" width="100%" height="90%" ng-if="map"></leaflet>
 
       <div>
         <form class="list list-cw" id="filterForm" hidden>
