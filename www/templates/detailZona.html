@@ -13,12 +13,18 @@
           <div class="col col-33"><strong>Sub Zona</strong></div>
           <div class="col col-67">{{detail.Subzona}}</div>
         </div>
+
+        <div class="item item-divider">Ketentuan Kegiatan</div>
         <div class="row">
-          <div class="col col-33"><strong>Kode Peraturan</strong></div>
-          <div class="col col-67">{{detail.KeteranganSyarat}} ({{detail.Syarat}})</div>
+          <div class="col col-33"><strong>Status</strong></div>
+          <div class="col col-67">{{detail.Syarat}}</div>
+        </div>
+        <div class="row">
+          <div class="col col-33"><strong>Keterangan Status</strong></div>
+          <div class="col col-67">{{detail.KeteranganSyarat}}</div>
         </div>
 
-        <div class="item item-divider">Aturan</div>
+        <div class="item item-divider">Aturan Dasar</div>
         <div class="row">
           <div class="col col-75"><strong>Koefisien Dasar Bangunan (KDB)</strong></div>
           <div class="col col-25">{{detail.KDB}}</div>
@@ -31,8 +37,9 @@
           <div class="col col-75"><strong>Koefisien Dasar Hijau (KDH)</strong></div>
           <div class="col col-25">{{detail.KDH}}</div>
         </div>
-
-        <div class="item item-divider">Tata Bangunan</div>
+        <div class="row">
+          <div class="col col-75"><strong>Tata Bangunan</strong></div>
+        </div>
         <div class="row">
             <div class="col">
             <p collection-repeat="tatabangunan in tatabangunans">

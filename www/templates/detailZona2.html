@@ -30,10 +30,21 @@
               &nbsp&nbsp&nbsp&nbsp<img class="pointer" src="img/minimarket2.png" width="40" height="40" >
                 <br>
                 <strong>Minimarket</strong></div>
-            
         </div>
 
-        <div class="item item-divider">Aturan</div>
+        <div class="item item-divider">Ketentuan Kegiatan</div>
+        <div class="showmore" hidden>
+          <div class="row">
+            <div class="col col-33"><strong>Status</strong></div>
+            <div class="col col-67">{{detailKegiatan.Syarat}}</div>
+          </div>
+          <div class="row">
+            <div class="col col-33"><strong>Keterangan Status</strong></div>
+            <div class="col col-67">{{detailKegiatan.KeteranganSyarat}}</div>
+          </div>
+        </div>
+
+        <div class="item item-divider">Aturan Dasar</div>
         <div class="showmore" hidden>
           <div class="row" >
             <div class="col col-75"><strong>Koefisien Dasar Bangunan (KDB)</strong></div>
@@ -74,10 +85,9 @@
               </label>
             </div>
           </div>
-        </div>
-
-        <div class="item item-divider">Tata Bangunan</div>
-        <div class="showmore" hidden>
+          <div class="row">
+            <div class="col col-75"><strong>Tata Bangunan</strong></div>
+          </div>
           <div class="row aturan">
               <div class="col">
               <p ng-repeat="tatabangunan in tatabangunans">
