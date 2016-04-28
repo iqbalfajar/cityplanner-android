@@ -450,7 +450,7 @@ angular.module('app.controllers', [])
   $scope.show = {};
   $scope.show.Kantor_Pemerintahan = true;
   $scope.show.Pendidikan = true;
-  $scope.show.Perdagangan_Jasa_Linear = false;
+  $scope.show.Perdagangan_Jasa_Linier = false;
   $scope.show.Perumahan_Kepadatan_Tinggi = false;
   $scope.show.Pusat_Perdagangan_Jasa = true;
   $scope.show.Transportasi = true;
@@ -458,7 +458,7 @@ angular.module('app.controllers', [])
   $scope.loadAllGeojson = function () {
     $scope.loadGeojson('Kantor_Pemerintahan','rgba(255,139,253,56)', $scope.show.Kantor_Pemerintahan);
     $scope.loadGeojson('Pendidikan','rgba(245,124,0,44)', $scope.show.Pendidikan);
-    // $scope.loadGeojson('Perdagangan_Jasa_Linear','rgba(255,61,0,72)', $scope.show.Perdagangan_Jasa_Linear);
+    // $scope.loadGeojson('Perdagangan_Jasa_Linier','rgba(255,61,0,72)', $scope.show.Perdagangan_Jasa_Linier);
     // $scope.loadGeojson('Perumahan_Kepadatan_Tinggi','rgba(255,193,7,14)', $scope.show.Perumahan_Kepadatan_Tinggi);
     $scope.loadGeojson('Pusat_Perdagangan_Jasa','rgba(249,0,0,79)', $scope.show.Pusat_Perdagangan_Jasa);
     $scope.loadGeojson('Transportasi','rgba(255,195,0,13)', $scope.show.Transportasi);
@@ -534,6 +534,8 @@ angular.module('app.controllers', [])
     }
     $("#filterForm").css(style);
     $scope.toogle = function(){
+      console.log('Toggle');
+      console.log($scope.data.filterShow);
       $scope.data.filterShow = !$scope.data.filterShow;
       if($scope.data.filterShow){
         $("#filterForm").show();
