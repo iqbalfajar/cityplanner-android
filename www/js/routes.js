@@ -40,41 +40,35 @@ angular.module('app.routes', [])
     }
   })
 
-   // setup an abstract state for the tabs directive
-   .state('citybuild', {
-     url: "/citybuild",
-     abstract: true,
-     templateUrl: "templates/cityBuildTabs.html"
-   })
- 
-    // Each tab has its own nav history stack:
-   .state('citybuild.rumah', {
-     url: '/rumah',
-     views: {
-     'citybuild-rumah': {
-       templateUrl: 'templates/CityBuildRumah.html',
-       controller: 'cityBuilderCtrl'
-     }
-     }
-   })
-   .state('citybuild.minimarket', {
-     url: '/minimarket',
-     views: {
-     'citybuild-minimarket': {
-       templateUrl: 'templates/CityBuildMinimarket.html',
-       controller: 'cityBuilderCtrl'
-     }
-     }
-   })
-   .state('citybuild.hotel', {
-     url: '/hotel',
-     views: {
-     'citybuild-hotel': {
-       templateUrl: 'templates/CityBuildHotel.html',
-       controller: 'cityBuilderCtrl'
-     }
-     }
-   })
+  .state('menu.cityBuildRumah', {
+    url: '/citybuild/rumah',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/cityBuildRumah.html',
+        controller: 'cityBuildRumahCtrl'
+      }
+    }
+  })
+
+  .state('menu.cityBuildHotel', {
+    url: '/citybuild/hotel',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/cityBuildHotel.html',
+        controller: 'cityBuildHotelCtrl'
+      }
+    }
+  })
+
+  .state('menu.cityBuildMinimarket', {
+    url: '/citybuild/minimarket',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/cityBuildMinimarket.html',
+        controller: 'cityBuildMinimarketCtrl'
+      }
+    }
+  })
 
   .state('menu.cityWatch', {
     url: '/citywatch',
@@ -138,26 +132,6 @@ angular.module('app.routes', [])
       'side-menu21': {
         templateUrl: 'templates/formLaporanPelanggaran.html',
         controller: 'formLaporanPelanggaranCtrl'
-      }
-    }
-  })
-
-  .state('menu.map', {
-    url: '/map',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/map.html',
-        controller: 'mapCtrl'
-      }
-    }
-  })
-
-  .state('menu.leaflet', {
-    url: '/leaflet',
-    views: {
-      'side-menu21': {
-        templateUrl: 'templates/leaflet.html',
-        controller: 'leafletCtrl'
       }
     }
   })

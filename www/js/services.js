@@ -7,16 +7,16 @@ angular.module('app.services', [])
   svc.getZonaKegiatan = function(kegiatan){
   	switch (kegiatan) {
         case 'rumah':
-            return $http.get('sampledata/zona-rumah.json');
+            return $http.get('sampledata/zona/zona-rumah.json');
             break;
         case 'hotel':
-            return $http.get('sampledata/zona-hotel.json');
+            return $http.get('sampledata/zona/zona-hotel.json');
             break;
         case 'minimarket':
-            return $http.get('sampledata/zona-minimarket.json');
+            return $http.get('sampledata/zona/zona-minimarket.json');
             break;
         default:
-        	return $http.get('sampledata/zona-all.json');
+        	return $http.get('sampledata/zona/zona-all.json');
     }  	
   }
 

@@ -54,9 +54,490 @@ angular.module('app.controllers', [])
 
 })
 
-.controller('cityWatchCtrl', function($scope, Config, $sce, $cordovaGeolocation, $http, leafletMapEvents, leafletData) {
-  $scope.urlZonaAll = $sce.trustAsResourceUrl(Config.getUrlZonaAll());
+.controller('cityBuildRumahCtrl', function($scope, Config, $sce, $cordovaGeolocation, $http, leafletMapEvents, leafletData) {
+  $scope.data = { filterShow : false};
+  var style = {
+    top : ($("#citybuild-btn").position().top - ($("#filterForm").height()+60)) + "px",
+  }
+  $("#filterForm").css(style);
+  $scope.toogle = function(){
+    $scope.data.filterShow = !$scope.data.filterShow;
+    if($scope.data.filterShow){
+      $("#filterForm").show();
+    }
+    else{
+      $("#filterForm").hide();
+    }
+  }  
 
+  // Map Code
+  $scope.map = {
+    defaults: {
+      // maxZoom: 18,
+    },
+    center: {
+        lat: -6.9003,
+        lng: 107.6203,
+        zoom: 16
+    },
+    layers: {
+        baselayers: {
+            googleRoadmap: {
+                name: 'Streets',
+                layerType: 'ROADMAP',
+                type: 'google'
+            },
+            googleHybrid: {
+                name: 'Hybrid',
+                layerType: 'HYBRID',
+                type: 'google'
+            }, 
+        },
+        overlays: {           
+        },
+    },
+    geojson: {},
+    markers : {},
+    events: {
+      map: {
+        enable: ['click', 'context'],
+        logic: 'emit'
+      }
+    }    
+  };
+
+  // Get the layer geojson data from a JSON
+  $scope.loadGeojson = function (Kategori, fillColor, show) {
+      $http.get("sampledata/geojson/citywatch/"+Kategori+".geojson").success(function(data, status) {
+        $scope.map.geojson[Kategori] = {
+          data: data,
+          filter: function (feature) {
+              return show;
+          },
+          style: {
+                fillColor: fillColor,
+                weight: 1,
+                opacity: 0.4,
+                color: fillColor,
+                fillOpacity: 0.4
+          },
+          hoverStyle : {
+              fillOpacity: 0.6
+          },
+          onEachFeature: onEachFeature,
+          resetStyleOnMouseout: true
+        };
+
+        function onEachFeature(feature, layer) {
+            layer.on({
+
+              click: function() {
+                layer.bindPopup("<a href='#/menu/zone-detail2/"+feature.properties.kode15+"' class='a-popup'>"+ feature.properties.kategori + "</a>");
+              }
+            })
+          }
+    });
+  };
+
+  $scope.show = {};
+  $scope.show.Kantor_Pemerintahan = true;
+  $scope.show.Kesehatan = true;
+  $scope.show.Pendidikan = true;
+  $scope.show.Perdagangan_Jasa_Linear = false;
+  $scope.show.Peribadatan = true;
+  $scope.show.Perumahan_Kepadatan_Tinggi = false;
+  $scope.show.Pusat_Perdagangan_Jasa = true;
+  $scope.show.RTH_Taman_Kota = true;
+  $scope.show.RTNH = true;
+  // Load geojson
+  $scope.loadAllGeojson = function () {
+    $scope.loadGeojson('Kantor_Pemerintahan','rgba(255,139,253,56)', $scope.show.Kantor_Pemerintahan);
+    $scope.loadGeojson('Kesehatan','rgba(245,124,0,44)', $scope.show.Kesehatan);
+    $scope.loadGeojson('Pendidikan','rgba(245,124,0,44)', $scope.show.Pendidikan);
+    // $scope.loadGeojson('Perdagangan_Jasa_Linear','rgba(255,61,0,72)', $scope.show.Perdagangan_Jasa_Linear);
+    $scope.loadGeojson('Peribadatan','rgba(255,195,0,13)', $scope.show.Peribadatan);
+    // $scope.loadGeojson('Perumahan_Kepadatan_Tinggi','rgba(255,193,7,14)', $scope.show.Perumahan_Kepadatan_Tinggi);
+    $scope.loadGeojson('Pusat_Perdagangan_Jasa','rgba(249,0,0,79)', $scope.show.Pusat_Perdagangan_Jasa);
+    $scope.loadGeojson('RTH_Taman_Kota','rgba(85,255,0,-71)', $scope.show.RTH_Taman_Kota);
+    $scope.loadGeojson('RTNH','rgba(85,255,0,-71)', $scope.show.RTNH);
+  };
+  //Load geojson
+  $scope.loadAllGeojson();
+  
+  // Filter Layer
+  $scope.filterChecked = true;
+  $scope.filterChange = function(Kategori, fillColor, checked) {
+      $scope.show[Kategori] = checked;
+ 
+      // now remove and reload geojson
+      leafletData.getMap().then(function (map) {
+          leafletData.getGeoJSON().then(function (geoJSON) {
+              // console.log(geoJSON);
+              
+              if ($scope.show[Kategori]) {
+                console.log('reload');
+                $scope.loadGeojson(Kategori,fillColor, $scope.show[Kategori]);
+              } else {
+                console.log('remove');
+                map.removeLayer(geoJSON[Kategori]);
+              }
+              // $scope.loadAllGeojson();
+          });
+      });
+  };
+
+  /**
+   * Center map on user's current position
+   */
+  $scope.locate = function(){
+
+    $cordovaGeolocation
+      .getCurrentPosition()
+      .then(function (position) {
+        $scope.map.center.lat  = position.coords.latitude;
+        $scope.map.center.lng = position.coords.longitude;
+        $scope.map.center.zoom = 16;
+
+        $scope.map.markers.now = {
+          lat:position.coords.latitude,
+          lng:position.coords.longitude,
+          message: "Anda berada di sini",
+          focus: true,
+          draggable: false
+        };
+
+      }, function(err) {
+        // error
+        console.log("Location error!");
+        console.log(err);
+      });
+  };
+
+})
+
+.controller('cityBuildHotelCtrl', function($scope, Config, $sce, $cordovaGeolocation, $http, leafletMapEvents, leafletData) {
+  $scope.data = { filterShow : false};
+  var style = {
+    top : ($("#citybuild-btn").position().top - ($("#filterForm").height()+60)) + "px",
+  }
+  $("#filterForm").css(style);
+  $scope.toogle = function(){
+    $scope.data.filterShow = !$scope.data.filterShow;
+    if($scope.data.filterShow){
+      $("#filterForm").show();
+    }
+    else{
+      $("#filterForm").hide();
+    }
+  }  
+
+  // Map Code
+  $scope.map = {
+    defaults: {
+      // maxZoom: 18,
+    },
+    center: {
+        lat: -6.9003,
+        lng: 107.6203,
+        zoom: 16
+    },
+    layers: {
+        baselayers: {
+            googleRoadmap: {
+                name: 'Streets',
+                layerType: 'ROADMAP',
+                type: 'google'
+            },
+            googleHybrid: {
+                name: 'Hybrid',
+                layerType: 'HYBRID',
+                type: 'google'
+            }, 
+        },
+        overlays: {           
+        },
+    },
+    geojson: {},
+    markers : {},
+    events: {
+      map: {
+        enable: ['click', 'context'],
+        logic: 'emit'
+      }
+    }    
+  };
+
+  // Get the layer geojson data from a JSON
+  $scope.loadGeojson = function (Kategori, fillColor, show) {
+      $http.get("sampledata/geojson/citywatch/"+Kategori+".geojson").success(function(data, status) {
+        $scope.map.geojson[Kategori] = {
+          data: data,
+          filter: function (feature) {
+              return show;
+          },
+          style: {
+                fillColor: fillColor,
+                weight: 1,
+                opacity: 0.4,
+                color: fillColor,
+                fillOpacity: 0.4
+          },
+          hoverStyle : {
+              fillOpacity: 0.6
+          },
+          onEachFeature: onEachFeature,
+          resetStyleOnMouseout: true
+        };
+
+        function onEachFeature(feature, layer) {
+            layer.on({
+
+              click: function() {
+                layer.bindPopup("<a href='#/menu/zone-detail2/"+feature.properties.kode15+"' class='a-popup'>"+ feature.properties.kategori + "</a>");
+              }
+            })
+          }
+    });
+  };
+
+  $scope.show = {};
+  $scope.show.Kantor_Pemerintahan = true;
+  $scope.show.Kesehatan = true;
+  $scope.show.Pendidikan = true;
+  $scope.show.Perdagangan_Jasa_Linear = false;
+  $scope.show.Peribadatan = true;
+  $scope.show.Perumahan_Kepadatan_Tinggi = false;
+  $scope.show.Pusat_Perdagangan_Jasa = true;
+  $scope.show.RTH_Taman_Kota = true;
+  $scope.show.RTNH = true;
+  // Load geojson
+  $scope.loadAllGeojson = function () {
+    $scope.loadGeojson('Kantor_Pemerintahan','rgba(255,139,253,56)', $scope.show.Kantor_Pemerintahan);
+    $scope.loadGeojson('Kesehatan','rgba(245,124,0,44)', $scope.show.Kesehatan);
+    $scope.loadGeojson('Pendidikan','rgba(245,124,0,44)', $scope.show.Pendidikan);
+    // $scope.loadGeojson('Perdagangan_Jasa_Linear','rgba(255,61,0,72)', $scope.show.Perdagangan_Jasa_Linear);
+    $scope.loadGeojson('Peribadatan','rgba(255,195,0,13)', $scope.show.Peribadatan);
+    // $scope.loadGeojson('Perumahan_Kepadatan_Tinggi','rgba(255,193,7,14)', $scope.show.Perumahan_Kepadatan_Tinggi);
+    $scope.loadGeojson('Pusat_Perdagangan_Jasa','rgba(249,0,0,79)', $scope.show.Pusat_Perdagangan_Jasa);
+    $scope.loadGeojson('RTH_Taman_Kota','rgba(85,255,0,-71)', $scope.show.RTH_Taman_Kota);
+    $scope.loadGeojson('RTNH','rgba(85,255,0,-71)', $scope.show.RTNH);
+  };
+  //Load geojson
+  $scope.loadAllGeojson();
+  
+  // Filter Layer
+  $scope.filterChecked = true;
+  $scope.filterChange = function(Kategori, fillColor, checked) {
+      $scope.show[Kategori] = checked;
+ 
+      // now remove and reload geojson
+      leafletData.getMap().then(function (map) {
+          leafletData.getGeoJSON().then(function (geoJSON) {
+              // console.log(geoJSON);
+              
+              if ($scope.show[Kategori]) {
+                console.log('reload');
+                $scope.loadGeojson(Kategori,fillColor, $scope.show[Kategori]);
+              } else {
+                console.log('remove');
+                map.removeLayer(geoJSON[Kategori]);
+              }
+              // $scope.loadAllGeojson();
+          });
+      });
+  };
+
+  /**
+   * Center map on user's current position
+   */
+  $scope.locate = function(){
+
+    $cordovaGeolocation
+      .getCurrentPosition()
+      .then(function (position) {
+        $scope.map.center.lat  = position.coords.latitude;
+        $scope.map.center.lng = position.coords.longitude;
+        $scope.map.center.zoom = 16;
+
+        $scope.map.markers.now = {
+          lat:position.coords.latitude,
+          lng:position.coords.longitude,
+          message: "Anda berada di sini",
+          focus: true,
+          draggable: false
+        };
+
+      }, function(err) {
+        // error
+        console.log("Location error!");
+        console.log(err);
+      });
+  };
+
+})
+
+.controller('cityBuildMinimarketCtrl', function($scope, Config, $sce, $cordovaGeolocation, $http, leafletMapEvents, leafletData) {
+  $scope.data = { filterShow : false};
+  var style = {
+    top : ($("#citybuild-btn").position().top - ($("#filterForm").height()+60)) + "px",
+  }
+  $("#filterForm").css(style);
+  $scope.toogle = function(){
+    $scope.data.filterShow = !$scope.data.filterShow;
+    if($scope.data.filterShow){
+      $("#filterForm").show();
+    }
+    else{
+      $("#filterForm").hide();
+    }
+  }  
+
+  // Map Code
+  $scope.map = {
+    defaults: {
+      // maxZoom: 18,
+    },
+    center: {
+        lat: -6.9003,
+        lng: 107.6203,
+        zoom: 16
+    },
+    layers: {
+        baselayers: {
+            googleRoadmap: {
+                name: 'Streets',
+                layerType: 'ROADMAP',
+                type: 'google'
+            },
+            googleHybrid: {
+                name: 'Hybrid',
+                layerType: 'HYBRID',
+                type: 'google'
+            }, 
+        },
+        overlays: {           
+        },
+    },
+    geojson: {},
+    markers : {},
+    events: {
+      map: {
+        enable: ['click', 'context'],
+        logic: 'emit'
+      }
+    }    
+  };
+
+  // Get the layer geojson data from a JSON
+  $scope.loadGeojson = function (Kategori, fillColor, show) {
+      $http.get("sampledata/geojson/citywatch/"+Kategori+".geojson").success(function(data, status) {
+        $scope.map.geojson[Kategori] = {
+          data: data,
+          filter: function (feature) {
+              return show;
+          },
+          style: {
+                fillColor: fillColor,
+                weight: 1,
+                opacity: 0.4,
+                color: fillColor,
+                fillOpacity: 0.4
+          },
+          hoverStyle : {
+              fillOpacity: 0.6
+          },
+          onEachFeature: onEachFeature,
+          resetStyleOnMouseout: true
+        };
+
+        function onEachFeature(feature, layer) {
+            layer.on({
+
+              click: function() {
+                layer.bindPopup("<a href='#/menu/zone-detail2/"+feature.properties.kode15+"' class='a-popup'>"+ feature.properties.kategori + "</a>");
+              }
+            })
+          }
+    });
+  };
+
+  $scope.show = {};
+  $scope.show.Kantor_Pemerintahan = true;
+  $scope.show.Kesehatan = true;
+  $scope.show.Pendidikan = true;
+  $scope.show.Perdagangan_Jasa_Linear = false;
+  $scope.show.Peribadatan = true;
+  $scope.show.Perumahan_Kepadatan_Tinggi = false;
+  $scope.show.Pusat_Perdagangan_Jasa = true;
+  $scope.show.RTH_Taman_Kota = true;
+  $scope.show.RTNH = true;
+  // Load geojson
+  $scope.loadAllGeojson = function () {
+    $scope.loadGeojson('Kantor_Pemerintahan','rgba(255,139,253,56)', $scope.show.Kantor_Pemerintahan);
+    $scope.loadGeojson('Kesehatan','rgba(245,124,0,44)', $scope.show.Kesehatan);
+    $scope.loadGeojson('Pendidikan','rgba(245,124,0,44)', $scope.show.Pendidikan);
+    // $scope.loadGeojson('Perdagangan_Jasa_Linear','rgba(255,61,0,72)', $scope.show.Perdagangan_Jasa_Linear);
+    $scope.loadGeojson('Peribadatan','rgba(255,195,0,13)', $scope.show.Peribadatan);
+    // $scope.loadGeojson('Perumahan_Kepadatan_Tinggi','rgba(255,193,7,14)', $scope.show.Perumahan_Kepadatan_Tinggi);
+    $scope.loadGeojson('Pusat_Perdagangan_Jasa','rgba(249,0,0,79)', $scope.show.Pusat_Perdagangan_Jasa);
+    $scope.loadGeojson('RTH_Taman_Kota','rgba(85,255,0,-71)', $scope.show.RTH_Taman_Kota);
+    $scope.loadGeojson('RTNH','rgba(85,255,0,-71)', $scope.show.RTNH);
+  };
+  //Load geojson
+  $scope.loadAllGeojson();
+  
+  // Filter Layer
+  $scope.filterChecked = true;
+  $scope.filterChange = function(Kategori, fillColor, checked) {
+      $scope.show[Kategori] = checked;
+ 
+      // now remove and reload geojson
+      leafletData.getMap().then(function (map) {
+          leafletData.getGeoJSON().then(function (geoJSON) {
+              // console.log(geoJSON);
+              
+              if ($scope.show[Kategori]) {
+                console.log('reload');
+                $scope.loadGeojson(Kategori,fillColor, $scope.show[Kategori]);
+              } else {
+                console.log('remove');
+                map.removeLayer(geoJSON[Kategori]);
+              }
+              // $scope.loadAllGeojson();
+          });
+      });
+  };
+
+  /**
+   * Center map on user's current position
+   */
+  $scope.locate = function(){
+
+    $cordovaGeolocation
+      .getCurrentPosition()
+      .then(function (position) {
+        $scope.map.center.lat  = position.coords.latitude;
+        $scope.map.center.lng = position.coords.longitude;
+        $scope.map.center.zoom = 16;
+
+        $scope.map.markers.now = {
+          lat:position.coords.latitude,
+          lng:position.coords.longitude,
+          message: "Anda berada di sini",
+          focus: true,
+          draggable: false
+        };
+
+      }, function(err) {
+        // error
+        console.log("Location error!");
+        console.log(err);
+      });
+  };
+
+})
+
+.controller('cityWatchCtrl', function($scope, Config, $sce, $cordovaGeolocation, $http, leafletMapEvents, leafletData) {
   $scope.data = { filterShow : false};
   var style = {
     top : ($("#cityWatch-button7").position().top - ($("#filterForm").height()+60)) + "px",
@@ -389,10 +870,6 @@ angular.module('app.controllers', [])
     }
   }
     
-})
-
-.controller('mapCtrl', function($scope) {
-
 })
 
 .controller('profileCtrl', function($scope) {
