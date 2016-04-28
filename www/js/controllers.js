@@ -108,7 +108,7 @@ angular.module('app.controllers', [])
 
   // Get the layer geojson data from a JSON
   $scope.loadGeojson = function (Kategori, fillColor, show) {
-      $http.get("sampledata/geojson/citywatch/"+Kategori+".geojson").success(function(data, status) {
+      $http.get("sampledata/geojson/citybuild-rumah/"+Kategori+".geojson").success(function(data, status) {
         $scope.map.geojson[Kategori] = {
           data: data,
           filter: function (feature) {
@@ -132,7 +132,7 @@ angular.module('app.controllers', [])
             layer.on({
 
               click: function() {
-                layer.bindPopup("<a href='#/menu/zone-detail2/"+feature.properties.kode15+"' class='a-popup'>"+ feature.properties.kategori + "</a>");
+                layer.bindPopup("<a href='#/menu/zone-detail/rumah/"+feature.properties.kode15+"' class='a-popup'>"+ feature.properties.kategori + "</a>");
               }
             })
           }
@@ -140,26 +140,20 @@ angular.module('app.controllers', [])
   };
 
   $scope.show = {};
-  $scope.show.Kantor_Pemerintahan = true;
-  $scope.show.Kesehatan = true;
-  $scope.show.Pendidikan = true;
+  $scope.show.Perdagangan_Jasa_Linier = true;
+  $scope.show.Pertahanan_Keamanan = true;
+  $scope.show.Perumahan_Kepadatan_Rendah = true;
   $scope.show.Perdagangan_Jasa_Linear = false;
-  $scope.show.Peribadatan = true;
+  $scope.show.Perumahan_Kepadatan_Sedang = true;
   $scope.show.Perumahan_Kepadatan_Tinggi = false;
-  $scope.show.Pusat_Perdagangan_Jasa = true;
-  $scope.show.RTH_Taman_Kota = true;
-  $scope.show.RTNH = true;
+  $scope.show.Perumahan_Kepadatan_Tinggi = true;
   // Load geojson
   $scope.loadAllGeojson = function () {
-    $scope.loadGeojson('Kantor_Pemerintahan','rgba(255,139,253,56)', $scope.show.Kantor_Pemerintahan);
-    $scope.loadGeojson('Kesehatan','rgba(245,124,0,44)', $scope.show.Kesehatan);
-    $scope.loadGeojson('Pendidikan','rgba(245,124,0,44)', $scope.show.Pendidikan);
-    // $scope.loadGeojson('Perdagangan_Jasa_Linear','rgba(255,61,0,72)', $scope.show.Perdagangan_Jasa_Linear);
-    $scope.loadGeojson('Peribadatan','rgba(255,195,0,13)', $scope.show.Peribadatan);
-    // $scope.loadGeojson('Perumahan_Kepadatan_Tinggi','rgba(255,193,7,14)', $scope.show.Perumahan_Kepadatan_Tinggi);
-    $scope.loadGeojson('Pusat_Perdagangan_Jasa','rgba(249,0,0,79)', $scope.show.Pusat_Perdagangan_Jasa);
-    $scope.loadGeojson('RTH_Taman_Kota','rgba(85,255,0,-71)', $scope.show.RTH_Taman_Kota);
-    $scope.loadGeojson('RTNH','rgba(85,255,0,-71)', $scope.show.RTNH);
+    $scope.loadGeojson('Perdagangan_Jasa_Linier','rgba(255,61,0,72)', $scope.show.Perdagangan_Jasa_Linier);
+    $scope.loadGeojson('Pertahanan_Keamanan','rgba(129,95,51,10)', $scope.show.Pertahanan_Keamanan);
+    $scope.loadGeojson('Perumahan_Kepadatan_Rendah','rgba(55,148,179,1)', $scope.show.Perumahan_Kepadatan_Rendah);
+    $scope.loadGeojson('Perumahan_Kepadatan_Sedang','rgba(255,171,64,25)', $scope.show.Perumahan_Kepadatan_Sedang);
+    $scope.loadGeojson('Perumahan_Kepadatan_Tinggi','rgba(255,193,7,14)', $scope.show.Perumahan_Kepadatan_Tinggi);
   };
   //Load geojson
   $scope.loadAllGeojson();
