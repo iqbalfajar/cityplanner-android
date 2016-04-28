@@ -57,16 +57,16 @@ angular.module('app.controllers', [])
 .controller('cityBuildRumahCtrl', function($scope, Config, $sce, $cordovaGeolocation, $http, leafletMapEvents, leafletData) {
   $scope.data = { filterShow : false};
   var style = {
-    top : ($("#citybuild-btn").position().top - ($("#filterForm").height()+60)) + "px",
+    top : ($(".citybuild-filter-btn").position().top - ($(".filterForm").height()+60)) + "px",
   }
-  $("#filterForm").css(style);
+  $(".filterForm").css(style);
   $scope.toogle = function(){
     $scope.data.filterShow = !$scope.data.filterShow;
     if($scope.data.filterShow){
-      $("#filterForm").show();
+      $(".filterForm").show();
     }
     else{
-      $("#filterForm").hide();
+      $(".filterForm").hide();
     }
   }  
 
@@ -210,16 +210,16 @@ angular.module('app.controllers', [])
 .controller('cityBuildHotelCtrl', function($scope, Config, $sce, $cordovaGeolocation, $http, leafletMapEvents, leafletData) {
   $scope.data = { filterShow : false};
   var style = {
-    top : ($("#citybuild-btn").position().top - ($("#filterForm").height()+60)) + "px",
+    top : ($(".citybuild-filter-btn").position().top - ($(".filterForm").height()+60)) + "px",
   }
-  $("#filterForm").css(style);
+  $(".filterForm").css(style);
   $scope.toogle = function(){
     $scope.data.filterShow = !$scope.data.filterShow;
     if($scope.data.filterShow){
-      $("#filterForm").show();
+      $(".filterForm").show();
     }
     else{
-      $("#filterForm").hide();
+      $(".filterForm").hide();
     }
   }  
 
@@ -365,16 +365,16 @@ angular.module('app.controllers', [])
 .controller('cityBuildMinimarketCtrl', function($scope, Config, $sce, $cordovaGeolocation, $http, leafletMapEvents, leafletData) {
   $scope.data = { filterShow : false};
   var style = {
-    top : ($("#citybuild-btn").position().top - ($("#filterForm").height()+60)) + "px",
+    top : ($(".citybuild-filter-btn").position().top - ($(".filterForm").height()+60)) + "px",
   }
-  $("#filterForm").css(style);
+  $(".filterForm").css(style);
   $scope.toogle = function(){
     $scope.data.filterShow = !$scope.data.filterShow;
     if($scope.data.filterShow){
-      $("#filterForm").show();
+      $(".filterForm").show();
     }
     else{
-      $("#filterForm").hide();
+      $(".filterForm").hide();
     }
   }  
 

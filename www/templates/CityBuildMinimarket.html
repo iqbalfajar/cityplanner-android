@@ -7,7 +7,7 @@
       <leaflet defaults="map.defaults" center="map.center" markers="map.markers" layers="map.layers" geojson="map.geojson" geojson-nested="true" width="100%" height="90%"></leaflet>
 
       <div>
-        <form class="list list-cw" id="filterForm" hidden>
+        <form class="list list-cw filterForm" hidden>
           <label name="Kantor_Pemerintahan" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
             <input value="on" name="Kantor_Pemerintahan" type="checkbox" checked="true" ng-model='show.Kantor_Pemerintahan' ng-change="filterChange('Kantor_Pemerintahan','rgba(255,139,253,56)', show.Kantor_Pemerintahan)"><i class="checkbox-icon"></i></div>
             <div class="item-content disable-pointer-events">
@@ -40,7 +40,7 @@
           </label>
         </form>
 
-        <button id="citybuild-btn" class="button button-positive button-block icon-center ion-social-buffer" type="button" ng-click="toogle()"> Filter Zona</button>
+        <button class="citybuild-filter-btn button button-positive button-block icon-center ion-social-buffer" type="button" ng-click="toogle()"> Filter Zona</button>
       </div>
         
     </ion-content>
