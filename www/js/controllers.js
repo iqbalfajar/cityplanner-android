@@ -768,6 +768,12 @@ angular.module('app.controllers', [])
             $scope.detailKegiatan = zonas[i];
             $scope.tatabangunans = zonas[i].TataBangunan.split('<br>');
 
+            $scope.tataBangunanCheck = {};
+            for (var j = 0; j < $scope.tatabangunans.length; j++) {
+              var key = $scope.tatabangunans[j];
+              $scope.tataBangunanCheck[key] = "-1";
+            }
+            break;
           }
         }
       })
@@ -790,6 +796,8 @@ angular.module('app.controllers', [])
   $scope.kdbCheck = "-1";
   $scope.klbCheck = "-1";
   $scope.kdhCheck = "-1";
+  $scope.ketStatusCheck = "-1";
+
   $scope.updateCheck = function(item,value) {
     switch (item) {
         case 'kdb':
@@ -801,8 +809,19 @@ angular.module('app.controllers', [])
         case 'kdh':
             $scope.kdhCheck = value;
             break;
+        case 'ketStatus':
+            $scope.ketStatusCheck = value;
+            break;
+        case 'tataBangunan':
+            $scope.ketStatusCheck = value;
+            break;
         default:
     }  
+    console.log(item + ':' + value);
+  }
+  $scope.updateCheckTataBangunan = function(item,value) {
+    $scope.tataBangunanCheck[item] = value;
+
     console.log(item + ':' + value);
   }
 

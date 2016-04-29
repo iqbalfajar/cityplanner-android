@@ -24,6 +24,18 @@
 
         <div class="item item-divider">Kesesuaian Aturan</div>
         <div class="row">
+          <div class="col col-33"><strong>Status</strong></div>
+          <div class="col col-67">{{detailKegiatan.Syarat}}</div>
+        </div>
+        <div class="row">
+          <div class="col col-33-fix"><strong>Keterangan Status</strong></div>
+          <div class="col col-62">{{detailKegiatan.KeteranganSyarat}}</div>
+          <div class="col col-5">
+            <i class="icon ion-checkmark-round" ng-hide="ketStatusCheck != '1'"></i>
+            <i class="icon ion-close-round" ng-hide="ketStatusCheck != '0'"></i>
+          </div>
+        </div>
+        <div class="row">
           <div class="col col-75"><strong>Koefisien Dasar Bangunan (KDB)</strong></div>
           <div class="col col-20">{{detailKegiatan.KDB}}</div>
           <div class="col col-5">
@@ -51,11 +63,15 @@
           <div class="row">
             <div class="col col-75"><strong>Tata Bangunan</strong></div>
           </div>
-          <div class="row aturan">
-              <div class="col">
-              <p ng-repeat="tatabangunan in tatabangunans">
+          <div class="row aturan" ng-repeat="tatabangunan in tatabangunans">
+              <div class="col col-95">
+              <!-- <p > -->
                 {{tatabangunan}}
-              </p>
+              <!-- </p> -->
+              </div>
+              <div class="col col-5">
+                <i class="icon ion-checkmark-round" ng-hide="tataBangunanCheck[tatabangunan] != '1'"></i>
+                <i class="icon ion-close-round" ng-hide="tataBangunanCheck[tatabangunan] != '0'"></i>
               </div>
           </div>
         </div>

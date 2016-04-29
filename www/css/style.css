@@ -234,3 +234,15 @@ body {
 .pointer {
   cursor: pointer;
 }
+.col-62 {
+    max-width: 62%;
+    flex: 0 0 62%;
+}
+.col-95 {
+    max-width: 95%;
+    flex: 0 0 95%;
+}
+.col-33-fix {
+    max-width: 33%;
+    flex: 0 0 33%;
+}
