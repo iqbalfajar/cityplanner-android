@@ -31,48 +31,63 @@
           <div class="col col-33-fix"><strong>Keterangan Status</strong></div>
           <div class="col col-62">{{detailKegiatan.KeteranganSyarat}}</div>
           <div class="col col-5">
-            <i class="icon ion-checkmark-round" ng-hide="ketStatusCheck != '1'"></i>
-            <i class="icon ion-close-round" ng-hide="ketStatusCheck != '0'"></i>
+            <!-- <i class="icon ion-checkmark-round" ng-hide="ketStatusCheck != '1'"></i>
+            <i class="icon ion-close-round" ng-hide="ketStatusCheck != '0'"></i> -->
+            <i class="icon ion-checkmark-round" ng-hide="!ketStatusCheck"></i>
+            <i class="icon ion-close-round" ng-hide="ketStatusCheck"></i>
           </div>
         </div>
         <div class="row">
           <div class="col col-75"><strong>Koefisien Dasar Bangunan (KDB)</strong></div>
           <div class="col col-20">{{detailKegiatan.KDB}}</div>
           <div class="col col-5">
-          	<i class="icon ion-checkmark-round" ng-hide="kdbCheck != '1'"></i>
-          	<i class="icon ion-close-round" ng-hide="kdbCheck != '0'"></i>
+          	<!-- <i class="icon ion-checkmark-round" ng-hide="kdbCheck != '1'"></i>
+          	<i class="icon ion-close-round" ng-hide="kdbCheck != '0'"></i> -->
+            <i class="icon ion-checkmark-round" ng-hide="!kdbCheck"></i>
+            <i class="icon ion-close-round" ng-hide="kdbCheck"></i>
           </div>
         </div>
         <div class="row">
           <div class="col col-75"><strong>Koefisien Luas Bangunan (KLB)</strong></div>
           <div class="col col-20">{{detailKegiatan.KLB}}</div>
           <div class="col col-5">
-          	<i class="icon ion-checkmark-round" ng-hide="klbCheck != '1'"></i>
-          	<i class="icon ion-close-round" ng-hide="klbCheck != '0'"></i>
+          	<!-- <i class="icon ion-checkmark-round" ng-hide="klbCheck != '1'"></i>
+          	<i class="icon ion-close-round" ng-hide="klbCheck != '0'"></i> -->
+            <i class="icon ion-checkmark-round" ng-hide="!klbCheck"></i>
+            <i class="icon ion-close-round" ng-hide="klbCheck"></i>
           </div>
         </div>
         <div class="row">
           <div class="col col-75"><strong>Koefisien Dasar Hijau (KDH)</strong></div>
           <div class="col col-20">{{detailKegiatan.KDH}}</div>
           <div class="col col-5">
-          	<i class="icon ion-checkmark-round" ng-hide="kdhCheck != '1'"></i>
-          	<i class="icon ion-close-round" ng-hide="kdhCheck != '0'"></i>
+          	<!-- <i class="icon ion-checkmark-round" ng-hide="kdhCheck != '1'"></i>
+          	<i class="icon ion-close-round" ng-hide="kdhCheck != '0'"></i> -->
+            <i class="icon ion-checkmark-round" ng-hide="!kdhCheck"></i>
+            <i class="icon ion-close-round" ng-hide="kdhCheck"></i>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-75"><strong>Tata Bangunan</strong></div>
+          <div class="col col-20">&nbsp;</div>
+          <div class="col col-5">
+            <!-- <i class="icon ion-checkmark-round" ng-hide="tataBangunanHeadCheck != '1'"></i>
+            <i class="icon ion-close-round" ng-hide="tataBangunanHeadCheck != '0'"></i> -->
+            <i class="icon ion-checkmark-round" ng-hide="!tataBangunanHeadCheck"></i>
+            <i class="icon ion-close-round" ng-hide="tataBangunanHeadCheck"></i>
           </div>
         </div>
         <div id="moreDetail" class="showmore_modal" hidden>
-          <div class="row">
-            <div class="col col-75"><strong>Tata Bangunan</strong></div>
-          </div>
           <div class="row aturan" ng-repeat="tatabangunan in tatabangunans">
-              <div class="col col-95">
+              <div class="col">
               <!-- <p > -->
                 {{tatabangunan}}
               <!-- </p> -->
               </div>
-              <div class="col col-5">
+              <!-- <div class="col col-5">
                 <i class="icon ion-checkmark-round" ng-hide="tataBangunanCheck[tatabangunan] != '1'"></i>
                 <i class="icon ion-close-round" ng-hide="tataBangunanCheck[tatabangunan] != '0'"></i>
-              </div>
+              </div> -->
           </div>
         </div>
         <div class="row">
@@ -95,9 +110,10 @@
                   <input type="text" placeholder="Tambah Foto" class="pointer" style="cursor:pointer;" disabled>
                   <input type="file" class="upload" placeholder="Tambah Foto">
                 </label>
-                <button class="button button-small button-dark">
+                <!-- <button class="button button-small button-dark">
                   Upload
-                </button>
+                </button> -->
+                <a class="button button-icon icon ion-camera"></a>
             </div>
             
             <div class="padding">

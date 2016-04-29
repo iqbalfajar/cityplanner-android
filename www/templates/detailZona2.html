@@ -43,11 +43,12 @@
             <div class="col col-57">{{detailKegiatan.KeteranganSyarat}}</div>
             <div class="col col-10">
               <label class="">
-              <select ng-model="ketStatusCheck" ng-change="updateCheck('ketStatus',ketStatusCheck)">
+              <!-- <select ng-model="ketStatusCheck" ng-change="updateCheck('ketStatus',ketStatusCheck)">
                 <option value="-1">..</option>
                 <option value="1">&radic;</option>
                 <option value="0">X</option>
-              </select>
+              </select> -->
+              <input type="checkbox" ng-model="ketStatusCheck" ng-change="updateCheck('ketStatus',ketStatusCheck)">
               </label>
             </div>
           </div>
@@ -60,11 +61,12 @@
             <div class="col col-15">{{detailKegiatan.KDB}}</div>
             <div class="col col-10">
               <label class="">
-              <select ng-model="kdbCheck" ng-change="updateCheck('kdb',kdbCheck)">
+              <!-- <select ng-model="kdbCheck" ng-change="updateCheck('kdb',kdbCheck)">
                 <option value="-1">..</option>
                 <option value="1">&radic;</option>
                 <option value="0">X</option>
-              </select>
+              </select> -->
+              <input type="checkbox" ng-model="kdbCheck" ng-change="updateCheck('kdb',kdbCheck)">
               </label>
             </div>
           </div>
@@ -73,11 +75,12 @@
             <div class="col col-15">{{detailKegiatan.KLB}}</div>
             <div class="col col-10">
               <label class="">
-              <select ng-model="klbCheck" ng-change="updateCheck('klb',klbCheck)">
+              <!-- <select ng-model="klbCheck" ng-change="updateCheck('klb',klbCheck)">
                 <option value="-1">..</option>
                 <option value="1">&radic;</option>
                 <option value="0">X</option>
-              </select>
+              </select> -->
+              <input type="checkbox" ng-model="klbCheck" ng-change="updateCheck('klb',klbCheck)">
               </label>
             </div>
           </div>
@@ -86,24 +89,36 @@
             <div class="col col-15">{{detailKegiatan.KDH}}</div>
             <div class="col col-10">
               <label class="">
-              <select ng-model="kdhCheck" ng-change="updateCheck('kdh',kdhCheck)">
+              <!-- <select ng-model="kdhCheck" ng-change="updateCheck('kdh',kdhCheck)">
                 <option value="-1">..</option>
                 <option value="1">&radic;</option>
                 <option value="0">X</option>
-              </select>
+              </select> -->
+              <input type="checkbox" ng-model="kdhCheck" ng-change="updateCheck('kdh',kdhCheck)">
               </label>
             </div>
           </div>
           <div class="row">
             <div class="col col-75"><strong>Tata Bangunan</strong></div>
+            <div class="col col-15">&nbsp;</div>
+            <div class="col col-10">
+              <label class="">
+              <!-- <select ng-model="tataBangunanHeadCheck" ng-change="updateCheck('tataBangunan',tataBangunanHeadCheck)">
+                <option value="-1">..</option>
+                <option value="1">&radic;</option>
+                <option value="0">X</option>
+              </select> -->
+              <input type="checkbox" ng-model="tataBangunanHeadCheck" ng-change="updateCheck('tataBangunan',tataBangunanHeadCheck)">
+              </label>
+            </div>
           </div>
           <div class="row aturan" ng-repeat="tatabangunan in tatabangunans">
-              <div class="col col-90" >
+              <div class="col" >
                 <!-- <p> -->
                   {{tatabangunan}}
                 <!-- </p> -->
               </div>
-              <div class="col col-10">
+              <!-- <div class="col col-10">
                 <label class="">
                 <select ng-model="tataBangunanCheck[tatabangunan]" ng-change="updateCheckTataBangunan(tatabangunan,tataBangunanCheck[tatabangunan])">
                   <option value="-1">..</option>
@@ -111,7 +126,7 @@
                   <option value="0">X</option>
                 </select>
                 </label>
-              </div>
+              </div> -->
           </div>
         </div>
 

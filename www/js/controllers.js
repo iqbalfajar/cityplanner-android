@@ -78,7 +78,7 @@ angular.module('app.controllers', [])
     center: {
         lat: -6.9003,
         lng: 107.6203,
-        zoom: 14
+        zoom: 15
     },
     layers: {
         baselayers: {
@@ -231,7 +231,7 @@ angular.module('app.controllers', [])
     center: {
         lat: -6.9003,
         lng: 107.6203,
-        zoom: 14
+        zoom: 15
     },
     layers: {
         baselayers: {
@@ -386,7 +386,7 @@ angular.module('app.controllers', [])
     center: {
         lat: -6.9003,
         lng: 107.6203,
-        zoom: 14
+        zoom: 15
     },
     layers: {
         baselayers: {
@@ -553,7 +553,7 @@ angular.module('app.controllers', [])
       center: {
           lat: -6.9003,
           lng: 107.6203,
-          zoom: 14
+          zoom: 15
       },
       layers: {
           baselayers: {
@@ -615,26 +615,30 @@ angular.module('app.controllers', [])
     };
 
     $scope.show = {};
+    $scope.show.Campuran_Intensitas_Tinggi = true;
+    $scope.show.Industri = true;
     $scope.show.Kantor_Pemerintahan = true;
     $scope.show.Kesehatan = true;
     $scope.show.Pendidikan = true;
     $scope.show.Perdagangan_Jasa_Linear = false;
     $scope.show.Peribadatan = true;
-    $scope.show.Perumahan_Kepadatan_Tinggi = false;
+    $scope.show.Perumahan_Kepadatan_Tinggi = true;
     $scope.show.Pusat_Perdagangan_Jasa = true;
-    $scope.show.RTH_Taman_Kota = true;
-    $scope.show.RTNH = true;
+    // $scope.show.RTH_Taman_Kota = true;
+    // $scope.show.RTNH = true;
     // Load geojson
     $scope.loadAllGeojson = function () {
+      $scope.loadGeojson('Campuran_Intensitas_Tinggi','rgba(225,225,225,0)', $scope.show.Kantor_Pemerintahan);
+      $scope.loadGeojson('Industri','rgba(150,135,131,5)', $scope.show.Kesehatan);
       $scope.loadGeojson('Kantor_Pemerintahan','rgba(255,139,253,56)', $scope.show.Kantor_Pemerintahan);
       $scope.loadGeojson('Kesehatan','rgba(245,124,0,44)', $scope.show.Kesehatan);
       $scope.loadGeojson('Pendidikan','rgba(245,124,0,44)', $scope.show.Pendidikan);
       // $scope.loadGeojson('Perdagangan_Jasa_Linear','rgba(255,61,0,72)', $scope.show.Perdagangan_Jasa_Linear);
       $scope.loadGeojson('Peribadatan','rgba(255,195,0,13)', $scope.show.Peribadatan);
-      // $scope.loadGeojson('Perumahan_Kepadatan_Tinggi','rgba(255,193,7,14)', $scope.show.Perumahan_Kepadatan_Tinggi);
+      $scope.loadGeojson('Perumahan_Kepadatan_Tinggi','rgba(255,193,7,14)', $scope.show.Perumahan_Kepadatan_Tinggi);
       $scope.loadGeojson('Pusat_Perdagangan_Jasa','rgba(249,0,0,79)', $scope.show.Pusat_Perdagangan_Jasa);
-      $scope.loadGeojson('RTH_Taman_Kota','rgba(85,255,0,-71)', $scope.show.RTH_Taman_Kota);
-      $scope.loadGeojson('RTNH','rgba(85,255,0,-71)', $scope.show.RTNH);
+      // $scope.loadGeojson('RTH_Taman_Kota','rgba(85,255,0,-71)', $scope.show.RTH_Taman_Kota);
+      // $scope.loadGeojson('RTNH','rgba(85,255,0,-71)', $scope.show.RTNH);
     };
     //Load geojson
     $scope.loadAllGeojson();
@@ -793,12 +797,19 @@ angular.module('app.controllers', [])
     }
   }  
 
-  $scope.kdbCheck = "-1";
-  $scope.klbCheck = "-1";
-  $scope.kdhCheck = "-1";
-  $scope.ketStatusCheck = "-1";
+  // $scope.kdbCheck = "-1";
+  // $scope.klbCheck = "-1";
+  // $scope.kdhCheck = "-1";
+  // $scope.ketStatusCheck = "-1";
+  // $scope.tataBangunanHeadCheck = "-1";
+  $scope.kdbCheck = false;
+  $scope.klbCheck = false;
+  $scope.kdhCheck = false;
+  $scope.ketStatusCheck = false;
+  $scope.tataBangunanHeadCheck = false;
 
   $scope.updateCheck = function(item,value) {
+    console.log(item + ':' + value);
     switch (item) {
         case 'kdb':
             $scope.kdbCheck = value;
@@ -813,11 +824,10 @@ angular.module('app.controllers', [])
             $scope.ketStatusCheck = value;
             break;
         case 'tataBangunan':
-            $scope.ketStatusCheck = value;
+            $scope.tataBangunanHeadCheck = value;
             break;
         default:
     }  
-    console.log(item + ':' + value);
   }
   $scope.updateCheckTataBangunan = function(item,value) {
     $scope.tataBangunanCheck[item] = value;

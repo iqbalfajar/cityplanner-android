@@ -8,6 +8,16 @@
 
       <div>
         <form class="list list-cw" id="filterForm" hidden>
+          <label name="Campuran_Intensitas_Tinggi" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+            <input value="on" name="Campuran_Intensitas_Tinggi" type="checkbox" checked="true" ng-model='show.Campuran_Intensitas_Tinggi' ng-change="filterChange('Campuran_Intensitas_Tinggi','rgba(225,225,225,0)', show.Campuran_Intensitas_Tinggi)"><i class="checkbox-icon"></i></div>
+            <div class="item-content disable-pointer-events">
+            <span>Campuran_Intensitas_Tinggi</span></div>
+          </label>
+          <label name="Industri" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+            <input value="on" name="Industri" type="checkbox" checked="true" ng-model='show.Industri' ng-change="filterChange('Industri','rgba(150,135,131,5)', show.Industri)"><i class="checkbox-icon"></i></div>
+            <div class="item-content disable-pointer-events">
+            <span>Industri</span></div>
+          </label>
           <label name="Kantor_Pemerintahan" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
             <input value="on" name="Kantor_Pemerintahan" type="checkbox" checked="true" ng-model='show.Kantor_Pemerintahan' ng-change="filterChange('Kantor_Pemerintahan','rgba(255,139,253,56)', show.Kantor_Pemerintahan)"><i class="checkbox-icon"></i></div>
             <div class="item-content disable-pointer-events">
@@ -42,16 +52,6 @@
             <input value="on" name="Pusat_Perdagangan_Jasa" type="checkbox" checked="true" ng-model='show.Pusat_Perdagangan_Jasa' ng-change="filterChange('Pusat_Perdagangan_Jasa','rgba(249,0,0,79)', show.Pusat_Perdagangan_Jasa)"><i class="checkbox-icon"></i></div>
             <div class="item-content disable-pointer-events">
             <span>Pusat Perdagangan Jasa</span></div>
-          </label>
-          <label name="RTH_Taman_Kota" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
-            <input value="on" name="RTH_Taman_Kota" type="checkbox" checked="true" ng-model='show.RTH_Taman_Kota' ng-change="filterChange('RTH_Taman_Kota','rgba(85,255,0,-71)', show.RTH_Taman_Kota)"><i class="checkbox-icon"></i></div>
-            <div class="item-content disable-pointer-events">
-            <span>RTH Taman Kota</span></div>
-          </label>
-          <label name="RTNH" class="item item-checkbox item-cw"><div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
-            <input value="on" name="RTNH" type="checkbox" checked="true" ng-model='show.RTNH' ng-change="filterChange('RTNH','rgba(85,255,0,-71)', show.RTNH)"><i class="checkbox-icon"></i></div>
-            <div class="item-content disable-pointer-events">
-            <span>RTNH</span></div>
           </label>
         </form>
 
