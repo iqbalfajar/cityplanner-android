@@ -702,6 +702,7 @@ angular.module('app.controllers', [])
 .controller('detailZonaCtrl', function($scope,$stateParams, BackendService) {
   $scope.detail = [];
   $scope.tatabangunans = [];
+  $scope.kegiatan = $stateParams.kegiatan;
   
   BackendService.getZonaKegiatan($stateParams.kegiatan)
   .success(function(zonas) {
