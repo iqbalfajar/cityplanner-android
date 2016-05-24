@@ -184,12 +184,12 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:gravity="center_vertical"
-            android:text="Back"
+            android:text="Batal"
             android:textColor="#fff"
             android:textSize="18sp"
             android:textStyle="bold"/>
 
-        <TextView
+        <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
@@ -199,9 +199,10 @@
             android:paddingRight="4dp"
             android:layout_marginBottom="7dp"
             android:background="@color/color_yellow"
-            android:gravity="center_vertical"
-            android:text="Save"
-            android:textColor="#fff"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:text="Simpan"
+            android:textColor="#444"
             android:textSize="18sp"
             android:textStyle="bold"/>
 
