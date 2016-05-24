@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/rsz_person_flat"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Iqbal Fajar"
+                android:textColor="@color/color_star"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star_black_18dp"
+                android:tint="@color/color_star"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star_black_18dp"
+                android:tint="@color/color_star"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_star_border_black_18dp"
+                android:tint="@color/color_star"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/color_yellow"
+                android:padding="4dp"
+                android:text="150"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="Points"
+                android:textSize="18sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/hr">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp">
+
+            <TextView
+                style="@style/form_caption"
+                android:text="Nama"
+                />
+
+            <EditText
+                style="@style/form_input"
+                android:text="Iqbal Fajar"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/hr">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp">
+
+            <TextView
+                style="@style/form_caption"
+                android:text="Email"
+                />
+
+            <EditText
+                style="@style/form_input"
+                android:text="iqbalfajar@gmail.com"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/hr">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp">
+
+            <TextView
+                style="@style/form_caption"
+                android:text="Alamat"
+                />
+
+            <EditText
+                style="@style/form_input"
+                android:text="Jl. Abdullah Lubis No. 20"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/hr">
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="6dp"
+            android:paddingTop="6dp">
+
+            <TextView
+                style="@style/form_caption"
+                android:text="Kota"
+                />
+
+            <EditText
+                style="@style/form_input"
+                android:text="Tangerang"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/hr">
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:layout_height="42dp">
+        <TextView android:layout_width="wrap_content"
+                  android:text="Back"
+                  android:textSize="18sp"
+                  android:gravity="center_vertical"
+                  android:textStyle="bold"
+                  android:textColor="#fff"
+                  android:layout_marginLeft="20dp"
+                  android:layout_height="match_parent"/>
+
+        <TextView android:layout_width="wrap_content"
+                  android:text="Back"
+                  android:textSize="18sp"
+                  android:gravity="center_vertical"
+                  android:textStyle="bold"
+                  android:background="@color/color_yellow"
+                  android:textColor="#fff"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginRight="20dp"
+                  android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+</RelativeLayout>

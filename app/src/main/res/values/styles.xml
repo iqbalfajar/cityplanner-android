@@ -66,4 +66,37 @@
     <style name="detail_group_desc" parent="detail_group_caption">
         <item name="android:layout_weight">5</item>
     </style>
+
+    <style name="BackGroundImageView">
+        <!--<item name="android:alpha">0.5</item>-->
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/splash_2</item>
+    </style>
+
+    <style name="hr">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dip</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:background">#5555</item>
+    </style>
+
+    <style name="form_caption">
+        <item name="android:layout_width">120dp</item>
+        <item name="android:text">Nama</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">bottom</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="form_input">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:text">Nama</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
 </resources>
