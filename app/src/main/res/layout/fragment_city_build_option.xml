@@ -7,21 +7,29 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <TextView
+        android:text="Mau Bangun Apa?"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="150dp"
         android:src="@drawable/btn_rumah"
         android:id="@+id/btn_rumah"/>
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="150dp"
         android:src="@drawable/btn_hotel"
         android:id="@+id/btn_hotel"/>
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="150dp"
         android:src="@drawable/btn_minimarket"
         android:id="@+id/btn_market"/>
 </LinearLayout>
