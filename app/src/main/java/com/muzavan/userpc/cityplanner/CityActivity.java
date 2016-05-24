@@ -16,6 +16,7 @@ public class CityActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Toolbar toolbar; // For setting the title in each fragment
+    CityBuildOptionFragment mCityBuildOptionFragment = new CityBuildOptionFragment();
     CityBuildFragment cityBuildFragment = new CityBuildFragment();
     CityWatchFragment cityWatchFragment = new CityWatchFragment();
     ProfileFragment mProfileFragment = new ProfileFragment();
@@ -47,6 +48,7 @@ public class CityActivity extends AppCompatActivity
         cityBuildFragment = new CityBuildFragment();
         cityWatchFragment = new CityWatchFragment();
         mProfileFragment = new ProfileFragment();
+        mCityBuildOptionFragment = new CityBuildOptionFragment();
 
         fragmentTransaction.replace(R.id.main_layout,cityBuildFragment).commit();
     }
@@ -97,7 +99,7 @@ public class CityActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.main_layout,mProfileFragment).commit();
         } else if (id == R.id.menu_city_build) {
             toolbar.setTitle(getResources().getString(R.string.title_activity_city));
-            fragmentTransaction.replace(R.id.main_layout,cityBuildFragment).commit();
+            fragmentTransaction.replace(R.id.main_layout,mCityBuildOptionFragment).commit();
 
         } else if (id == R.id.menu_city_watch) {
             toolbar.setTitle(getResources().getString(R.string.title_activity_city_watch));
