@@ -20,7 +20,7 @@ public class ProfileFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View out = inflater.inflate(R.layout.fragment_profile,container);
+        View out = inflater.inflate(R.layout.fragment_profile,container,false);
 
         return out;
     }

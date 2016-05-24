@@ -5,15 +5,15 @@
         <item
             android:id="@+id/profile"
             android:icon="@drawable/ic_person_black_24dp"
-            android:title="Login" />
+            android:title="Profile"/>
         <item
             android:id="@+id/menu_city_build"
             android:icon="@drawable/ic_streetview_black_24dp"
-            android:title="City Build" />
+            android:title="City Build"/>
         <item
             android:id="@+id/menu_city_watch"
             android:icon="@drawable/ic_map_black_24dp"
-            android:title="City Watch" />
+            android:title="City Watch"/>
     </group>
 
 </menu>

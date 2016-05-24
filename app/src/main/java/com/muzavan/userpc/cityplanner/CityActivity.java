@@ -18,6 +18,7 @@ public class CityActivity extends AppCompatActivity
     Toolbar toolbar; // For setting the title in each fragment
     CityBuildFragment cityBuildFragment = new CityBuildFragment();
     CityWatchFragment cityWatchFragment = new CityWatchFragment();
+    ProfileFragment mProfileFragment = new ProfileFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class CityActivity extends AppCompatActivity
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         cityBuildFragment = new CityBuildFragment();
         cityWatchFragment = new CityWatchFragment();
+        mProfileFragment = new ProfileFragment();
 
         fragmentTransaction.replace(R.id.main_layout,cityBuildFragment).commit();
     }
@@ -91,7 +93,8 @@ public class CityActivity extends AppCompatActivity
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
         if (id == R.id.profile) {
-            // Handle the login, unimplemented
+            toolbar.setTitle("Profile");
+            fragmentTransaction.replace(R.id.main_layout,mProfileFragment).commit();
         } else if (id == R.id.menu_city_build) {
             toolbar.setTitle(getResources().getString(R.string.title_activity_city));
             fragmentTransaction.replace(R.id.main_layout,cityBuildFragment).commit();
